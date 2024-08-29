@@ -34,3 +34,6 @@ $\vec E^\parallel$ is continuous across the boundary, because of Stokes Theorem.
 $$\oint\vec{E}\cdot d\vec{l} = \int\left(\vec\nabla\times\vec{E}\right)\cdot d\vec{A} = 0 \mathrm{\ as\ } h\rightarrow 0$$
 For $V$: $D_\hat{n}V_\mathrm{above}-D_\hat{n}V_\mathrm{below} = -\dfrac{\sigma}{\epsilon_0}$, coming from $\vec E = -\vec\nabla V$.
 For $V$: $V_\mathrm{above}-V_\mathrm{below} = 0$, because $\vec E$ would be infinite if it wasn't $0$.
+
+We were able to define $V$ in statics because $\vec\nabla\times\vec{E} = 0$ in statics, which meant $\vec E$ could be thought as the gradient scalar function. In dynamics, $\vec\nabla\times\vec{E} = -\dfrac{d\vec{B}}{dt}$, the idea is more complicated. Need's both $V$ and $\vec{A}$ to find $\vec E$.
+
