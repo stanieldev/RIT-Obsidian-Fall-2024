@@ -51,3 +51,7 @@ X''(x)Y(y)&=X(x)Y'(Y)\\
 \end{align}$$
 Blahblahblah same stuff over and over.
 
+Ex: Solve $u_{xx}+u_{yy} = 0$
+$$X''=kX \implies X(x)=Ae^{\sqrt kx}+Be^{-\sqrt kx}$$
+$$Y''=-kY \implies Y(y)=Ce^{i\sqrt kx}+De^{-i\sqrt kx}$$
+$$\boxed{u(x,y)=\left(Ae^{\sqrt kx}+Be^{-\sqrt kx}\right)\left(Ce^{i\sqrt kx}+De^{-i\sqrt kx}\right)}$$
