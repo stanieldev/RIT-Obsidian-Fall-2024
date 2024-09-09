@@ -16,7 +16,7 @@ Ohm's Law isn't fundamental like Newton's Laws are, but is it effectively true f
 Recall that $\vec{J} = nq\vec{v}_\text{drift}$, Ohm's law says that:
 $$\begin{align}
 nq\vec{v}_\text{drift} &= \sigma\vec{f}\\
-\Aboxed{\vec{v}_\text{drift}=\dfrac{\sigma}{nq}\vec{f}}
+\Aboxed{\vec{v}_\text{drift}&=\dfrac{\sigma}{nq}\vec{f}}
 \end{align}$$
 The chargers are bouncing all over, encountering a resistive force, losing energy to scattering and thermalization. That $\vec{f}$ is necessary to keep charges drifting in 1 particular direction.
 $\vec{v}_\text{drift}$ for any given charge (like you have a swarm of bees being pushed by a gentle breeze).

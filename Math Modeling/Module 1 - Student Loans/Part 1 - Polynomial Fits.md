@@ -29,38 +29,32 @@ I noticed that Graph A, Private Nonprofit Colleges, look to have increased their
 
 **Figure A:** ![[q2_private.png]]
 
-|          | Linear Fit | Quadratic Fit | Cubic Fit |
-| -------- | ---------- | ------------- | --------- |
-| $\chi^2$ |            |               |           |
-| $r^2$    |            |               |           |
+|          | Linear Fit | Quadratic Fit | Cubic Fit  | Power Fit  |
+| -------- | ---------- | ------------- | ---------- | ---------- |
+| $\chi^2$ | 2888250.15 | 2529565.47    | 679566.783 | 2172501.93 |
+| $r^2$    | 97.58%     | 97.92%        | 99.45%     | 98.21%     |
 
-
-
-
-Using least squares, I found a regression: $A(x-1971)^p + C$.
-$$T(x)=(274.20)(x-1971)^{1.23} + 11461.88$$
-There are a lot of fit statistics that got printed with LMFIT, but I listed some:
-$\chi^2 = 2172501.93$, $r^2=98.21\%$.
 
 **Figure B:** ![[q2_public_4.png]]
-Using least squares, I found a regression: $A(x-1971)^p + C$.
-$$T(x)=(19.03)(x-1971)^{1.61} + 2713.42$$
-There are a lot of fit statistics that got printed with LMFIT, but I listed some:
-$\chi^2 = 540912.098$, $r^2=95.69\%$.
+
+|          | Linear Fit | Quadratic Fit | Cubic Fit | Power Fit |
+| -------- | ---------- | ------------- | --------- | --------- |
+| $\chi^2$ | 968680.36  | 589420.30     | 243296.87 | 540912.10 |
+| $r^2$    | 92.14%     | 95.31%        | 98.10%    | 95.69%    |
+
 
 **Figure C:** ![[q2_public_2.png]]
-Using least squares, I found a regression: $A(x-1971)^p + C$.
-$$T(x)=(24.33)(x-1971)^{1.25} + 1335.86$$
-There are a lot of fit statistics that got printed with LMFIT, but I listed some:
-$\chi^2 = 59448.92$, $r^2=94.89\%$.
 
+|          | Linear Fit | Quadratic Fit | Cubic Fit | Power Fit |
+| -------- | ---------- | ------------- | --------- | --------- |
+| $\chi^2$ | 66803.79   | 63896.33      | 33975.96  | 59448.92  |
+| $r^2$    | 94.14%     | 94.51%        | 97.14%    | 94.89%    |
 
 
 3. What is the common trend for the three graphs? 
 
-A common trend among the 3 graphs is that tuition increases *super-linearly*, I.e. a power $p>1$.
+A common trend among the 3 graphs is that tuition increases *super-linearly*.
 They all also seem to have a spike around 1973, and a dip at about COVID times.
-
 
 
 4. What is the domain and range of each of your chosen polynomial models? 
@@ -69,24 +63,27 @@ I chose the domain to be $x\in\left[1971,2023\right]$.
 The range tends to overshoot the data, probably because of COVID-19, but it tends to be:
 $T(x)\in\left[\$1335.86, \$47000\right]$.
 If we wanted the individual ranges, we would find that: $T_n(x)\in\left[T_n(1971), T_n(2023)\right]$.
-
+My polynomials are in powers of $(x-1971)$, for reference.
 
 
 5. Use your polynomial models to predict the tuition and fees for a student entering each type of institution in the academic year 2028-29. Comment on whether or not you think the predictions are reasonable.
 
 #### Predicted Costs in 2028
-Private 4-Year : $\$50869.82$
-Public 4-Year : $\$15488.30$
-Public 2-Year : $\$5124.94$
-
+| Model     | Private 4-Year | Public 4-Year | Public 2-Year |
+| --------- | -------------- | ------------- | ------------- |
+| Linear    | 48,751.67      | 13,660.75     | 4,903.09      |
+| Quadratic | 50,930.05      | 15,792.02     | 5,122.99      |
+| Cubic     | 43,021.21      | 12,359.73     | 4,109.55      |
+| Mean      | 47,567.64      | 13,917.50     | 4,711.88      |
+| Median    | 48,751.67      | 13,660.75     | 4,903.09      |
 I think these predictions would be more valid if COVID-19 didn't occur, since there was a sharp decrease in tuition during that time.
 I believe these are overestimates of future tuition costs, but they aren't overly outlandish.
+
+Interesting thing is that, of the 3 models, Linear seems to be a nice in-between of Quadratic and Cubic, being responsible for all 3 median values.
 
 
 
 6. List the properties of polynomial functions, and explain the advantages for using them in modeling. 
-
-I misunderstood the statement "Explore different degrees of polynomials, and choose the degree that you think “best” represents the data." to mean that you wanted me to find what degree $p$ best fits the data. I apologize, but since I have already done all the modeling and math with this assumption, I *really* don't want to redo it for higher-degree polynomials.
 
 Polynomials are convenient for finding the different weights for individual degrees of growth, whether it be constant, linear, or quadratic (and above).
 
@@ -98,9 +95,9 @@ The calculation for future values, as well as derivatives, are also much easier 
 
 A limitation with polynomials is that truncation of polynomials can lead to larger variances for times much larger than the domain it was defined on, since finances usually grow in some form of exponentials.
 
-IF the true model grows as something that is non-convergent over a larger domain than the source domain, then something like the Taylor series of ln(1+x) occurs, where the function diverges toward infinity differently than a polynomial would.
+It will always lose to exponential / superexponential growths in the long-term modeling of values.
 
-I've found as well, in my experience, that polynomials have an odd behavior at critical points, or places where a continuous function diverges because of the polynomial arbitrarily at $t_0$, because it wasn't an initial condition that the function has to pass through. This occurred more-so in physics, but I believe it could be a constraint here as well.
+If the true model was logarithmic, it would also fail to converge beyond x=2 (after some adjusting to our bounds), since $\ln(1+x)$ doesn't behave nicely being represented as a polynomial.
 
 
 
