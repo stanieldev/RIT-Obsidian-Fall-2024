@@ -22,7 +22,7 @@ Given $ay''+by'+cy=0$:
 
 Dirichlet Conditions: $y(a) = A$ and $y(a) = B$.
 Neumann Conditions: $y'(a) = A$ and $y'(b) = B$.
-Robin Conditions: $y(a) = A$ and $y'(b) = B$
+Robin Conditions: $y(a) = A$ and $y'(b) = B$.
 
 
 ### Sturm-Liouville Problems
