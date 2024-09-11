@@ -14,7 +14,7 @@
 | Annual Interest Rate   | 7.39%      | 4.99%      |
 | Monthly Payment        | $211.72    | $327.11    |
 | Total Interest Paid    | $13,278.50 | $15,396.40 |
-| Cumulative Payments    | 120        | 120        |
+| Cumulative Payments    | TODO       | TODO       |
 **Table 1: The case of Nate and Catherine.**
 
 
@@ -63,7 +63,7 @@ With the interest rate of Catherine's loan being smaller than Nate's, it would h
 | Annual Interest Rate   | 4.99%      | 2.69%      |
 | Monthly Payment        | $327.11    | $260.09    |
 | Total Interest Paid    | $15,396.40 | $7,351.11  |
-| Cumulative Payments    |            |            |
+| Cumulative Payments    | TODO       | TODO       |
 **Table 2: The case of Catherine and Henry.**
 
 
