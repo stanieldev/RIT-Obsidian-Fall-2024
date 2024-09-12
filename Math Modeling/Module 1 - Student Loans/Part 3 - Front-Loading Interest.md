@@ -36,13 +36,25 @@
 
 3. *In all of these cases, how does the total interest paid compare to the simple interest model you used in Part 2?*
 
-| Previous Total Interest Paid | $13,278.50 | $15,396.40 | $7,351.11 |
-| ---------------------------- | ---------- | ---------- | --------- |
+| Total Interest         | Nate       | Catherine  | Henry     |
+| ---------------------- | ---------- | ---------- | --------- |
+| Front-Loading Interest |            |            |           |
+| Cumulative Interest    | $13,278.50 | $15,396.40 | $7,351.11 |
+
+
+
 
 
 4. *Suppose that Catherine has started to pay off her student loans using the monthly payments you determined in Tables 3 and 4. Now suppose that after 12 months of payments, Catherine’s rich uncle gifts her $10,000. Catherine decides that immediately after her 12th loan payment, she will use the $10,000 to make an extra payment that is applied directly to reduce the principal of the loan. From that point forward, she will continue to pay monthly payments at the same level as her first 12 payments.* 
+
+Insert Desmos Graph about it:
+
+
+
+*How much earlier than the originally planned 10 years will Catherine have her loan paid off? How much total interest will she have saved?* 
+
+
+
    
-   *How much earlier than the originally planned 10 years will Catherine have her loan paid off? How much total interest will she have saved?* 
-   
-   *Do you believe that Catherine would be better off financially if she had not used the $10,000 to pay down the principal, but rather that she invested it in a savings account? Explain why or why not.*
+*Do you believe that Catherine would be better off financially if she had not used the $10,000 to pay down the principal, but rather that she invested it in a savings account? Explain why or why not.*
 

@@ -14,7 +14,7 @@
 | Annual Interest Rate   | 7.39%      | 4.99%      |
 | Monthly Payment        | $211.72    | $327.11    |
 | Total Interest Paid    | $13,278.50 | $15,396.40 |
-| Cumulative Payments    | TODO       | TODO       |
+| Cumulative Payments    | $25,406.40 | $39,253.20 |
 **Table 1: The case of Nate and Catherine.**
 
 
@@ -32,7 +32,7 @@ R(t_\text{years})&=P_0\left(1+\dfrac{\text{APR}}{12}\right)^{12t} -p\cdot12t &\i
 T(t_\text{years})&=P_0\left(1+\dfrac{\text{APR}}{12}\right)^{12t} &\implies& &T(t_\text{months})&=P_0\left(1+\dfrac{\text{APR}}{12}\right)^{t}\\
 I(t_\text{years})&=P_0\left(1+\dfrac{\text{APR}}{12}\right)^{12t}-P_0 &\implies& &I(t_\text{months})&=P_0\left(1+\dfrac{\text{APR}}{12}\right)^{t}-P_0\\
 \end{align}$$
-Where $p$ is the payment per month, $P_0$ is the principle, $R(t)$ is remaining balance, $T(t)$ is total balance before payment, and $I(t)$ is the surplus (interest) on top of the principle.
+Where $p$ is the payment per month, $P_0$ is the principle, $R(t)$ is remaining balance, $T(t)$ is cumulative payment, and $I(t)$ is the interest (surplus) on top of the principle.
 
 
 2. *In referring to Nate and Catherine, who pays less in interest and by how much?*
@@ -43,7 +43,8 @@ Catherine paid a surplus of $2,117.90 in interest relative to Nate.
 
 3. *After repaying their loans, what are the cumulative payments of Nate and Catherine?*
 
-TODO
+The cumulative payment for Nate was $25,406.40, compared to Catherine's $39,253.20.
+Catherine had to pay an extra $13,846.80 over the term of the repayment.
 
 
 4. *In reference to the previous question, is this result in line with or contradictory to the interest rate each borrow got?*
@@ -63,7 +64,7 @@ With the interest rate of Catherine's loan being smaller than Nate's, it would h
 | Annual Interest Rate   | 4.99%      | 2.69%      |
 | Monthly Payment        | $327.11    | $260.09    |
 | Total Interest Paid    | $15,396.40 | $7,351.11  |
-| Cumulative Payments    | TODO       | TODO       |
+| Cumulative Payments    | $39,253.20 | $31,210.80 |
 **Table 2: The case of Catherine and Henry.**
 
 
