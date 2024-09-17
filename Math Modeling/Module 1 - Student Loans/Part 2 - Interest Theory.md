@@ -12,9 +12,9 @@
 | Loan Amount            | $12,161.50 | $23,856.69 |
 | Loan Term              | 10 years   | 10 years   |
 | Annual Interest Rate   | 7.39%      | 4.99%      |
-| Monthly Payment        | $211.72    | $327.11    |
-| Total Interest Paid    | $13,278.50 | $15,396.40 |
-| Cumulative Payments    | $25,406.40 | $39,253.20 |
+| Monthly Payment        | $176.24    | $298.01    |
+| Total Interest Paid    | $8,987.34  | $11,904.49 |
+| Cumulative Payments    | $21,148.85 | $35,761.18 |
 **Table 1: The case of Nate and Catherine.**
 
 
@@ -22,29 +22,19 @@
 
 For my calculation of the future tuition rates, I ended up using the linear approximation, since it was the median of the 3 models calculations. While is it a little less fitting than the others, I feel that the linear trend has more room to cancel out fluctuations more than x² or x³.
 
-For interest payments, I used a monthly model of compound interest. We had found, in class, the most amount of interest is paid with compound interest, compounding as often as possible.
-It's quite common that monthly payments are the main method of college loans, according to my sister who works in Financial Aid for another college.
-I also inferred that the table was trying to tell me it was month compound interest.
-
-Equations I used:
-$$\begin{align}
-R(t_\text{years})&=P_0\left(1+\dfrac{\text{APR}}{12}\right)^{12t} -p\cdot12t &\implies& &R(t_\text{months})&=P_0\left(1+\dfrac{\text{APR}}{12}\right)^{t} -pt\\
-T(t_\text{years})&=P_0\left(1+\dfrac{\text{APR}}{12}\right)^{12t} &\implies& &T(t_\text{months})&=P_0\left(1+\dfrac{\text{APR}}{12}\right)^{t}\\
-I(t_\text{years})&=P_0\left(1+\dfrac{\text{APR}}{12}\right)^{12t}-P_0 &\implies& &I(t_\text{months})&=P_0\left(1+\dfrac{\text{APR}}{12}\right)^{t}-P_0\\
-\end{align}$$
-Where $p$ is the payment per month, $P_0$ is the principle, $R(t)$ is remaining balance, $T(t)$ is cumulative payment, and $I(t)$ is the interest (surplus) on top of the principle.
+For interest payments, I used a ~~monthly~~ **simple** model of interest. I had thought it was compound interest, since it's standard practice for student loans, but I was informed it was **simple** interest.
 
 
 2. *In referring to Nate and Catherine, who pays less in interest and by how much?*
 
 Overall, it seems that Nate paid less in interest than Catherine, over the term of their loan.
-Catherine paid a surplus of $2,117.90 in interest relative to Nate.
+Catherine paid a surplus of $2,917.15 in interest relative to Nate.
 
 
 3. *After repaying their loans, what are the cumulative payments of Nate and Catherine?*
 
-The cumulative payment for Nate was $25,406.40, compared to Catherine's $39,253.20.
-Catherine had to pay an extra $13,846.80 over the term of the repayment.
+The cumulative payment for Nate was $21,148.85, compared to Catherine's $35,761.18.
+Catherine had to pay an extra $14,612.33 over the term of the repayment.
 
 
 4. *In reference to the previous question, is this result in line with or contradictory to the interest rate each borrow got?*
@@ -62,9 +52,9 @@ With the interest rate of Catherine's loan being smaller than Nate's, it would h
 | Loan Amount            | $23,856.69 | $23,856.69 |
 | Loan Term              | 10 years   | 10 years   |
 | Annual Interest Rate   | 4.99%      | 2.69%      |
-| Monthly Payment        | $327.11    | $260.09    |
-| Total Interest Paid    | $15,396.40 | $7,351.11  |
-| Cumulative Payments    | $39,253.20 | $31,210.80 |
+| Monthly Payment        | $298.01    | $252.28    |
+| Total Interest Paid    | $11,904.49 | $6,417.45  |
+| Cumulative Payments    | $35,761.18 | $30,274.14 |
 **Table 2: The case of Catherine and Henry.**
 
 
@@ -76,15 +66,12 @@ Complete!
 
 6. *How much does Henry save in interest compared with Catherine?* 
 
-During the 10-year payment of the loan, Henry saved about $8,042.30 in interest compared to Catherine.
+During the 10-year payment of the loan, Henry saved about $5,487.04 in interest compared to Catherine.
 
 
 7. *Is the amount significant?*
 
-I argue that ~$8,000 is significant in this case, since, between Henry's loans and Catherine's loans, the amount that Henry would have to pay in comparison is +109.4% of his interest.
-About half the interest cost was saved with a lower interest rate, and so that amount is very much significant.
-
-
+The amount is that Henry saves on interest payments is staggering. Compared to the size of the loan, Henry saved about 15% on his loan compared to Catherine's.
 
 
 ## References
