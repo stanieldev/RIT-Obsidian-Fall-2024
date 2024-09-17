@@ -126,18 +126,19 @@ The resistance of the wire would change by about $1/1000$ of the original resist
 
 **d)** *Suppose I connect two 1-mm diameter wires end to end, made of different materials, copper to gold. When 10 A flows through the system, a thin layer of charge appears at the boundary. Estimate the total charge that has accumulated at the boundary. (I took a guess that it will come out + in the figure. Did I get it right? What determines this sign? Note: Griffiths Table 7.1 may be helpful here, and of course our usual boundary conditions, back in Griffiths Chapter 2.3.5.)*
 
-$$\begin{align}
-n_\text{cu}&=\dfrac{8960\ \mathrm{kg}}{1\ \mathrm{m}^3}\cdot\dfrac{1\ \mathrm{mol}\ e^-}{0.063546\ \mathrm{kg}} = \dfrac{1.41\cdot10^5\ \mathrm{mol}\ e^-}{1\ \mathrm{m}^3} = 8.491\cdot10^{28}\ \dfrac{e^-}{\mathrm{m}^3}\\
-n_\text{au}&=\dfrac{19300\ \mathrm{kg}}{1\ \mathrm{m}^3}\cdot\dfrac{1\ \mathrm{mol}\ e^-}{0.196967\ \mathrm{kg}} = \dfrac{9.80\cdot10^4\ \mathrm{mol}\ e^-}{1\ \mathrm{m}^3} = 5.901\cdot10^{28}\ \dfrac{e^-}{\mathrm{m}^3}
-\end{align}$$
-$$\begin{align}
-v_\text{cu}&=\dfrac{J}{n_\text{cu}q}=\dfrac{1.273\cdot10^{7}\dfrac{\mathrm{A}}{\mathrm{m}^2}}{\left(8.491\cdot10^{28}\ \dfrac{e^-}{\mathrm{m}^3}\right)\left(1.602\cdot10^{-19}\ \dfrac{\mathrm{C}}{e^-}\right)}=9.359\cdot10^{-4}\dfrac{\mathrm{m}}{\mathrm{s}}\\
-v_\text{au}&=\dfrac{J}{n_\text{au}q}=\dfrac{1.273\cdot10^{7}\dfrac{\mathrm{A}}{\mathrm{m}^2}}{\left(5.901\cdot10^{28}\ \dfrac{e^-}{\mathrm{m}^3}\right)\left(1.602\cdot10^{-19}\ \dfrac{\mathrm{C}}{e^-}\right)}=13.47\cdot10^{-4}\dfrac{\mathrm{m}}{\mathrm{s}}\\
-\end{align}$$
-I'm not sure how I'd calculate the accumulated total charge at steady state, but what I do know is that electrons in gold move faster, and so will leave behind a positively charged region near the interface of the copper.
+I was confused on what I needed to do and all I needed was Hasan saying "Boundary Conditions" and I was like "oh duh, obviously."
 
-As for the copper, their drift velocity cannot change, otherwise the amount of current flowing would increase, contradicting the question's requirements.
-
+$$\begin{align}
+E_\text{above}^\perp-E_\text{below}^\perp&=\dfrac{\sigma}{\epsilon_0}\\
+\dfrac{J^\perp}{\sigma_\text{cu}}-\dfrac{J^\perp}{\sigma_\text{au}}&=\dfrac{\sigma}{\epsilon_0}\\
+\epsilon_0J^\perp\left(\dfrac{1}{\sigma_\text{cu}}-\dfrac{1}{\sigma_\text{au}}\right)&=\sigma\\
+\end{align}$$
+---
+$$\begin{align}
+\sigma&=\epsilon_0J^\perp\left(\dfrac{1}{\sigma_\text{cu}}-\dfrac{1}{\sigma_\text{au}}\right)\\
+&=\left(8.854\cdot10^{-12}\dfrac{\mathrm{F}}{\mathrm{m}}\right)\left(1.273\cdot10^{7}\dfrac{\mathrm{A}}{\mathrm{m}^2}\right)\left(\dfrac{1}{5.96\cdot10^7\dfrac{\mathrm{S}}{\mathrm{m}}}-\dfrac{1}{4.11\cdot10^7\dfrac{\mathrm{S}}{\mathrm{m}}}\right)\\
+\Aboxed{\sigma&=-8.5124\cdot10^{-13}\dfrac{\mathrm{C}}{\mathrm{m^2}}}
+\end{align}$$
 
 ### Question 3
 *The region between two concentric metal spherical shells (radius $a$ and $b$, respectively) is filled with a weakly conducting material of conductivity $\sigma$. Assume the outer shell is electrically grounded, and a battery maintains a potential difference of $|V|=V_0$ between the two shells. (In this problem, be careful not to confuse conductivity, $\sigma$, with surface charge density. Also, ignore any dielectric properties of the weakly conducting material.)*
