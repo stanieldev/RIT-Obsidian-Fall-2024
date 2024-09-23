@@ -1,6 +1,7 @@
-**Date: 9/12/2024**
+**Name:** Stanley Goodwin
+**Date:** 9/12/2024
 
-
+---
 ### Power Series
 $$\begin{align}
 S(z)&=\sum_{n=0}^\infty a_n(z-z_0)^n & \rho&=\limsup_{n\rightarrow\infty} |a_n|^{-1/n}

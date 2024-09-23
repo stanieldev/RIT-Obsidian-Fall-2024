@@ -1,5 +1,7 @@
-**Date 9/19/2024**
+**Name:** Stanley Goodwin
+**Date:** 8/19/2024
 
+---
 ### Inductance & Inertial Element
  - $L$ is the tendency to resist changes in $I$, just as $m$ is the tendency to resist changes in $v$.
  - Work to build up a current in an inductor:

@@ -1,6 +1,9 @@
-Stanley Goodwin, 8/31/2024
-Collaborators: None
-Time Taken: ~2 Hours
+**Name:** Stanley Goodwin
+**Date:** 8/31/2024
+**Collaborators:** None
+**Time Taken:** ~2 Hours
+
+
 
 
 **Q1.** *Make a quick sketch, in the x-y plane, of the following (two-dimensional) vector function.*

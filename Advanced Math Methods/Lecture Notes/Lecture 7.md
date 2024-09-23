@@ -1,6 +1,7 @@
-**Date 9/17/2024**
+**Name:** Stanley Goodwin
+**Date:** 9/17/2024
 
-
+---
 ### Function $\log(w)$ 
 The function $e^z=w$ does not have a unique solution $z$.
 The solution is $z=\log(w)=\ln(r)+i\left(\theta+2\pi n\right)$.

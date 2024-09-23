@@ -1,4 +1,7 @@
-**Date: 9/4/2024**
+**Name:** Stanley Goodwin
+**Date:** 9/4/2024
+
+---
 
 Solve $u_{xx} + u_{yy} = 0$
 $$\begin{align}

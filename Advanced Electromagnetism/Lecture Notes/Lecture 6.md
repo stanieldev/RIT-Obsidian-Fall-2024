@@ -1,5 +1,7 @@
-**Date: 9/12/2024**
+**Name:** Stanley Goodwin
+**Date:** 9/12/2024
 
+---
 ### Magnetic Fields & Work
 We know that magnetic fields don't do work, and yet we saw that it looks like it does work when we remove a loop of metal from a magnetic field.
 

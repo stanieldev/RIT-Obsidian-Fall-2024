@@ -1,5 +1,7 @@
-**Date: 9/5/2024**
+**Name:** Stanley Goodwin
+**Date:** 9/5/2024
 
+---
 ## Boundary Conditions
 $$\begin{align}
 \vec\nabla\cdot\vec{E}&=\dfrac{\rho}{\epsilon_0} &\implies& \left.\left(\vec{E}_\text{above}^\perp-\vec{E}_\text{below}^\perp\right)\right|_\text{surface} = \dfrac{\sigma}{\epsilon_0}\\

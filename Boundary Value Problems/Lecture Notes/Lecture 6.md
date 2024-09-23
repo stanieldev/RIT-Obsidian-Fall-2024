@@ -1,4 +1,7 @@
-**Date 9/9/2024**
+**Name:** Stanley Goodwin
+**Date:** 9/9/2024
+
+---
 
 Example:
 $$\begin{align}

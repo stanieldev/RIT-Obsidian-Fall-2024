@@ -1,5 +1,7 @@
-**Date 9/19/2024**
+**Name:** Stanley Goodwin
+**Date:** 9/19/2024
 
+---
 ### Exercise 1
 **Definition:** $\ln(z)=\ln\left(re^{i\theta}\right)=\ln(r)+i\theta$.
 Q1) Radius Independence

@@ -1,12 +1,13 @@
-**Stanley Goodwin | 9/11/2024**
-Hours: ~8 Total
+**Name:** Stanley Goodwin
+**Date:** 9/11/2024
+**Collaborators:** None
+**Time Taken:** 8 Hours over 2 days
 
 **Notes:** 
  - I didn't really know how to do Q2D, but I know it has to relate to the drift velocities and $\rho$ at the interface making sure that enough current is flowing in both wires.
  - I didn't graph any of these by hand, but they were Gaussian-Adjacent, so I don't think it mattered too much.
 
 *As always, your work will be graded for clarity of explanation as much as for the “correctness” of your final answer. And as always, please include the names of those you collaborated with, as well as the total number of hours spent on this assignment.*
-
 
 ### Question 1
 *Suppose the magnetic vector potential in a region of space is given by:*

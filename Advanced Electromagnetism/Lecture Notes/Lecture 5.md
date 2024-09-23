@@ -1,5 +1,7 @@
-**Date 9/10/2024**
+**Name:** Stanley Goodwin
+**Date:** 9/10/2024
 
+---
 ### Resistor Review
  - Ohmic Materials $\vec{J}=\sigma\vec{E}$
  - Resistance $V=IR$

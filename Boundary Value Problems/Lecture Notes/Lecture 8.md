@@ -1,3 +1,7 @@
+**Name:** Stanley Goodwin
+**Date:** 9/13/2024
+
+---
 ### General S-L Problems
 The general Sturm-Liouville differential equation takes the following form:
 $$\left(y'(x)\cdot p(x)\right)'+y(x)\cdot q(x)+\lambda_n\cdot y(x)\cdot r(x)=0$$

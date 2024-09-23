@@ -1,4 +1,7 @@
-**Date: 8/30/2024**
+**Name:** Stanley Goodwin
+**Date:** 8/30/2024
+
+---
 
 Classify $u_{xx}-2u_{xy}+\dfrac{1}{4}u_{yy}=0$
 $(-2)^2-4(1)(1/4) > 0 \implies$Hyperbolic.

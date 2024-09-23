@@ -1,5 +1,7 @@
-**Date: 9/12/2024**
+**Name:** Stanley Goodwin
+**Date:** 9/12/2024
 
+---
 ### Building a Simple Model for the Elevator Problem
 $$\begin{align}
 T_\text{ground} &=25\text{s}&&\text{Time doors are open on Floor 0.}\\

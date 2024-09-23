@@ -1,3 +1,8 @@
+**Name:** Stanley Goodwin
+**Date:** 9/16/2024
+
+---
+
 Periodic solutions to differential equations, I think.
 
 The set $\beta=\left\{\sin\left(\tfrac{n\pi}{l}x\right)|n\in\mathbb{Z}\right\}$ forms a basis of odd function space.

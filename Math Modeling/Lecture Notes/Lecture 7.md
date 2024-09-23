@@ -1,5 +1,7 @@
-**Date 9/17/2024**
+**Name:** Stanley Goodwin
+**Date:** 9/17/2024
 
+---
 ### Sensitivity Analysis
 When constructing a model, it's useful to explore how sensitive the outputs of the model are to perturbations in one or more of the assumptions.
 

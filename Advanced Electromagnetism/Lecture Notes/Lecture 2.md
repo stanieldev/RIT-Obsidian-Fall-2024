@@ -1,4 +1,7 @@
-**Date: 8/29/2024**
+**Name:** Stanley Goodwin
+**Date:** 8/29/2024
+
+---
 ### Fundamental Theorem of Calculus
 $$\begin{align}
 \int_a^b \dfrac{d}{dx}f(x)\ dx &= f(b) - f(a)\\

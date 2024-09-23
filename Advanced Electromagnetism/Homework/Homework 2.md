@@ -1,3 +1,8 @@
+**Name:** Stanley Goodwin
+**Date:** 9/04/2024
+**Collaborators:** None
+**Time Taken:** N/A
+
 
 ## Question 1
 Consider a solid, neutral, conducting metal sphere (radius $a$), centered at the origin, as shown.

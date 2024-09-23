@@ -1,5 +1,7 @@
-**Date: 9/20/2024**
+**Name:** Stanley Goodwin
+**Date:** 9/20/2024
 
+---
 
 $$\begin{align}
 I(n) &= \int_0^\pi x^n\cos(kx)\ dx\\

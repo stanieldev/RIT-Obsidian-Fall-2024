@@ -1,5 +1,7 @@
-**Date: 8/27/2024**
+**Name:** Stanley Goodwin
+**Date:** 8/27/2024
 
+---
 ### Math Introduction Exercise
 How to estimate the following question:
 *How much does it cost to get to NYC from Rochester?*

@@ -1,4 +1,7 @@
-**Date 9/17/2024**
+**Name:** Stanley Goodwin
+**Date:** 9/17/2024
+
+---
 
 In dynamics, we can no longer define $\vec E$ as a gradient of a scalar function $\phi$.
 Path integrals are no longer path-independent.

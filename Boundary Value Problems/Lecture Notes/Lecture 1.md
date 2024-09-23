@@ -1,5 +1,7 @@
-**Date: 8/26/2024**
+**Name:** Stanley Goodwin
+**Date:** 8/26/2024
 
+---
 ## Syllabus Review
  - Chapters 11-13 are being used.
 

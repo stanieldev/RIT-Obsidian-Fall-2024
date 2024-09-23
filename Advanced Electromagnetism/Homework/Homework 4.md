@@ -1,12 +1,14 @@
-Stanley Goodwin
-9/22/2024 (Previously 9/18/2024)
-Time Taken : 9 hours over 2 days.
+**Name:** Stanley Goodwin
+**Date:** 9/22/2024 (Previously 9/18/2024)
+**Collaborators:** None
+**Time Taken:** 9 Hours over 2 days
 
-### Question 1
-
-**a)** A homopolar generator: What Michael Faraday came up with a relatively simple DC generator called a homopolar generator; a conducting wheel of diameter $D$ rotates with angular velocity $\omega$ in a uniform B-field oriented along the wheel axis. Sliding contacts make an electrical connection between the center of the wheel and the edge, as shown, and an EMF is induced across a load resistance $R$.
-
-**i)** *Show that the power dissipated in the resistor is $P=c\dfrac{\omega^2B^2D^4}{R}$, where $c$ is an unknown numerical constant you’ll have to uncover for yourself.*
+---
+## Question 1
+### 1.A
+*A homopolar generator: What Michael Faraday came up with a relatively simple DC generator called a homopolar generator; a conducting wheel of diameter $D$ rotates with angular velocity $\omega$ in a uniform B-field oriented along the wheel axis. Sliding contacts make an electrical connection between the center of the wheel and the edge, as shown, and an EMF is induced across a load resistance $R$.*
+#### 1.A.1
+*Show that the power dissipated in the resistor is $P=c\dfrac{\omega^2B^2D^4}{R}$, where $c$ is an unknown numerical constant you’ll have to uncover for yourself.*
 $$\begin{align}
 \mathrm{EMF}&=-\int_0^{D/2} \vec{E}\cdot d\vec{r}\\
 &=-\int_0^{D/2} \dfrac{d\vec{F}}{dq}\cdot d\vec{r}\\
@@ -21,8 +23,8 @@ P&=VI &&\text{(Definition)}\\
 &=\dfrac{\left(\dfrac{1}{8}B\omega D^2\right)^2}{R} &&\text{(Substitution)}\\
 \Aboxed{P&=\dfrac{1}{64}\dfrac{B^2\omega^2 D^4}{R}} &&\text{(Q.E.D.)}
 \end{align}$$
-
-**ii)** *How fast (in Hz) would a 1m diameter generator in a 0.2 tesla magnetic field have*
+#### 1.A.2
+*How fast (in Hz) would a 1m diameter generator in a 0.2 tesla magnetic field have*
 *to rotate to produce an EMF of 120V?*
 $$\begin{align}
 |\mathrm{EMF}|&=\dfrac{1}{8}B\omega D^2\\
@@ -30,12 +32,10 @@ $$\begin{align}
 2\pi f&=\dfrac{8\cdot120\mathrm{V}}{0.2\mathrm{T}\cdot1\mathrm{m}^2}\\
 \Aboxed{f&=763.94\ \mathrm{Hz}}
 \end{align}$$
-
----
-
-**b)** An AC generator: A square loop with side $a$ is mounted on a horizontal axis and rotates with a steady frequency $f$ (rotations/sec). A uniform magnetic field $\vec B$ points left to right between the two pole faces. The figure shows the configuration at time $t=0$ (note that there is no flux at this instant).
-
-**i)** *If the output is connected to a load resistance $R$, calculate the instantaneous and average power dissipated in the resistor.*
+### 1.B
+*An AC generator: A square loop with side $a$ is mounted on a horizontal axis and rotates with a steady frequency $f$ (rotations/sec). A uniform magnetic field $\vec B$ points left to right between the two pole faces. The figure shows the configuration at time $t=0$ (note that there is no flux at this instant).*
+#### 1.B.1
+*If the output is connected to a load resistance $R$, calculate the instantaneous and average power dissipated in the resistor.*
 $$\begin{align}
 \mathrm{EMF}&=N\dfrac{d}{dt}\left(\vec{B}\cdot\vec{A}\right)\\
 &=NBA\cdot\dfrac{d}{dt}\left(\sin\theta\right)\\
@@ -53,9 +53,8 @@ P&=VI &&\text{(Definition)}\\
 &=\dfrac{1}{2\pi}\dfrac{(NBA\omega)^2}{R}\pi &&\text{(Evaluation)}\\
 \Aboxed{\bar{P}&=\dfrac{(NBA\omega)^2}{2R}} &&\text{(Q.E.D.)}
 \end{align}$$
-
-**ii)** *Compare your results to the mechanical power needed to turn the loop.*
-
+#### 1.B.2
+*Compare your results to the mechanical power needed to turn the loop.*
 $$\begin{align}
 \bar{P}&=\dfrac{1}{2\pi}\int\vec{\tau}\cdot \vec{\omega}\ d\theta\\
 &=\dfrac{1}{2\pi}\int\left(\dfrac{a}{2}\hat{r}\times\vec{F}\right)\cdot \omega\hat{\omega}\ d\theta\\
@@ -70,10 +69,8 @@ $$\begin{align}
 \end{align}$$
 This mechanical power is identical to the electrical power generated.
 This makes sense, since power should be conserved.
-
-**iii)** *If the rotation rate is 60Hz the loop has area 0.02$\mathrm{m}^2$, and the magnetic field has a magnitude of 0.2T, about how many turns of wire would you need to produce a*
-*standard 120V (RMS) output?*
-
+#### 1.B.3
+*If the rotation rate is 60Hz the loop has area 0.02$\mathrm{m}^2$, and the magnetic field has a magnitude of 0.2T, about how many turns of wire would you need to produce a standard 120V (RMS) output?*
 $$\begin{align}
 \dfrac{V_\mathrm{rms}^2}{R}&=\dfrac{(NBA\omega)^2}{2R}\\
 2V_\mathrm{rms}^2&=N^2B^2A^2\omega^2\\
@@ -82,11 +79,9 @@ N^2&=\dfrac{2V_\mathrm{rms}^2}{B^2A^2\omega^2}\\
 N&=\dfrac{\sqrt2(120\mathrm{V})}{(0.2\mathrm{T})(0.02\mathrm{m}^2)(2\pi\cdot60\ \mathrm{Hz})}\\
 \Aboxed{N&\approx 112.5\text{ Loops}}
 \end{align}$$
-
----
-
-**c)** Eddy-current break: An electromagnetic "eddy-current brake" consists of a solid spinning wheel of conductivity $\sigma$ and thickness $d$. A uniform field of magnitude $B_0$ is applied perpendicular to the surface of the wheel over a small area $A$ located a distance $s$ from the axis.
-
+### 1.C
+*Eddy-current break: An electromagnetic "eddy-current brake" consists of a solid spinning wheel of conductivity $\sigma$ and thickness $d$. A uniform field of magnitude $B_0$ is applied perpendicular to the surface of the wheel over a small area $A$ located a distance $s$ from the axis.*
+#### 1.C.1
 **i)** *Show that the torque on this disk is given (very approximately) by $\tau = \sigma\omega B^2s^2Ad$.*
 
 $$\begin{align}
@@ -101,9 +96,8 @@ $$\begin{align}
 
 I wasn't 100% sure about how to find a "charge," but I assumed it had to be linear to conductivity, linear to volume, and linear to the strength of the field.
 There's a proper way to calculate an effective charge, but I ran out of time to do so.
-
-
-**ii)** ***Extra Credit:*** *Perform an order of magnitude estimate for how strong $B_0$ should be for this kind of brake to be functional as a car break, given a magnet size of 20$\mathrm{cm}^2$per break. Do you foresee any problems as the car slows down?*
+#### 1.C.2 : Extra Credit
+*Perform an order of magnitude estimate for how strong $B_0$ should be for this kind of brake to be functional as a car break, given a magnet size of 20$\mathrm{cm}^2$per break. Do you foresee any problems as the car slows down?*
 
 $$\vec\tau=\vec{r}\times\vec{F}\implies \vec{F}=\vec\tau\times\dfrac{\vec{r}}{r^2}$$
 $$\begin{align}
@@ -118,16 +112,14 @@ m\dfrac{d^2x}{dt^2}&=(4\sigma B_0^2Ad)\dfrac{dx}{dt}\\
 \dfrac{d^2x}{dt^2}&=\left(\dfrac{4\sigma B_0^2Ad}{m}\right)\dfrac{dx}{dt}\\
 \Delta x(t)&=v_0e^{\left(\tfrac{4\sigma B_0^2Ad}{m}\right)t}
 \end{align}$$
-
 As the wheels get slower, they produce less braking force and it's an exponential decay of velocity breaking.
 Something else that may affect it is that $\sigma$ decreases as temperature increases.
 
 ---
-
-### Question 2
+## Question 2
 A rectangular loop of metal wire, of width $w$, moving with constant speed $v$, is entering a region of uniform B-field. The B-field is out of the page and is increasing at a constant rate $B=B_0+\alpha t$, where $B_0$ and $\alpha$ are positive constants. At $t=0$, the right edge of the loop is a distance $x_0$ into the field, as shown. Note that the EMF around the loop has two different causes: the motion of the loop and the changing of the B-field.
-
-**a)** *Derive an expression for the magnitude of the EMF around the loop as a function of time, while the loop is entering the field.*
+### 2.A
+*Derive an expression for the magnitude of the EMF around the loop as a function of time, while the loop is entering the field.*
 
 $$\begin{align}
 \mathrm{EMF}(t)&=\dfrac{d\Phi_\mathrm{B}}{dt}\\
@@ -137,10 +129,8 @@ $$\begin{align}
 &=wvB_0+\alpha twv+\alpha wx_0+\alpha wvt\\
 \Aboxed{\mathrm{EMF}(t)&=v(wB_0)+2\alpha v(wt)+\alpha (wx_0)}
 \end{align}$$
-
----
-
-**b)** *Is the induced current in the loop clockwise, counterclockwise (or impossible to determine without knowing the values of $v$ and $\alpha$?) Explain. Also, explicitly check that your answer to part a) makes sense by checking units and considering the two cases $v=0$ and $\alpha=0$. Explain how these limits give answers you might expect.*
+### 2.B
+*Is the induced current in the loop clockwise, counterclockwise (or impossible to determine without knowing the values of $v$ and $\alpha$?) Explain. Also, explicitly check that your answer to part a) makes sense by checking units and considering the two cases $v=0$ and $\alpha=0$. Explain how these limits give answers you might expect.*
 
 For the system where there's no velocity and there's just an increasing field, the flux in the area increases, meaning the current opposes the new flux by decreasing flux. By the right hand rule, the current must flow clockwise.
 $$\mathrm{EMF}(t)=\alpha (wx_0)=\alpha A_0 \ge 0$$
@@ -154,19 +144,19 @@ Since all 3 methods of EMF production cause currents going around clockwise, the
 **Current always goes clockwise in this example.**
 
 ---
-
-### Question 3
-A square metal loop is released from rest and falls straight down. The loop is between the poles of a magnet with uniform B-field, and initially, the top of the loop is inside the field and the bottom of the loop is outside the field. The metal has mass density $\rho_\mathrm{m}$ and electrical resistivity $\rho_\mathrm{res}$. The loop has edge length $L$, and is made of a rectangular wire with very small transverse dimensions $w$ and $l$.
-
-**a.i)** *What is the EMF around the loop in terms of the downward speed $v$ of the loop?*
+## Question 3
+*A square metal loop is released from rest and falls straight down. The loop is between the poles of a magnet with uniform B-field, and initially, the top of the loop is inside the field and the bottom of the loop is outside the field. The metal has mass density $\rho_\mathrm{m}$ and electrical resistivity $\rho_\mathrm{res}$. The loop has edge length $L$, and is made of a rectangular wire with very small transverse dimensions $w$ and $l$.*
+### 3.A
+#### 3.A.1
+*What is the EMF around the loop in terms of the downward speed $v$ of the loop?*
 $$\begin{align}
 \mathrm{EMF}(t)&=\dfrac{d\Phi_\mathrm{B}}{dt}\\
 &=\dfrac{d(B\cdot A(t))}{dt}\\
 &=B\cdot\dfrac{d(L\cdot y(t))}{dt}\\
 \Aboxed{\mathrm{EMF}(t)&=BLv}\\
 \end{align}$$
-
-**a.ii)** *Assume the loop reaches terminal velocity before it passes entirely outside the field, and derive an expression for the terminal speed of the loop.*
+#### 3.A.2
+*Assume the loop reaches terminal velocity before it passes entirely outside the field, and derive an expression for the terminal speed of the loop.*
 
 Electrical Power (Lost to heat):
 $$\begin{align}
@@ -183,8 +173,8 @@ P_\mathrm{E} &= P_\mathrm{G}\\
 (BL)^2v&=(4L)^2\rho_\mathrm{res}\rho_\mathrm{m}g\\
 \Aboxed{v_\mathrm{terminal}&=\dfrac{16g}{B^2}\rho_\mathrm{res}\rho_\mathrm{m}}
 \end{align}$$
-
-**a.iii)** *Do some qualitative sensemaking/sanity checks: Units? Does the functional dependence on the various variables seem reasonable? (Nothing quantitative, just e.g. arguing that the terminal velocity should be bigger if $g$ is bigger, since it’s pulled harder by gravity.)*
+#### 3.A.1
+*Do some qualitative sensemaking/sanity checks: Units? Does the functional dependence on the various variables seem reasonable? (Nothing quantitative, just e.g. arguing that the terminal velocity should be bigger if $g$ is bigger, since it’s pulled harder by gravity.)*
 
 $$\begin{align}
 [v_\mathrm{terminal}]&=\dfrac{[16][g]}{[B^2]}[\rho_\mathrm{res}][\rho_\mathrm{m}]\\
@@ -195,10 +185,8 @@ $$\begin{align}
 &=\dfrac{\mathrm{N}\cdot\mathrm{m}}{\mathrm{N\cdot s}}\\
 \Aboxed{[v_\mathrm{terminal}]&=\dfrac{\mathrm{m}}{\mathrm{s}}}
 \end{align}$$
-
----
-
-**b)** *Show that, when the loop is traveling at terminal velocity, the rate at which thermal energy is generated by resistive heating is equal to the rate at which gravity does work on the loop (you are comparing power here). Briefly, why must the two be equal?*
+### 3.B
+*Show that, when the loop is traveling at terminal velocity, the rate at which thermal energy is generated by resistive heating is equal to the rate at which gravity does work on the loop (you are comparing power here). Briefly, why must the two be equal?*
 
 Electrical Power (Lost to heat):
 $$\begin{align}
@@ -210,10 +198,8 @@ P_\mathrm{G} &= F_g\cdot v \approx \rho_\mathrm{m}(4wlL)gv\\
 \end{align}$$
 They are equal because of the conservation of energy over time.
 I also used this in my formulation since I know the conservation of energy.
-
----
-
-**c)** *At $t=0$, the loop starts at rest. Use $F=ma$ to write down a differential equation for the speed $v$ of the loop. Then, solve for the speed $v$ as a function of time. You should find that the speed approaches the terminal speed exponentially. Sketch $v(t)$. What the time constant for this exponential motion? If the metal is aluminum, and $B$ is, say, 0.2T, what is the numerical value of the time constant? (Hint: I claim the values of $L$, $w$, and $t$ don’t matter. Show us why not.)*
+### 3.C
+*At $t=0$, the loop starts at rest. Use $F=ma$ to write down a differential equation for the speed $v$ of the loop. Then, solve for the speed $v$ as a function of time. You should find that the speed approaches the terminal speed exponentially. Sketch $v(t)$. What the time constant for this exponential motion? If the metal is aluminum, and $B$ is, say, 0.2T, what is the numerical value of the time constant? (Hint: I claim the values of $L$, $w$, and $t$ don’t matter. Show us why not.)*
 $$\begin{align}
 \vec{F}&=-\rho_\mathrm{m}(4wlL)g+\dfrac{(B_0L)^2}{\rho_\mathrm{res}}\dfrac{wl}{4L}v\\
 -g&=\dfrac{dv}{dt}-\left(\dfrac{B_0^2}{16\rho_\mathrm{res}\rho_\mathrm{m}}\right)v\\
@@ -230,16 +216,13 @@ v(t)&=v_0e^{\left(\tfrac{B_0^2}{16\rho_\mathrm{res}\rho_\mathrm{m}}\right)t}+\df
 v(t)&=\left(\dfrac{16g}{B_0^2}\rho_\mathrm{res}\rho_\mathrm{m}\right)\left(1-e^{\tfrac{B_0^2}{16\rho_\mathrm{res}\rho_\mathrm{m}}t}\right)\\
 \Aboxed{v(t)&=v_\text{terminal}\cdot\left(1-e^{\tfrac{g}{v_\text{terminal}}t}\right)}
 \end{align}$$
-This is the expression we'd expect, since it's an exponential decay to $v_\text{terminal}$
-
-
+This is the expression we'd expect, since it's an exponential decay to $v_\text{terminal}$.
 
 ---
-
-### Question 4
+## Question 4
 A conducting disk with radius $a$, height $h\gg a$, and conductivity $\sigma$ is immersed in a time-varying, but spatially uniform, magnetic field parallel to its axis, $\vec B=B_0\sin(\omega t)\hat{z}$.
-
-**a)** *Ignoring the effects of any induced magnetic fields find the induced electric field $\vec{E}(\vec{r},t)$ and current density $\vec{J}(\vec{r},t)$ in the disk, and sketch the current distribution.*
+### 4.A
+*Ignoring the effects of any induced magnetic fields find the induced electric field $\vec{E}(\vec{r},t)$ and current density $\vec{J}(\vec{r},t)$ in the disk, and sketch the current distribution.*
 $$\begin{align}
 \int\vec{E}\cdot d\vec{l}&=-\omega \pi r^2B_0\cos(\omega t)\hat{z}\\
 \vec{E}\cdot2\pi r&=-\omega \pi r^2B_0\cos(\omega t)\hat{z}\\
@@ -250,8 +233,8 @@ $$\begin{align}
 ![[HW4_Q4A.png]]
 I normalized $J$ so that we can see the cosine component more thoroughly.
 It grows radially outward linearly for $0\le r\le a$.
-
-**b)** Compare $\vec{E}(\vec{r},t)$ to the electric field in presented in problem #2 on problem set #2 in the limit 𝜔𝑡 ≪ 1.
+### 4.B
+Compare $\vec{E}(\vec{r},t)$ to the electric field in presented in problem #2 on problem set #2 in the limit 𝜔𝑡 ≪ 1.
 $$\begin{align}
 \lim_{\omega t\ll1}\vec{E}(\vec{r},t)&=\dfrac{B_0|\vec{r}|}{2t}\hat{z}\cdot\lim_{\omega t\ll1}-\omega t\cos(\omega t)\\
 &=\dfrac{B_0|\vec{r}|}{2t}\hat{z}\cdot\lim_{\omega t\ll1}-\omega t\left(1\right)\\
@@ -262,10 +245,9 @@ $$\begin{align}
 &=-\dfrac{B_0y}{2\tau}\hat{x}+\dfrac{B_0x}{2\tau}\hat{y}
 \end{align}$$
 It looks like to me that $\tau$ and $\omega$ is inversely proportional to each other.
-
-**c)** Induction Stoves!
-
-**i)** If the power dissipated in a resistor is $P=IV$, show that the power dissipated per
+### 4.C : Induction Stoves!
+#### 4.C.1
+If the power dissipated in a resistor is $P=IV$, show that the power dissipated per
 unit volume is $\vec{J}\cdot\vec{E}$ . Calculate the total instantaneous power dissipated in the disk at
 time $t$, and the average power dissipated per cycle of the field.
 $$\begin{align}
@@ -287,9 +269,8 @@ $$\begin{align}
 \bar P&=\dfrac{\pi\sigma B_0^2\omega^2a^4h}{8}\dfrac{\omega}{2\pi}\int_0^{2\pi/\omega}\cos^2(\omega t)\ dt\\
 \Aboxed{\bar P&=\dfrac{\pi\sigma B_0^2\omega^2a^4h}{16}}
 \end{align}$$
-
-
-**ii)** *If this disk was roughly the size of the solid base of a typical frying pan, and the frequency was $20\ \mathrm{kHz}$, use the above result for power per unit volume to find what approximate scale for $B_0$ you would need to rapidly and significantly heat up the pan (say, 1000 watts of power). Does this seem feasible?*
+#### 4.C.2
+*If this disk was roughly the size of the solid base of a typical frying pan, and the frequency was $20\ \mathrm{kHz}$, use the above result for power per unit volume to find what approximate scale for $B_0$ you would need to rapidly and significantly heat up the pan (say, 1000 watts of power). Does this seem feasible?*
 
 For the sake of argument, lets use a 10" frying pan with a thickness of 5mm.
 It is also made of stainless steel, and so $\sigma=1.45\cdot10^6\ \mathrm{S/m}$ at $T=20\mathrm{^{\circ}C}$.
@@ -303,7 +284,6 @@ B_0^2&=\dfrac{16\bar{P}}{\pi\sigma \omega^2a^4h}\\
 &=4.135\cdot10^{-4}\ \mathrm{T}\\
 \end{align}$$
 It seems pretty reasonable that we could do this form of induction cooktop, since the magnitude of $B_0$ is around the order of less than $1.0\text{ mT}$.
+#### 4.C.3
+Didn't have enough time!
 
-
-
-**iii)** Didn't have enough time!

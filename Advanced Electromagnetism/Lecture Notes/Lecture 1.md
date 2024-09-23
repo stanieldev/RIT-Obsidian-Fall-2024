@@ -1,4 +1,7 @@
-**Date: 8/27/2024**
+**Name:** Stanley Goodwin
+**Date:** 8/27/2024
+
+---
 ## Syllabus
 Homework every week except exam weeks.
 

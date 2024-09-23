@@ -1,5 +1,7 @@
-**Date: 9/3/2024**
+**Name:** Stanley Goodwin
+**Date:** 9/3/2024
 
+---
 ## Interest Models
 
 ### Simple Interest

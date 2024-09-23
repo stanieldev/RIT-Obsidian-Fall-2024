@@ -1,5 +1,7 @@
-**Date: 9/3/2024**
+**Name:** Stanley Goodwin
+**Date:** 9/3/2024
 
+---
 ### Conductors in Equilibrium
  - In equilibrium, $\vec{E}=0$ inside the conducting material.
  - This also implies, by $\vec{E} = -\vec\nabla V$, that $V$ is uniform within the conducting material.

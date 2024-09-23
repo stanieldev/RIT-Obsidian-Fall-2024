@@ -1,4 +1,7 @@
-**Date: 9/6/2024**
+**Name:** Stanley Goodwin
+**Date:** 9/6/2024
+
+---
 
 Example: $u_x=u_{xx}+3u_y$
 $$u(x,y)=Ae^{kx}e^{-\tfrac{3}{2}y}\left(Be^{\sqrt{\left(\tfrac{9}{4}+k\right)}y}+Ce^{-\sqrt{\left(\tfrac{9}{4}+k\right)}y}\right)$$

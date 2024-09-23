@@ -1,4 +1,7 @@
-**Date: 8/29/2024**
+**Name:** Stanley Goodwin
+**Date:** 8/29/2024
+
+---
 
 Interpolation model: Passes through every datapoint.
 Regression model: Does a least squares best fit.
