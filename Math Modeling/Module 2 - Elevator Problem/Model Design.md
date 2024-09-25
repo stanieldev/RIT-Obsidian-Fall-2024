@@ -1,10 +1,9 @@
 **Date 9/17/2024**
 
-
-### Parameter Space
+### Model Parameter Space (Email)
 Given the set of parameters here:
 $$\begin{align}
-T_\text{G}&=15\mathrm{s} &\text{The time the elevator is open on the ground floor.}\\
+T_\text{0}&=15\mathrm{s} &\text{The time the elevator is open on the ground floor.}\\
 T_\text{F}&=10\mathrm{s}\ &\text{The time the door is open on non-ground floors.} \\
 T_\text{t}&=4\ \mathrm{s}/\text{Floor}\ &\text{The time the elevator takes to travel between floors.}\\
 N_\text{F}&=6\text{ Floors}\ &\text{The number of floors of the building above the ground floor.}\\
@@ -16,121 +15,95 @@ $$\begin{align}
 \text{Floor}&&\text{G}&&\text{1st}&&\text{2nd}&&\text{3rd}&&\text{4th}&&\text{5th}&&\text{6th}\\
 \text{Number}&&0&&80&&80&&40&&80&&20&&20
 \end{align}$$
-**Note:** For the sake of the model, I will assume that no one misses their floor, since it's reasonable that employees are paying attention to the floor they're traveling to.
-
-
-### Single-Elevator
-Notice about some assumptions:
- - An elevator will always be filled to capacity $C_\text{E}$.
- - The probability of people going to floors is independent of each-other.
-	 - No groups of employees travel together.
- - Employees always leave on their designated floor.
+### Model Assumptions
+In order to keep the mathematics a lot less complicated, I propose a few constraints:
+ - An elevator will always be, and will only leave when, filled to capacity $C_\text{E}$.
+	 - This has less to do with reality and more to minimize the number of trips.
+ - The probability of individual employees going to floors are independent of each-other.
+	 - No groups of employees/friends travel together.
+	 - This keeps the probability of traveling to different floors independent.
+ - Employees always get off at their designated floor.
+	 - We assume that employees are paying attention to the floor they're traveling to.
 	 - This ensures the door only opens once per floor.
  - Employees do not interfere with the operations of the elevator.
-	 - No changing the time it takes for the elevator to operate.
- - The probability distribution of floors does not change with time (approximately).
-	 - I.e. Employees from higher floors coming in earlier to beat traffic.
+	 - Employees are assumed to be harmless to elevator operations.
+	 - This ensures that elevator times are unchanged while operating.
+ - Employees arrive to the lobby at equally-spaced interval.
+	 - Employees are assumed to have no free will on when they arrive, on average.
+	 - This controls for employee arrival times being influenced by other employees and what floor an employee needs to get to.
 
-Given the probability $p_i$, representing the probability of a worker going to floor $i$ :
-$$p\in\left\{p_i|1\le i\le n, i\in\mathbb{N}\right\} \text{ where } \displaystyle\sum_i p_i = 1$$
-We can represent the probability of certain configurations of elevator stops :
+### Single-Elevator
+To model a singular elevator, we can represent the number of employees going to each floor as an ordered list of configurations:
+$$E=\left[n_1,n_2,\dots,n_{N_\text{F}}\right],\text{ where } \displaystyle\sum_in_i=C_\text{E}$$
+We can also represent the probability of an employee getting off on floor $i$ : 
+$$p_i=\dfrac{\text{Employees on floor }i}{\text{Total Employees}}, \text{ where } \displaystyle\sum_i p_i = 1$$
+We can express the probability of a configuration $E$ as:
 $$\begin{align}
-p\left(\left\{n_1,n_2,\dots,n_n\right\}\right)&=C!\cdot\prod_{i=1}^n\dfrac{p_i^{n_i}}{n_i!}
+p\left(E\right)&=(C_\text{E})!\cdot\prod_{f=1}^{N_\text{F}}\dfrac{(p_f)^{n_f}}{(n_f)!}
 \end{align}$$
-We can also represent the time for each configuration.
-$$T\left(S\right)= T_0 + F(S)\cdot T_\text{f} + M(S)\cdot 2T_\text{t}$$
-Where $F(S)$ is the number of floors that don't have $0$ people going to it and $M(S)$ is the highest floor that doesn't have $0$ people going to it.
+To find the time of the configuration, we can write it as:
+$$T\left(E\right)= T_0 + F(E)\cdot T_\text{f} + 2M(E)\cdot T_\text{t}$$
+Where $F(E)$ is the number of floors that don't have $0$ people going to it and $M(E)$ is the highest floor that doesn't have $0$ people going to it.
 
-This means we can calculate the expected value of $T$.
+#### Sensitivity
+Starting with the time of a configuration
+$$T\left(E\right)=T_0+F(E)\cdot T_\text{f} + 2M(E)\cdot T_\text{t}$$
+we get that the responses of changes to our parameters are:
 $$\begin{align}
-\langle T\rangle&=\sum_{S} T(S)\cdot p(S)\\
-&=T_\text{G}+T_\text{F}\langle F(S)\rangle+2T_\text{t}\langle M(S)\rangle
-\end{align}$$
-
-
-
-
-
-
-
-
-
-
-### Elevator Problem Analysis
-Given the set of parameters here:
-$$\begin{align}
-T_0:\ &\text{The time the door is open on the ground floor.}\\
-T_\text{f}:\ &\text{The time the door is open on non-ground floors.} \\
-T_\text{t}:\ &\text{The time the elevator takes to travel between floors.}\\
-n:\ &\text{The number of floors of the building above the ground floor.}\\
-C:\ &\text{Max Capacity of a singular Elevator.}\\
-N:\ &\text{Number of elevators in the building.}
-\end{align}$$
-
-
-
-Worst Case Period : $T_\text{W} = T_0 + nT_\text{f} + 2nT_\text{t}$
-$$\begin{align}
-\dfrac{\partial T_\text{W}}{\partial T_0}&= 1& 
-\dfrac{\partial T_\text{W}}{\partial T_\text{f}}&= n&
-\dfrac{\partial T_\text{W}}{\partial T_\text{t}}&= 2n&
-\dfrac{\partial T_\text{W}}{\partial n}&= T_\text{f}+2T_\text{t}
-\end{align}$$
-
-### Incorporating Randomness
-
-
-### Combinatorics
-Given the probability $p_i$, representing the probability of a worker going to floor $i$ :
-$$p\in\left\{p_i|1\le i\le n, i\in\mathbb{N}\right\} \text{ where } \displaystyle\sum_i p_i = 1$$
-We can represent the probability of certain configurations of elevator stops :
-$$\begin{align}
-p\left(\left\{n_1,n_2,\dots,n_n\right\}\right)&=\left(\begin{array}!C\\n_1\end{array}\right)\left(\begin{array}!C-n_1\\n_2\end{array}\right)\left(\begin{array}!C-n_1-n_2\\n_3\end{array}\right)\dots p_1^{n_1}p_2^{n_2}p_3^{n_3}\dots\\
-&=\dfrac{(C)!}{(n_1)!}\dfrac{1}{(n_2)!}\dots\dfrac{1}{(n_{n-1})!}\dfrac{1}{(n_n)!}\dots p_1^{n_1}p_2^{n_2}p_3^{n_3}\dots\\
-\Aboxed{p\left(\left\{n_1,n_2,\dots,n_n\right\}\right)&=C!\cdot\prod_{i=1}^n\dfrac{p_i^{n_i}}{n_i!}}
-\end{align}$$
-We can also represent the time for each configuration.
-$$T\left(S\right)= T_0 + |S|T_\text{f} + 2\max(S)\cdot T_\text{t}$$
-This means we can calculate the expected value of $T$.
-$$\begin{align}
-\langle T\rangle&=\sum_{S} T(S)\cdot p(S)\\
-&=T_0+T_\text{f}\langle|S|\rangle+2T_\text{t}\langle\max{S}\rangle
-\end{align}$$
-And the second moment of $T$.
-$$\begin{align}
-\langle T^2\rangle&=\sum_{S} T(S)^2\cdot p(S)\\
-&=\sum_{S} (T_0+T_\text{f}|S|+2T_\text{t}\max{S})^2\cdot p(S)\\
-&= T_0^2+T_\text{f}^2\langle|S|^2\rangle+4T_\text{t}^2\langle(\max{S})^2\rangle+2T_0T_\text{f}\langle|S|\rangle+4T_\text{f}T_\text{t}\langle|S|\cdot\max{S}\rangle+4T_0T_\text{t}\langle\max{S}\rangle
-\end{align}$$
-As well as the variance of $T$.
-$$\begin{align}
-\sigma_T^2&= T_0^2+T_\text{f}^2\langle|S|^2\rangle+4T_\text{t}^2\langle(\max{S})^2\rangle+2T_0T_\text{f}\langle|S|\rangle+4T_\text{f}T_\text{t}\langle|S|\cdot\max{S}\rangle+4T_0T_\text{t}\langle\max{S}\rangle\\
-&-T_0^2-T_\text{f}^2\langle|S|\rangle^2-4T_\text{t}^2\langle\max{S}\rangle^2-2T_0T_\text{f}\langle|S|\rangle-4T_\text{f}T_\text{t}\langle|S|\rangle\langle\max{S}\rangle-4T_0T_\text{t}\langle\max{S}\rangle\\
-\Aboxed{\sigma_T^2&=T_\text{f}^2\sigma_{|S|}^2+4T_\text{t}^2\sigma_{\max S}^2+4T_\text{f}T_\text{t}\left(\langle|S|\cdot\max{S}\rangle-\langle|S|\rangle\langle\max{S}\rangle\right)}\\
-\end{align}$$
-
-
-### Summary of Combinatorics
-*Singular Elevator Period*
-$$\begin{align}
-\langle T\rangle&=T_0+T_\text{f}\langle|S|\rangle+2T_\text{t}\langle\max{S}\rangle\\
-\langle T^2\rangle&=T_0^2+T_\text{f}^2\langle|S|^2\rangle+4T_\text{t}^2\langle(\max{S})^2\rangle+2T_0T_\text{f}\langle|S|\rangle+4T_\text{f}T_\text{t}\langle|S|\cdot\max{S}\rangle+4T_0T_\text{t}\langle\max{S}\rangle\\
-\sigma_T^2&=T_\text{f}^2\sigma_{|S|}^2+4T_\text{t}^2\sigma_{\max S}^2+4T_\text{f}T_\text{t}\left(\langle|S|\cdot\max{S}\rangle-\langle|S|\rangle\langle\max{S}\rangle\right)
-\end{align}$$
-*Number of Stops*
-$$\begin{align}
-\langle |S|\rangle&=\sum_{S} |S|\cdot p(S)\\
-\langle |S^2|\rangle&=\sum_{S} |S|^2\cdot p(S)\\
-\sigma_{|S|}^2&=\langle |S^2|\rangle-\langle |S|\rangle^2
-\end{align}$$
-*Number of Floors*
-$$\begin{align}
-\langle \max S\rangle&=\sum_{S} (\max{S})\cdot p(S)\\
-\langle (\max{S})^2\rangle&=\sum_{S} (\max{S})^2\cdot p(S)\\
-\sigma_{\max{S}}^2&=\langle(\max{S})^2\rangle-\langle\max{S}\rangle^2
+\dfrac{\partial T(E)}{\partial T_0}&= 1& 
+\dfrac{\partial T(E)}{\partial T_\text{f}}&= F(E)&
+\dfrac{\partial T(E)}{\partial T_\text{t}}&= M(E)
 \end{align}$$
 
 
 
 
-### Sensitivity to Parameters
+#### Statistical Quantities
+We can calculate the expected values of floors, the maximum floor, and total duration:
+$$\begin{align}
+\langle F\rangle&=\sum_{E} F(E)\cdot p(E)\\
+\langle M\rangle&=\sum_{E} F(E)\cdot p(E)\\
+\langle T\rangle&=\sum_{E} T(E)\cdot p(E)\\
+&=T_0+\langle F\rangle\cdot T_\text{f} + 2\langle M\rangle\cdot T_\text{t}\\
+\end{align}$$
+As well as the second moments:
+$$\begin{align}
+\langle F^2\rangle&=\sum_{E} F(E)^2\cdot p(E)\\
+\langle M^2\rangle&=\sum_{E} F(E)^2\cdot p(E)\\
+\langle T^2\rangle&=\sum_{E} T(E)^2\cdot p(E)\\
+&=T_0^2+T_\text{f}^2\langle F^2\rangle + 4T_\text{t}^2\langle M^2\rangle+2T_0T_\text{f}\langle F\rangle+2T_\text{f}T_\text{t}\langle F\cdot M\rangle+2T_\text{t}T_0\langle M\rangle\\
+\end{align}$$
+Leading to standard deviation:
+$$\begin{align}
+\sigma_F^2&=\langle F^2\rangle-\langle F\rangle^2\\
+\sigma_M^2&=\langle M^2\rangle-\langle M\rangle^2\\
+\sigma_{FM}^2&=\langle F\cdot M\rangle-\langle F\rangle\langle M\rangle\\
+\sigma_T^2&=\langle T^2\rangle-\langle T\rangle^2\\
+&=T_0^2+T_\text{f}^2\langle F^2\rangle + 4T_\text{t}^2\langle M^2\rangle+2T_0T_\text{f}\langle F\rangle+2T_\text{f}T_\text{t}\langle F\cdot M\rangle+2T_\text{t}T_0\langle M\rangle\\
+&-T_0^2-T_\text{f}^2\langle F\rangle^2 - 4T_\text{t}^2\langle M\rangle^2-2T_0T_\text{f}\langle F\rangle-2T_\text{f}T_\text{t}\langle F\rangle\langle M\rangle-2T_\text{t}T_0\langle M\rangle\\
+\sigma_T^2&=(T_\text{f}^2)\sigma_F^2+(2T_\text{f}T_\text{t})\sigma_{FM}^2+ (4T_\text{t}^2)\sigma_M^2\\
+\Aboxed{\sigma_T&=\sqrt{(T_\text{f}^2)\sigma_F^2+(2T_\text{f}T_\text{t})\sigma_{FM}^2+ (4T_\text{t}^2)\sigma_M^2}}
+\end{align}$$
+Notice: The standard deviation of time depends on both number of floors and the highest floor, but also the cross-correlation between them.
+
+
+### Calculating by Random Sampling
+
+
+
+| Params                    | Trials    | Result    |
+| ------------------------- | --------- | --------- |
+| $\langle F\rangle$        | 1,000,000 | 4.519028  |
+| $\langle M\rangle$        | 1,000,000 | 5.202572  |
+| $\langle F^2\rangle$      | 1,000,000 | 21.080626 |
+| $\langle M^2\rangle$      | 1,000,000 | 27.79676  |
+| $\langle F\cdot M\rangle$ | 1,000,000 | 23.955666 |
+**Trial 1 Parameters**
+
+| Params               | Simulated Value<br>(1mil Trials) |
+| -------------------- | -------------------------------- |
+| $\langle T\rangle$   | 101.810856                       |
+| $\langle T^2\rangle$ | 10549.28748                      |
+| $\sigma_T^2$         | 183.837081                       |
+| $\sigma_T$           | 13.55865335                      |
+**Trial 1 Times**
