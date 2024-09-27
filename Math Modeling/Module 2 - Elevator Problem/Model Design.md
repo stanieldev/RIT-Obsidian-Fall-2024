@@ -7,7 +7,7 @@ T_\text{0}&=15\mathrm{s} &\text{The time the elevator is open on the ground floo
 T_\text{F}&=10\mathrm{s}\ &\text{The time the door is open on non-ground floors.} \\
 T_\text{t}&=4\ \mathrm{s}/\text{Floor}\ &\text{The time the elevator takes to travel between floors.}\\
 N_\text{F}&=6\text{ Floors}\ &\text{The number of floors of the building above the ground floor.}\\
-N_\text{E}&=x\text{ Elevators}\ &\text{Number of elevators in the building.}\\
+N_\text{E}&=3\text{ Elevators}\ &\text{Number of elevators in the building.}\\
 C_\text{E}&=10\text{ People}\ &\text{Max Capacity of a singular Elevator.}
 \end{align}$$
 We're given that the distribution of workers per floor is:
@@ -32,6 +32,19 @@ In order to keep the mathematics a lot less complicated, I propose a few constra
 	 - Employees are assumed to have no free will on when they arrive, on average.
 	 - This controls for employee arrival times being influenced by other employees and what floor an employee needs to get to.
 
+
+
+### Elevator Scoring
+
+
+
+
+
+
+
+
+
+
 ### Single-Elevator
 To model a singular elevator, we can represent the number of employees going to each floor as an ordered list of configurations:
 $$E=\left[n_1,n_2,\dots,n_{N_\text{F}}\right],\text{ where } \displaystyle\sum_in_i=C_\text{E}$$
@@ -54,6 +67,9 @@ $$\begin{align}
 \dfrac{\partial T(E)}{\partial T_\text{f}}&= F(E)&
 \dfrac{\partial T(E)}{\partial T_\text{t}}&= M(E)
 \end{align}$$
+
+
+
 
 
 
@@ -88,22 +104,34 @@ Notice: The standard deviation of time depends on both number of floors and the 
 
 
 ### Calculating by Random Sampling
+When calculating a random sampling, the cardinality of the configuration space takes the following form:
+$$\mathrm{Configurations}=N_\text{F}^{C_\text{E}}$$
+Since every employee in the elevator can go to any of the floors. The associated probabilities of each configuration are different, but the total number of configurations is static.
+For our particular problem, the number of configurations
+$$\mathrm{Configurations}=6^{10}\approx 6\cdot10^{7} =60\ \mathrm{million}$$
+For my simulation, I did 2 different trials, A and B.
+Trial A, being a weighted random sampling of 1 million elevator configurations, is a sample population of the true population.
+Trial B, being over 480 million configurations, is also a weighted random sample, but effectively 6x census of the population. It is overkill, but I had this just running for a while to converge on a reasonable answer, instead of brute forcing the configuration states.
+
+| Trial      | $\langle F\rangle$ | $\langle M\rangle$ | $\langle F^2\rangle$ | $\langle M^2\rangle$ | $\langle F\cdot M\rangle$ |
+| ---------- | ------------------ | ------------------ | -------------------- | -------------------- | ------------------------- |
+| A (1mil)   | 4.519028           | 5.202572           | 21.080626            | 27.79676             | 23.955666                 |
+| B (480mil) | 4.521325           | 5.204896           | 21.102233            | 27.82128             | 23.977083                 |
+**Table A: Weighted Random Sampling of Elevator Configuration Space.**
+
+| Trial      | Type | $\langle T\rangle$ | $\langle T^2\rangle$ | $\sigma_T^2$ | $\sigma_T$  |
+| ---------- | ---- | ------------------ | -------------------- | ------------ | ----------- |
+| A (1mil)   | Sim  | 101.810856         | 10549.28748          | 183.837081   | 13.55865335 |
+| B (480mil) | Sim  | 101.852417         | 10557.69             | 183.596787   | 13.54731124 |
+**Table B: Cycle Time of Elevator Configuration Space.**
 
 
+Plotting the error in expected values vs the number of configurations, we see that is it overly sufficient, but would have been better had I just done a census of the population.
+![[err_abs.png]]
+![[sq_err_abs.png]]
+**Notice: The dashed vertical lines represent integer multiples of the total configuration.**
 
-| Params                    | Trials    | Result    |
-| ------------------------- | --------- | --------- |
-| $\langle F\rangle$        | 1,000,000 | 4.519028  |
-| $\langle M\rangle$        | 1,000,000 | 5.202572  |
-| $\langle F^2\rangle$      | 1,000,000 | 21.080626 |
-| $\langle M^2\rangle$      | 1,000,000 | 27.79676  |
-| $\langle F\cdot M\rangle$ | 1,000,000 | 23.955666 |
-**Trial 1 Parameters**
 
-| Params               | Simulated Value<br>(1mil Trials) |
-| -------------------- | -------------------------------- |
-| $\langle T\rangle$   | 101.810856                       |
-| $\langle T^2\rangle$ | 10549.28748                      |
-| $\sigma_T^2$         | 183.837081                       |
-| $\sigma_T$           | 13.55865335                      |
-**Trial 1 Times**
+However, the exponential nature of configurations makes finding the averages computationally ineffective for larger elevator capacities and floor numbers.
+
+The comparison is to show that the error is reasonably small even for smaller samples, and it tends to become exponentially closer to the true value as the number of configurations simulated equals the number of total configurations.
