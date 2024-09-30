@@ -63,30 +63,41 @@ $$\begin{align}
 ## Exercise 3
 Compute the same contour integral of $f(z)=e^z$ over the contour $\Gamma$ using Cauchy’s theorem, and verify that the result is consistent with the answer from Exercise 1.
 $$\begin{align}
-f(z)&=e^z=e^{x+iy}=e^x\left(\cos y + i\sin y\right)\\
-f(x,y)&=\left(e^x\cos y \right)+i\left(e^x\sin y\right)
+f(z)=e^z \implies \dfrac{df(z)}{dz}=e^z
 \end{align}$$
-$$\begin{align}
-\dfrac{\partial \Im\left(f(x,y)\right)}{dx}&=-\dfrac{\partial \Re\left(f(x,y)\right)}{dy}\\
-\dfrac{\partial\left(e^x\sin y\right)}{dx}&=-\dfrac{\partial\left(e^x\cos y \right)}{dy}\\
-e^x\sin y&=-\left(-e^x\sin y \right)\\
-\Aboxed{e^x\sin y&=e^x\sin y}
-\end{align}$$
+Since $f(z)$ is differentiable (holomorphic) over all space, then $\displaystyle\oint_\gamma f(z)\ dz=0$.
+
 
 ---
 ## Exercise 4
 Compute the contour integral of $f(z)=\dfrac{1}{z-1}$ over a square contour $\Gamma$, oriented counter-clockwise, centered at the origin with a side length B. The contour integral is:
 $$I=\oint\dfrac{1}{z-1}\ dz$$
-So I'm going to use a trick:
+For the sake of convenience, I'm going to break the contour into the following:
 $$\begin{align}
-\oint\dfrac{1}{z-1}\ dz&=2\pi i\cdot\text{Res}(z=1)\\
-&=2\pi i\cdot\lim_{z\rightarrow 1}(z-1)\cdot\dfrac{1}{z-1}\\
-\Aboxed{\oint\dfrac{1}{z-1}&=2\pi i}
+\oint\dfrac{1}{z-1}\ dz&=\int_{\Gamma_1}\dfrac{1}{z-1}\ dz+\int_{\Gamma_2}\dfrac{1}{z-1}\ dz+\int_{\Gamma_3}\dfrac{1}{z-1}\ dz+\int_{\Gamma_4}\dfrac{1}{z-1}\ dz\\
+&+\int_{\Gamma_5}\dfrac{1}{z-1}\ dz+\int_{\Gamma_6}\dfrac{1}{z-1}\ dz+\int_{\Gamma_7}\dfrac{1}{z-1}\ dz+\int_{\Gamma_8}\dfrac{1}{z-1}\ dz\\
 \end{align}$$
-Alternatively, I'll do as the question asked instead:
+Doing a bit of simplification, we can see that:
+$$\begin{align}
+\int_{\Gamma_1}\dfrac{1}{z-1}\ dz+\int_{\Gamma_2}\dfrac{1}{z-1}\ dz+\int_{\Gamma_3}\dfrac{1}{z-1}\ dz+\int_{\Gamma_4}\dfrac{1}{z-1}\ dz+\int_{\Gamma_5}\dfrac{1}{z-1}\ dz &=0\\
+\int_{\Gamma_6}\dfrac{1}{z-1}\ dz+\int_{\Gamma_8}\dfrac{1}{z-1}\ dz&=0
+\end{align}$$
+
+
+
+
+
+Therefore, the original expression simplifies to the following:
+$$\begin{align}
+\oint\dfrac{1}{z-1}\ dz&=\int_{\Gamma_7}\dfrac{1}{z-1}\ dz\\
+&=\lim_{R\rightarrow0}\int_{0}^{2\pi}\dfrac{1}{Re^{i\theta}}\ dz
+\end{align}$$
+
+
+
+
+
 For $B\ge2$:
 $$\begin{align}
-\oint\dfrac{1}{z-1}\ dz&=\int_{-\tfrac{B}{2}}^{\tfrac{B}{2}}\dfrac{1}{\tfrac{B}{2}+iy-1}\ idy+\int_{\tfrac{B}{2}}^{-\tfrac{B}{2}}\dfrac{1}{-\tfrac{B}{2}+iy-1}\ idy\\
-&+\int_{-\tfrac{B}{2}}^{\tfrac{B}{2}}\dfrac{1}{x-i\tfrac{B}{2}-1}\ dx+\int_{\tfrac{B}{2}}^{-\tfrac{B}{2}}\dfrac{1}{x+i\tfrac{B}{2}-1}\ dx\\
-\Aboxed{\oint\dfrac{1}{z-1}\ dz&=2\pi i}
+\oint\dfrac{1}{z-1}\ dz&=
 \end{align}$$
