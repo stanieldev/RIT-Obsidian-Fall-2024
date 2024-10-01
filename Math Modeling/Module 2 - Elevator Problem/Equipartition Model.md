@@ -35,9 +35,9 @@ In order to keep the mathematics a lot less complicated, I propose a few constra
 
 ### Equipartition of States
 There are 3 characteristics of time we can determine from a bit of thinking:
-$T_0$ is minimized if the elevator is always full.
-$T_\mathrm{F}$ is minimized if the elevators have as few different floors as possible.
-$T_\mathrm{t}$ is minimized if the elevators have adjacent floors.
+1. $T_0$ is minimized if the elevator is always full.
+2. $T_\mathrm{F}$ is minimized if the elevators have as few different floors as possible.
+3. $T_\mathrm{t}$ is minimized if the elevators have adjacent floors.
 
 We also know that the elevator that takes the longest ends up being the total time for everyone, since we're looking at the maximum time of all 3 elevators. This implies that the optimal strategy must be the set of elevators that have identical times between all 3.
 

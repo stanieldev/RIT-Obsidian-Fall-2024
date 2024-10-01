@@ -77,27 +77,17 @@ $$\begin{align}
 \oint\dfrac{1}{z-1}\ dz&=\int_{\Gamma_1}\dfrac{1}{z-1}\ dz+\int_{\Gamma_2}\dfrac{1}{z-1}\ dz+\int_{\Gamma_3}\dfrac{1}{z-1}\ dz+\int_{\Gamma_4}\dfrac{1}{z-1}\ dz\\
 &+\int_{\Gamma_5}\dfrac{1}{z-1}\ dz+\int_{\Gamma_6}\dfrac{1}{z-1}\ dz+\int_{\Gamma_7}\dfrac{1}{z-1}\ dz+\int_{\Gamma_8}\dfrac{1}{z-1}\ dz\\
 \end{align}$$
+Here's a graph of the contour breakup (as $R\rightarrow 0$):
+![[HW4_Q4.png]]
 Doing a bit of simplification, we can see that:
 $$\begin{align}
 \int_{\Gamma_1}\dfrac{1}{z-1}\ dz+\int_{\Gamma_2}\dfrac{1}{z-1}\ dz+\int_{\Gamma_3}\dfrac{1}{z-1}\ dz+\int_{\Gamma_4}\dfrac{1}{z-1}\ dz+\int_{\Gamma_5}\dfrac{1}{z-1}\ dz &=0\\
 \int_{\Gamma_6}\dfrac{1}{z-1}\ dz+\int_{\Gamma_8}\dfrac{1}{z-1}\ dz&=0
 \end{align}$$
-
-
-
-
-
 Therefore, the original expression simplifies to the following:
 $$\begin{align}
-\oint\dfrac{1}{z-1}\ dz&=\int_{\Gamma_7}\dfrac{1}{z-1}\ dz\\
-&=\lim_{R\rightarrow0}\int_{0}^{2\pi}\dfrac{1}{Re^{i\theta}}\ dz
-\end{align}$$
-
-
-
-
-
-For $B\ge2$:
-$$\begin{align}
-\oint\dfrac{1}{z-1}\ dz&=
+\oint\dfrac{1}{z-1}\ dz&=\lim_{R\rightarrow0}\int_{\Gamma_7}\dfrac{1}{\left(Re^{i\theta}+1\right)-1}\ d\left(Re^{i\theta}+1\right)\\
+&=\lim_{R\rightarrow0}\int_{0}^{2\pi}\dfrac{iRe^{i\theta}}{Re^{i\theta}}\ d\theta\\
+&=i\int_{0}^{2\pi}\ d\theta\\
+\Aboxed{\oint\dfrac{1}{z-1}\ dz&=2\pi i}
 \end{align}$$
