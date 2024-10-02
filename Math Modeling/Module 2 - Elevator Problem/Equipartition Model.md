@@ -66,3 +66,16 @@ $$\begin{align}
 T&=\left\lceil\dfrac{N_1}{C_\mathrm{E}}\right\rceil\left(T_0+\langle F\rangle\cdot T_\text{f} + 2\langle M\rangle\cdot T_\text{t}\right)\\
 \sigma_T&=\left\lceil\dfrac{N_1}{C_\mathrm{E}}\right\rceil\sqrt{(T_\text{f}^2)\sigma_F^2+(2T_\text{f}T_\text{t})\sigma_{FM}^2+ (4T_\text{t}^2)\sigma_M^2}
 \end{align}$$
+
+
+
+$$\begin{align}
+E_1&=\left[80,80,31,\ 0\ ,\ 0\ ,\ 0\ \right] & N_1&=191\\
+E_3&=\left[\ 0\ ,\ 0\ ,\ 9\ ,80,20,20\right] & N_3&=129\\
+\end{align}$$
+$$T=1308\mathrm{s}=21\mathrm{m},48\mathrm{s}$$
+
+| Trial      | Type | $\langle T\rangle$ | $\dfrac{N_\text{employees}}{N_\text{E}\cdot C_\text{E}}\langle T\rangle$ | Min, Sec                   |
+| ---------- | ---- | ------------------ | ------------------------------------------------------------------------ | -------------------------- |
+| A (1mil)   | Sim  | 101.810856         | 1,629$\mathrm{s}$                                                        | $27\mathrm{m},9\mathrm{s}$ |
+| B (480mil) | Sim  | 101.852417         | 1630$\mathrm{s}$                                                         | $27\mathrm{m},9\mathrm{s}$ |

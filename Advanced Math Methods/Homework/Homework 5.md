@@ -19,14 +19,14 @@ f(0)&=\dfrac{1}{2\pi i}\oint\dfrac{f(z)}{z}\ dz\\
 &=\dfrac{1}{2\pi i}\int_0^{2\pi}\dfrac{f(Re^{i\phi})}{Re^{i\phi}}\ d\left(Re^{i\phi}\right)\\
 &=\dfrac{1}{2\pi i}\int_0^{2\pi}\dfrac{b(\phi)\cdot iRe^{i\phi}}{Re^{i\phi}}\ d\theta\\
 f(0)&=\dfrac{1}{2\pi}\int_0^{2\pi}b(\phi)\ d\theta\\
-\Re(f(0))&=\dfrac{1}{2\pi}\int_0^{2\pi}b(\phi)\ d\theta\\
+\Re(f(0))&=\Re\left(\dfrac{1}{2\pi}\int_0^{2\pi}b(\phi)\ d\theta\right)\\
 \Aboxed{u(0,0)&=\dfrac{1}{2\pi}\int_0^{2\pi}b(\phi)\ d\theta}
 \end{align}$$
 ### 1.2
-Write the contour integral explicitly by parametrizing it with polar coordinates centered around the origin, proving the following formula: $u(0,0)=\dfrac{1}{2\pi}\displaystyle\int_0^{2\pi} b(\phi)\ d\phi$
+*Write the contour integral explicitly by parametrizing it with polar coordinates centered around the origin, proving the following formula:* $u(0,0)=\dfrac{1}{2\pi}\displaystyle\int_0^{2\pi} b(\phi)\ d\phi$
 $$\begin{align}
 ...
 \end{align}$$
 ---
 ## Question 2
-
+Choose $f(z)=z^2$. Evaluate the value of $u(x,y)$ at the boundary of the disk of radius $R$ (i.e. the function $b(\phi)$) and apply the formula derived in Exercise 1 to verify explicitly that the value of the potential $u$ at its center is consistent with Eq. (2).
