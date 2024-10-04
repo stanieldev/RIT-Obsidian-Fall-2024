@@ -17,7 +17,7 @@ To solve this problem, we'll assume (with no loss of generality) that $u(x,y)$ i
 $$\begin{align}
 f(0+0i)&=\dfrac{1}{2\pi i}\oint\dfrac{f(z)}{z}\ dz\\
 &=\dfrac{1}{2\pi i}\oint\dfrac{u(x,y)+iv(x,y)}{x+iy}\ d\left(dx+idy\right)\\
-&=\dfrac{1}{2\pi i}\oint\dfrac{u(R\cos\phi,R\sin\phi)}{Re^{i\phi}}\ iRe^{i\phi}\ d\phi\\
+&=\dfrac{1}{2\pi i}\oint\dfrac{u(R\cos\phi,R\sin\phi)}{Re^{i\phi}}\ iRe^{i\phi}\ d\phi+\dfrac{1}{2\pi i}\oint\dfrac{iv(R\cos\phi,R\sin\phi)}{Re^{i\phi}}\ iRe^{i\phi}\ d\phi\\
 &=\dfrac{1}{2\pi }\oint u(R\cos\phi,R\sin\phi)\ d\phi+i\dfrac{1}{2\pi }\oint v(R\cos\phi,R\sin\phi)\ d\phi\\
 \Re\left(f(0+0i)\right)&=\dfrac{1}{2\pi }\oint u(R\cos\phi,R\sin\phi)\ d\phi\\
 \Aboxed{u(0,0)&=\dfrac{1}{2\pi }\oint b(\phi)\ d\phi}

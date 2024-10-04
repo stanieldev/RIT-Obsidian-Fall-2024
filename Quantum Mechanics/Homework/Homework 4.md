@@ -4,6 +4,10 @@
 
 
 
+
+
+
+
 ## 1
 $$x=x_0\left(a^\dagger+a\right), x_0=\sqrt{\dfrac{\hbar}{2m\omega}}$$
 $$p=p_0\left(a^\dagger-a\right), p_0=\sqrt{\dfrac{m\hbar\omega}{2}}$$
