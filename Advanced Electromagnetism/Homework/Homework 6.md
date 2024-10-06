@@ -16,7 +16,7 @@ $$\begin{align}
 \int_{0}^{2\pi}\left(B\hat\phi\right)\cdot \left(sd\phi\ \hat\phi\right)&=\mu_0I_\text{enc}\\
 B\cdot\int_{0}^{2\pi} sd\phi&=\mu_0I_0\cos(\omega t)\\
 B\cdot 2\pi s&=\mu_0I_0\cos(\omega t)\\
-\Aboxed{\vec{B}=\dfrac{\mu_0I_0}{2\pi s}\cos(\omega t)\hat\phi}
+\Aboxed{\vec{B}(s,t)=\dfrac{\mu_0I_0}{2\pi s}\cos(\omega t)\hat\phi}
 \end{align}$$
 ### 1.b
 *Find the induced electric field $\vec E(s,t)$ in the "coax region" $a<s<b$.*
@@ -25,7 +25,7 @@ $$\begin{align}
 \oint E\cdot sd\phi&=-\dfrac{d}{dt}\iint B\cdot sdsd\phi\\
 E\cdot 2\pi s&=-2\pi\dfrac{d}{dt}\int \dfrac{\mu_0I_0}{2\pi s}\cos(\omega t)\cdot sds\\
 E\cdot 2\pi s&=-2\pi\dfrac{d}{dt}\left(\dfrac{\mu_0I_0}{2\pi}\cos(\omega t)\cdot s\right)\\
-E\cdot &=-\dfrac{\mu_0I_0}{2\pi}\dfrac{d}{dt}\cos(\omega t)\\
+E &=-\dfrac{\mu_0I_0}{2\pi}\dfrac{d}{dt}\cos(\omega t)\\
 E&=\dfrac{\mu_0I_0\omega}{2\pi}\sin(\omega t)\\
 \Aboxed{\vec E&=\dfrac{\mu_0I_0\omega}{2\pi}\sin(\omega t)\hat\phi}
 \end{align}$$
@@ -93,6 +93,7 @@ $$\begin{align}
 \end{align}$$
 #### 3.b.I
 *Sketch a plot of the magnitude of $\tilde V_\text{out}(t)/V_\text{in}(t)$ versus $\omega$.*
+**TODO**
 #### 3.b.II
 *Check that your solution makes sense in the limits $\omega\rightarrow0$ and $\omega\rightarrow\infty$.*
 $$\begin{align}
@@ -119,19 +120,50 @@ This is exactly a **low-pass filter**, since it decreases the signal strength of
 
 ---
 ## Question 4
+For our final circuit, consider the series RLC circuit shown to the right. Assume that the circuit is underdamped (i.e. $R$ is small), and that all transients have long since died away.
+The power supply provides a driving emf $V(t)=V_0\sin(\omega t)$.
 ### 4.a
-
+*What Find an equation for the true current through the power supply as a function of time.*
+$$\begin{align}
+...
+\end{align}$$
 ### 4.b
-
+*Hand sketch a rough plot of the amplitude of the true current as a function of $\omega$, showing and briefly explaining any interesting features (such as the limits and anything else that stands out to you.*
+$$\begin{align}
+...
+\end{align}$$
 ### 4.c
+Now let’s use some realistic values appropriate to an inexpensive oscillator, say a 1 ohm resistor, a 30 pF (picofarad) capacitor, and a 100 nH (nanohenry) inductor).
 #### 4.c.I
+*What is the natural resonance frequency (in hertz) of this circuit? Does this value give you any hints as to what a circuit like this might be useful for?*
+$$\begin{align}
+...
+\end{align}$$
 #### 4.c.II
-
-
+*Use the software of your choice to plot the amplitude of the true current as a function of frequency. Be careful to set the scale of your frequency axis to run past the resonance. Does the graph match the expectations of your “sketch” in the previous part? Briefly comment.*
+$$\begin{align}
+...
+\end{align}$$
 ---
 ## Question 5
+Let’s return one last time to the coaxial cable we started with in Problem #1. You already found the induced electric field. Now let’s think about things in terms of displacement current.
 ### 5.a
-
+*What is the displacement current density $\vec J_d$ in the coax region $(a < s < b)$?*
+$$\begin{align}
+...
+\end{align}$$
 ### 5.b
+*Use integration by parts to find the total displacement current in the coax region, $I_d$, then demonstrate that the units work out as a check on your integration.*
+$$\begin{align}
+...
+\end{align}$$
 ### 5.c
+*Using physically reasonable numbers for a real coax (say $a=1\ \mathrm{mm}$ and $b=1\ \mathrm{cm}$), determine the angular frequency needed for $I_d$ to equal 1% of $I_0$.*
+$$\begin{align}
+...
+\end{align}$$
 ### 5.d
+*Briefly comment on your result, expressing the frequency in hertz. Does the displacement current become a bigger issue as we move to frequencies greater than or less than this value? How do you feel about our “quasi-static” approximation in light of this result?*
+$$\begin{align}
+...
+\end{align}$$
