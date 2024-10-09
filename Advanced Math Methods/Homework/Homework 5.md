@@ -16,7 +16,7 @@ To solve this problem, we'll assume (with no loss of generality) that $u(x,y)$ i
 **Note:** Use the right-hand side of the Cauchy Integral Formula: $f(\zeta)=\dfrac{1}{2\pi i}\displaystyle\oint\dfrac{f(z)}{z-\zeta}\ dz$, by interpreting $u(x,y)$ as the real part of $f(z)=u(x,y)+iv(x,y)$. 
 $$\begin{align}
 f(0+0i)&=\dfrac{1}{2\pi i}\oint\dfrac{f(z)}{z}\ dz\\
-&=\dfrac{1}{2\pi i}\oint\dfrac{u(x,y)+iv(x,y)}{x+iy}\ d\left(dx+idy\right)\\
+&=\dfrac{1}{2\pi i}\oint\dfrac{u(x,y)+iv(x,y)}{x+iy}\cdot\left(dx+idy\right)\\
 &=\dfrac{1}{2\pi i}\oint\dfrac{u(R\cos\phi,R\sin\phi)}{Re^{i\phi}}\ iRe^{i\phi}\ d\phi+\dfrac{1}{2\pi i}\oint\dfrac{iv(R\cos\phi,R\sin\phi)}{Re^{i\phi}}\ iRe^{i\phi}\ d\phi\\
 &=\dfrac{1}{2\pi }\oint u(R\cos\phi,R\sin\phi)\ d\phi+i\dfrac{1}{2\pi }\oint v(R\cos\phi,R\sin\phi)\ d\phi\\
 \Re\left(f(0+0i)\right)&=\dfrac{1}{2\pi }\oint u(R\cos\phi,R\sin\phi)\ d\phi\\
