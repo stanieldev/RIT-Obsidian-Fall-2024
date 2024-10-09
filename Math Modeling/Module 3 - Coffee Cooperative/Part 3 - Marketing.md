@@ -1,10 +1,9 @@
-## Tasks  
-For each part of this module, you will work on a set of tasks. After all three tasks are complete, you will write a report about the tasks. During class, you can work in groups. After the class during which we complete Part 3, you will  
-have approximately one week to submit an individual report via MyCourses. Requirements for the report will be provided with each task, and they will all be summarized at the end of the third task. 
+**Name:** Stanley Goodwin
+**Todo:** All Sections
+## Tasks
+For each part of this module, you will work on a set of tasks. After all three tasks are complete, you will write a report about the tasks. During class, you can work in groups. After the class during which we complete Part 3, you will have approximately one week to submit an individual report via MyCourses. Requirements for the report will be provided with each task, and they will all be summarized at the end of the third task. 
 
 In this final part of the module we will help the cooperative determine how to market themselves to attract about 15-20 visitors per day in order to maximize   their profit. In order to do this, we are going to examine reported data from Google. The website that we will be using is Google Trends, a data analytics site that allows you to explore aggregated search data from across the world.
-
-Please follow these steps to start your data analysis:
 
 ### Section 1-5
 1. Google Trends is a website that allows you to analyze data used in Google search engines. In order to use this site, you will need to log in with a Google account.  
@@ -12,6 +11,12 @@ Please follow these steps to start your data analysis:
 3. Type a search term in the topics menu bar. A plot should be generated highlighting the relative interest (scaled between 0 to 100) in this search term over time. The data are scaled in this way so searches in countries with more active internet users would not dominate the results. If you are curious for more information about how the data are scaled, please visit the following link: https://support.google.com/trends/answer/4365533?hl=en  
 4. If you are comfortable now with the interface for Google Trends, select a search term that will be relevant for the cooperative in terms of their marketing (e.g., knowing how Google users trend for “Game of Thrones” is not as helpful as “winter escape”). You might have to try a few different terms in order to get some data. Record terms that were useful and not as useful.  
 5. For the purposes of this project, we are going to limit the results to one year. To do that, click on “select time range” and limit it to one complete calendar year.
+
+
+
+
+
+
 ### Section 6
 6. Now let’s download the data. At the top right of the webpage, you should see a download icon allowing you to download the data as a comma-separated values (CSV) file. Save this CSV file and open it. When you open up this file in a spreadsheet program, the first few lines provide information about the web search. Starting a few lines later are the “interest” data graphed on the webpage. Notice that in column “A” there is a time stamp corresponding to the weeks. We will rewrite this as weeks of the year. 
 #### 6.A)
@@ -29,7 +34,7 @@ Now, click and drag the lower right corner of cell C5 down the length of the col
 
 ### Section 9
 9. Let’s try to fit different function families to these data. We will let $I$ represent the interest in your search term and t represent the weeks since January 1, so you are determining a functional form $I(t)$. For each of the function families listed below, fit a curve through the data, and for each one, record how good your model is in representing the data:  
-#### 9.A) Linear regression  
+#### 9.A) Linear regression
 #### 9.B) quadratic regression
 #### 9.C) cubic regression
 #### 9.D) exponential regression

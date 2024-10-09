@@ -1,21 +1,24 @@
 **Name:** Stanley Goodwin
-## Tasks  
+**Todo:** Sections 2, 3, 6-9
+## Tasks
 For each part of this module, you will work on a set of tasks. After all three tasks are complete, you will write a report about the tasks. During class, you can work in groups. After the class during which we complete Part 3, you will have approximately one week to submit an individual report via MyCourses. Requirements for the report will be provided with each task, and they will all be summarized at the end of the third task.
 
 In this part of the module we will revisit the basic profit model, using key aspects of how the profit is defined. As a reminder, the basic model for profit $P$ (units: dollars per day) is,
 $$P=R-C=p\cdot v-C$$
-where we have the following variables:  
+where we have the following variables:
  - P = Daily profit ($ / day),  
  - R = Daily revenue ($ / day),  
  - p = Visitor charge ($ / visitor) to stay at the cooperative,  
  - v = The number of daily visitors (visitors / day),
  - C = the cost to the cooperative ($ / day) to accommodate visitors.
+
 ### Section 1
 The currency in Nicaragua is the cordoba. *Identify the current conversion between United States dollars and the Nicaraguan cordoba.* 
 **Note:** We will now write all the currency units in Nicaraguan cordobas, so knowing this conversion will be helpful to think about your results in a familiar currency.
-
+$$\$1.00\text{ (USD)} = \text{C}\$36.84 \text{ (NIO)} \ \ \ \ \ \text{(As of 10/9/2024)}$$
 ### Section 2
-*With your group, estimate the daily cost to accommodate visitors using the information provided.* **Note:** Use the Nicaraguan cordoba as the monetary unit. It might be helpful to plan out a typical meal requirement for a given guest and to create an itemized list. Feel free to include items you may think are important but are not listed, and provide a reasonable estimate on the price (with justification!). Justify your reasoning in determining the items that would be important.
+*With your group, estimate the daily cost to accommodate visitors using the information provided.*
+**Note:** Use the Nicaraguan cordoba as the monetary unit. It might be helpful to plan out a typical meal requirement for a given guest and to create an itemized list. Feel free to include items you may think are important but are not listed, and provide a reasonable estimate on the price (with justification!). Justify your reasoning in determining the items that would be important.
 
 ### Section 3
 Go back to the itemized list you made. Identify costs that would be:
@@ -28,7 +31,6 @@ Based on this information, we can refine our basic model to the following:
 
 where we have introduced the following variable:  
 $k$ = visitor cost (cordobas / visitor) to accommodate guests.  
-
 
 ### Section 4
 *Assuming the values of $p$, $k$, and $C$ are known, what is an algebraic expression for the minimum number of visitors needed for the cooperative to be profitable? How does changing the parameters $p$, $k$, and $C$ affect the number of visitors?*
