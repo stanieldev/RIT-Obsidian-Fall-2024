@@ -20,6 +20,8 @@ $$\$1.00\text{ (USD)} = \text{C}\$36.84 \text{ (NIO)} \ \ \ \ \ \text{(As of 10/
 *With your group, estimate the daily cost to accommodate visitors using the information provided.*
 **Note:** Use the Nicaraguan cordoba as the monetary unit. It might be helpful to plan out a typical meal requirement for a given guest and to create an itemized list. Feel free to include items you may think are important but are not listed, and provide a reasonable estimate on the price (with justification!). Justify your reasoning in determining the items that would be important.
 
+https://mycourses.rit.edu/d2l/le/content/1101231/viewContent/10371767/View
+
 ### Section 3
 Go back to the itemized list you made. Identify costs that would be:
 #### 3.A)
@@ -70,7 +72,7 @@ per visitor is worthwhile.
 
 ### Section 9
 A recommendation from an external group is to give a daily wage to each family in the cooperative to offset the cost of receiving visitors. The wage should incorporate the fixed cost used to accommodate guests and also any (human) time spent in the receiving of guests. If the cooperative will implement this plan, what type of information would be useful in setting a wage?
-What would be the wage you would recommend? Based on your investigations, determine how this wage will affect p, the price they charge to visitors. Would that price p be reasonable for visitors to the cooperative?
+What would be the wage you would recommend? Based on your investigations, determine how this wage will affect $p$, the price they charge to visitors. Would that price $p$ be reasonable for visitors to the cooperative?
 
 
 
