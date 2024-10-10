@@ -173,7 +173,7 @@ P_\mathrm{E} &= P_\mathrm{G}\\
 (BL)^2v&=(4L)^2\rho_\mathrm{res}\rho_\mathrm{m}g\\
 \Aboxed{v_\mathrm{terminal}&=\dfrac{16g}{B^2}\rho_\mathrm{res}\rho_\mathrm{m}}
 \end{align}$$
-#### 3.A.1
+#### 3.A.3
 *Do some qualitative sensemaking/sanity checks: Units? Does the functional dependence on the various variables seem reasonable? (Nothing quantitative, just e.g. arguing that the terminal velocity should be bigger if $g$ is bigger, since it’s pulled harder by gravity.)*
 
 $$\begin{align}
