@@ -1,5 +1,5 @@
 **Name:** Stanley Goodwin
-**Date:** 09/27/2024
+**Date:** 10/01/2024
 **Collaborators:** None
 
 In this assignment, we will compute contour integrals of holomorphic functions, both directly and using the theorems introduced in this chapter until now. Remember that contour integrals are defined as follows:
