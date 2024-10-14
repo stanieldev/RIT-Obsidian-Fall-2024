@@ -4,6 +4,14 @@
 
 
 
+
+
+
+
+
+
+
+
 ### Question 1
 $$V(x)=\begin{cases}
 &\dfrac{m\omega^2x^2}{2}&,&x\gt 0\\
