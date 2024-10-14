@@ -1,5 +1,4 @@
 **Name:** Stanley Goodwin
-**Todo:** Sections 2, 3, 6-9
 ## Tasks
 For each part of this module, you will work on a set of tasks. After all three tasks are complete, you will write a report about the tasks. During class, you can work in groups. After the class during which we complete Part 3, you will have approximately one week to submit an individual report via MyCourses. Requirements for the report will be provided with each task, and they will all be summarized at the end of the third task.
 
@@ -20,19 +19,64 @@ $$\$1.00\text{ (USD)} = \text{C}\$36.84 \text{ (NIO)} \ \ \ \ \ \text{(As of 10/
 *With your group, estimate the daily cost to accommodate visitors using the information provided.*
 **Note:** Use the Nicaraguan cordoba as the monetary unit. It might be helpful to plan out a typical meal requirement for a given guest and to create an itemized list. Feel free to include items you may think are important but are not listed, and provide a reasonable estimate on the price (with justification!). Justify your reasoning in determining the items that would be important.
 
-https://mycourses.rit.edu/d2l/le/content/1101231/viewContent/10371767/View
+| Item           | Cost           | Notes                       |
+| -------------- | -------------- | --------------------------- |
+| Rice           | C$16 / lb      | 1 lb -> 6 People            |
+| Beans          | C$14 / lb      | 1 lb -> 6 People            |
+| Oil            | C$30 / 0.25L   | Used for Cooking            |
+| Tortillas      | C$3 / 10       |                             |
+| Chicken        | C$200 /hen     |                             |
+| Eggs           | C$5 / egg      |                             |
+| Mango          | C$16           |                             |
+| Watermelon     | C$160          |                             |
+| Cantelope      | C$70           |                             |
+| Bread          | C$50 / loaf    |                             |
+| Pasta          | C$15           | 1 lb -> 6 People            |
+| Sugar          | C$15 / lb      |                             |
+| Cheese         | C$40 / lb      |                             |
+| Coffee         |                |                             |
+| Purified Water | C$30 / 0.5L    | Used for Cooking & Drinking |
+| Toilet Paper   | C$18 / roll    |                             |
+| Napkins        | C$60 / package | 60 per Package              |
+| Candles        | C$3 / candle   | 1.5 hours / candle of light |
+| Body Soap      | C$20 / bar     |                             |
+| Laundry Soap   | C$26 / load    |                             |
+| Matches        | C$2 / box      |                             |
+| Batteries      | C$40 / battery |                             |
+**Table 1:** Table of item prices in Rural Nicaragua.
 
 ### Section 3
 Go back to the itemized list you made. Identify costs that would be:
-#### 3.A)
-Dependent on each visitor.
-#### 3.B)
-Costs that would be fixed or visitor-independent.
+#### 3.A) Visitor-Dependent
+| Item           | Cost           | Notes                       |
+| -------------- | -------------- | --------------------------- |
+| Rice           | C$16 / lb      | 1 lb -> 6 People            |
+| Beans          | C$14 / lb      | 1 lb -> 6 People            |
+| Oil            | C$30 / 0.25L   | Used for Cooking            |
+| Tortillas      | C$3 / 10       |                             |
+| Chicken        | C$200 /hen     |                             |
+| Eggs           | C$5 / egg      |                             |
+| Mango          | C$16           |                             |
+| Watermelon     | C$160          |                             |
+| Cantelope      | C$70           |                             |
+| Bread          | C$50 / loaf    |                             |
+| Pasta          | C$15           | 1 lb -> 6 People            |
+| Sugar          | C$15 / lb      |                             |
+| Cheese         | C$40 / lb      |                             |
+| Purified Water | C$30 / 0.5L    | Used for Cooking & Drinking |
+| Toilet Paper   | C$18 / roll    |                             |
+| Napkins        | C$60 / package | 60 per Package              |
+| Body Soap      | C$20 / bar     |                             |
+| Laundry Soap   | C$26 / load    |                             |
+**Table 2:** Table of visitor-dependent items.
 
-Based on this information, we can refine our basic model to the following:  
 
-where we have introduced the following variable:  
-$k$ = visitor cost (cordobas / visitor) to accommodate guests.  
+#### 3.B) Visitor-Independent
+| Item         | Cost           | Notes                       |
+| ------------ | -------------- | --------------------------- |
+| Coffee       | Labor          |                             |
+| Candles      | C$3 / candle   | 1.5 hours / candle of light |
+**Table 3:** Table of visitor-dependent items.
 
 ### Section 4
 *Assuming the values of $p$, $k$, and $C$ are known, what is an algebraic expression for the minimum number of visitors needed for the cooperative to be profitable? How does changing the parameters $p$, $k$, and $C$ affect the number of visitors?*
@@ -62,17 +106,50 @@ The cost per person must always be larger than the cost per person, which makes 
 *Based on your itemized lists of fixed and variable costs, estimate $C$.*
 **Note:** As you can imagine, the value of the parameter $C$ depends on which items you focused on in the table as visitor-dependent. Provide justification for your reasoning.
 
+For light, electricity, and general power requirements, it would probably only cost about $C\approx\text{C\$}20$, chosen not only from the table but purposely about the cost of 1 visitor so that we can simplify the model easier.
+
 ### Section 7
 *Based on your itemized lists of fixed and variable costs, estimate $k$ (with justification).* 
-**Note:** To determine $k$, it might be useful to take an accounting of the per item cost of goods, estimate the number of items that each visitor would use (for every day or for a visit), and then multiply the two values together. From that work determine if a summative or an average cost  
-per visitor is worthwhile.
+**Note:** To determine $k$, it might be useful to take an accounting of the per item cost of goods, estimate the number of items that each visitor would use (for every day or for a visit), and then multiply the two values together. From that work determine if a summative or an average cost per visitor is worthwhile.
+
+Based on this information, we can refine our basic model to the following:  
+I used the website [[https://www.numbeo.com/cost-of-living/in/Matagalpa-Nicaragua?displayCurrency=NIO|Numbeo]] to estimate the costs over about a week.
+
+For visitors, it looks to be about ~C$140/week, incorporating food, water, transportation, general amenities (short-time utilities), with this estimate being about middle of the road, so there would be fluctuation over time.
+
+Since visitors are only there for a day:
+$k\approx\text{C\$}20/\text{visitor}$.
 
 ### Section 8
 *Now that you have determined $C$ and $k$, what is a necessary condition for $p$? Would that price $p$ be reasonable for visitors to the cooperative?*
+$k\approx\text{C\$}20/\text{visitor}$.
+$C\approx\text{C\$}20$.
+$$\begin{align}
+\boxed{p\gt 20/\text{visitor}}\\
+\end{align}$$
+This is the bare minimum estimate that avoids the fixed cost per day.
+$$\begin{align}
+p&\gt\dfrac{C}{v_\text{min}}+k\\
+\end{align}$$
+This includes the fixed cost, and so is a better metric for the constraint on $p$.
 
 ### Section 9
-A recommendation from an external group is to give a daily wage to each family in the cooperative to offset the cost of receiving visitors. The wage should incorporate the fixed cost used to accommodate guests and also any (human) time spent in the receiving of guests. If the cooperative will implement this plan, what type of information would be useful in setting a wage?
-What would be the wage you would recommend? Based on your investigations, determine how this wage will affect $p$, the price they charge to visitors. Would that price $p$ be reasonable for visitors to the cooperative?
+*A recommendation from an external group is to give a daily wage to each family in the cooperative to offset the cost of receiving visitors. The wage should incorporate the fixed cost used to accommodate guests and also any (human) time spent in the receiving of guests. If the cooperative will implement this plan, what type of information would be useful in setting a wage?*
 
+Using a table like numbeo's for Matagalpa to estimate the costs of the families there.
+The average amount of people per family would also make a difference, since more children means more mouths to feed and childcare.
+
+*What would be the wage you would recommend? Based on your investigations, determine how this wage will affect $p$, the price they charge to visitors. Would that price $p$ be reasonable for visitors to the cooperative?*
+
+I found that, if you live conservatively and frugally, the cost of living looks to be about C$1500 - C$2000 per month for a family of 4. Given that the costs of operations are about C$20 per day, over 30 days, is an extra C$600.
+
+Also, for the sake of the calculation, we'll assume an average of 4 visitors a day.
+
+Based on this information, I think that a singular family of the cooperative should charge:
+$$\begin{align}
+p&\ge30\cdot\dfrac{C}{v_\text{month}}+k\\
+&\ge\dfrac{30\cdot\text{C\$}20}{30\cdot 4\text{ visitor}}+\text{C\$}20/\text{visitor}\\
+\Aboxed{p&\ge\text{C\$}25/\text{visitor}}
+\end{align}$$
 
 

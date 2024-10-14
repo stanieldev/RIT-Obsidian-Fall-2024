@@ -2,7 +2,7 @@
 ## Introduction
 The problem we will study in this module is presented in Chapter 20: “Sustainability Analysis of a Rural Nicaraguan Coffee Cooperative” of (1). I’ve broken this problem into three parts: the first, which we will work on today, gives an introduction to the problem, asks you to do some fact-finding, and explores a simple model of profit. The second part extends the profit model to consider both fixed and variable costs for accommodating visitors at the coffee cooperative. The third part will focus on the problem of maximizing profit.
 
-## Tasks  
+## Tasks
 For each part of this module, you will work on a set of tasks. After all three tasks are complete, you will write a report about the tasks. During class, you can work in groups. After the class during which we complete Part 3, you will have approximately one week to submit an individual report via MyCourses. Requirements for the report will be provided with each task, and they will all be summarized at the end of the third task.
 
 ---
