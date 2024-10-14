@@ -15,7 +15,7 @@ By removing the loop from the magnetic field, it redirects where the charges are
 3. Changing Magnetic Field (Magnitude) also creates EMF.
 
 This tells us something deeper about flux.
-This led to Faraday postulating that $\vec{E}=\dfrac{d\Phi_B}{dt}$.
+This led to Faraday postulating that $\vec{E}=-\dfrac{d\Phi_B}{dt}$.
 Time-varying Magnetic Flux provides a force that pushes static charges.
 Field $\vec E$ looks like an electric field, but is not proven until relativity.
 

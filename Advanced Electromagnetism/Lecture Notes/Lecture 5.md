@@ -32,7 +32,7 @@ This is called a *Motional EMF*.
 
 When a conductor moves through a magnetic field, the Lorentz Force drives a current.
 The EMF due to this motion is:
-$$\mathrm{EMF}=-\dfrac{\partial \Phi_B}{\partial t}$$
+$$\mathrm{EMF}=-\dfrac{d\Phi_B}{dt}$$
 The external magnetic field exerts a force on the induced currents.
 The net force on the loop is then a force that opposes the motion of the wire.
 

@@ -7,7 +7,7 @@ $$\begin{align}
 \vec\nabla\cdot\vec{E}&=\dfrac{\rho}{\epsilon_0} &\implies& \left.\left(\vec{E}_\text{above}^\perp-\vec{E}_\text{below}^\perp\right)\right|_\text{surface} = \dfrac{\sigma}{\epsilon_0}\\
 \vec\nabla\times\vec{E}&=0 &\implies& \left.\left(\vec{E}_\text{above}^\parallel-\vec{E}_\text{below}^\parallel\right)\right|_\text{surface} = 0\\
 \vec\nabla\cdot\vec{B}&=0 &\implies& \left.\left(\vec{B}_\text{above}^\perp-\vec{B}_\text{below}^\perp\right)\right|_\text{surface} = 0\\
-\vec\nabla\times\vec{B}&=\mu_0\vec{J} &\implies& \left.\left(\vec{B}_\text{above}^\parallel-\vec{B}_\text{below}^\parallel\right)\right|_\text{surface} = \hat{n}\times\vec{K}\\
+\vec\nabla\times\vec{B}&=\mu_0\vec{J} &\implies& \left.\left(\vec{B}_\text{above}^\parallel-\vec{B}_\text{below}^\parallel\right)\right|_\text{surface} = \vec{K}\times\hat{n}\\
 \end{align}$$
 ## Current & Resistance
 What makes current flow in the first place? In most materials we find:

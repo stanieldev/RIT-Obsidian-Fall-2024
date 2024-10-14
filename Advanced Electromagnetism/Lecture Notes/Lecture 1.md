@@ -15,12 +15,11 @@ By introducing dynamics (time-dependence), we'll be able to discuss topics like 
 
 ## Review of Static Electromagnetism
 What do we remember doing last semester?
-
  - Solving Laplace's equation $\left(\vec{\nabla}^2V=0\right)$
  - Field-Potential relation $\left(\vec{E}=-\vec{\nabla}V\right)$
  - Coulomb's law $\left(\vec{E}=\dfrac{1}{4\pi\epsilon_0}\displaystyle\int\dfrac{\rho}{r^2}\hat{r}\ d\tau\right)$
  - Biot-Savart Law $\left(\vec{B}=\dfrac{\mu_0}{4\pi}\displaystyle\int\dfrac{\vec{J}\times\hat{r}}{r^2}\ d\tau\right)$
- - Ampere's Law
+ - Gauss' Law / Ampere's Law
 
 ### Comparison of Electrostatic and Electrodynamics
 | *Only True in Statics*    | *Always True*            |
@@ -32,17 +31,16 @@ What do we remember doing last semester?
 |                           | Lorentz Force Law        |
 ### Maxwell's Equations
 $$\begin{align}
-\nabla\cdot \vec{E}&=\dfrac{\rho}{\epsilon_0} & \oint\vec{E}\cdot d\vec{A} &= \dfrac{q_\text{enc}}{\epsilon_0} & \text{(Gauss' Law)}\\
-\nabla\cdot \vec{B}&=0 & \oint\vec{B}\cdot d\vec{A} &= 0 & \text{(No Monopoles)}\\
-\nabla\times \vec{E}&=-\dfrac{\partial \vec{B}}{\partial t} & \oint\vec{E}\cdot d\vec{l}&=-\dfrac{d}{dt}\int\vec{B}\cdot d\vec{A} & \text{(Faraday's Law)}\\
-\nabla\times \vec{B}&=\mu_0\vec{J}+\epsilon_0\mu_0\dfrac{\partial \vec{E}}{\partial t} & \oint\vec{B}\cdot d\vec{l} &= \mu_0I + \epsilon_0\mu_0\dfrac{d}{dt}\int\vec{E}\cdot d\vec{A} & \text{(Ampere's Law)}
+\vec\nabla\cdot \vec{E}&=\dfrac{\rho}{\epsilon_0} & \oint\vec{E}\cdot d\vec{A} &= \dfrac{q_\text{enc}}{\epsilon_0} & \text{(Gauss' Law)}\\
+\vec\nabla\cdot \vec{B}&=0 & \oint\vec{B}\cdot d\vec{A} &= 0 & \text{(No Monopoles)}\\
+\vec\nabla\times \vec{E}&=-\dfrac{\partial \vec{B}}{\partial t} & \oint\vec{E}\cdot d\vec{l}&=-\dfrac{d}{dt}\int\vec{B}\cdot d\vec{A} & \text{(Faraday's Law)}\\
+\vec\nabla\times \vec{B}&=\mu_0\vec{J}+\epsilon_0\mu_0\dfrac{\partial \vec{E}}{\partial t} & \oint\vec{B}\cdot d\vec{l} &= \mu_0I_\text{enc} + \epsilon_0\mu_0\dfrac{d}{dt}\int\vec{E}\cdot d\vec{A} & \text{(Ampere's Law)}
 \end{align}$$
 
 ## Vector Calculus Review
-
 ### Gradient
 Tells us the directional derivative of the scalar function $f$.
-$$\nabla f = \displaystyle\sum_i\partial_i f_i e_i$$
+$$\vec\nabla f = \displaystyle\sum_i\dfrac{\partial f}{\partial x_i}\cdot e_i$$
 Is it also the inverse operation of a line integral.
 $$f = -\int\vec{F}\cdot d\vec{l} \iff \vec{F}=-\vec{\nabla}f$$
 ### Divergence
@@ -51,7 +49,6 @@ $$\vec{\nabla}\cdot\vec{F}= \displaystyle\sum_i\dfrac{\partial F_i}{\partial x_i
 It also relates to the flux of a closed surface with the following relation:
 $$\int\vec\nabla\cdot\vec{F}\ d\tau = \oint\vec{F}\cdot d\vec{A}$$
 This relationship is called the *Divergence Theorem*.
-
 ### Curl
 Tells us about a "curl" of vector field $F$ at a point.
 $$\vec{\nabla}\times\vec{F}=\left|\begin{array}{ccc}\hat{x}&\hat{y}&\hat{z}\\\partial_x&\partial_y&\partial_z\\F_x&F_y&F_z\end{array}\right|$$

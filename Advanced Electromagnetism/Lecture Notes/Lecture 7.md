@@ -41,7 +41,7 @@ Instead, lets run the current in the solenoid and find the flux through the litt
 
 $\vec{B}_\text{solenoid}=\mu_0nI$, $\vec{A}_\text{loop}=\pi R^2$, so $\Phi_\text{loop}=\mu_0nI\pi R^2$.
 $\implies M_{21}=\dfrac{\Phi_\text{loop}}{I} = \mu_0n\pi R^2$
-$\implies |\vec{E}|=-M_{21}\dfrac{dI}{dt} = \mu_0n\pi R^2\alpha$.
+$\implies |\vec{E}|=-M_{21}\dfrac{dI}{dt} =-\mu_0n\pi R^2\alpha$.
 
 
 ### Self-Inductance
@@ -90,6 +90,6 @@ $$\begin{align}
 
 Extras: Define $F=E+icB$.
 $$\begin{align}
-\mathcal{W}_{EM}&=\dfrac{1}{2\epsilon_0}\left(E+(icB)\right)\left(E-(icB)\right)\\
+\mathcal{W}_{EM}&=\dfrac{1}{2\epsilon_0}\left(E+icB\right)\left(E-icB\right)\\
 \Aboxed{\mathcal{W}_{EM}&=\dfrac{1}{2\epsilon_0}F^\dagger F}
 \end{align}$$

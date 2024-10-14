@@ -52,11 +52,12 @@ $$\begin{align}
 \end{align}$$
 $$\begin{align}
 &&J_\text{free}+J_\text{bound}&=J\\
-&&J_\text{free}+\vec\nabla\cdot\vec{M}&=\epsilon_0\vec\nabla\cdot\vec{E}\\
-
-
-
+&&J_\text{free}+\vec\nabla\times\vec{M}&=\epsilon_0\vec\nabla\cdot\vec{E}\\
 &&\rho_\text{free}&=\epsilon_0\vec\nabla\cdot\vec{E}+\vec\nabla\cdot\vec{P}\\
 &&\rho_\text{free}&=\vec\nabla\cdot\left(\epsilon_0\vec{E}+\vec{P}\right)\\
 &&\vec\nabla\cdot\vec{D}&=\rho_\text{free}\
 \end{align}$$
+
+$$\vec{D}\equiv\epsilon_0\vec{E}+\vec{P}$$
+$$\vec{J}_\text{polar}\equiv\dfrac{\partial \vec{P}}{\partial t}$$
+$$\vec\nabla\times\vec{H}\equiv J_\text{free}+\dfrac{\partial \vec{D}}{\partial t}$$

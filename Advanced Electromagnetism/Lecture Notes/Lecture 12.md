@@ -56,6 +56,7 @@ Any locally-conserved quantity will have a similar conservation law.
  - For a conserved quantity $X$, $\dfrac{dX}{dt}=-\vec\nabla\cdot\vec{S}$, where $\vec{S}$ is a volume current that carries $X$.
  - Some conserved quantities are Energy, Momentum, and Angular Momentum.
 
+
 Energy density conservation:
 $$\begin{align}
 \mathcal{U}_E&=\dfrac{1}{2}\epsilon_0 E^2\\

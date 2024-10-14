@@ -20,3 +20,5 @@ $$\begin{align}
 \oint\Delta V&=0 & &\text{(Voltage Law)}\\
 \sum_\text{Node}I_\text{in}&=\sum_\text{Node}I_\text{out} & &\text{(Current Law)}\\
 \end{align}$$
+### Euler's Identity
+$$e^{i\theta}=\cos\theta+i\sin\theta$$

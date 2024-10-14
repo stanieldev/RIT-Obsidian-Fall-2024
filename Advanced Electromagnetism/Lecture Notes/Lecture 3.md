@@ -11,6 +11,8 @@
 
 ## Magnetostatics
 Static $\vec{B}$ arises due to currents.
+$$\vec{F}_B=q\vec{v}\times\vec{B}=\int Id\vec{l}\times\vec{B}=\int \left(\vec{K}\times\vec{B}\right)dA=\int \left(\vec{J}\times\vec{B}\right)d\tau$$
+If we know where all the currents are (and they are steady currents), we can use the Biot-Savart law to calculate $\vec{B}$.
 
 ### Biot-Sovart & Ampere
 If we know where all the currents are, (and they are steady currents), we can use the Biot-Sovart Law to calculate the magnetic field $\vec{B}$.
@@ -23,6 +25,7 @@ For volume currents:
 $$\vec{B}=\dfrac{\mu_0}{4\pi}\displaystyle\int\dfrac{\vec{J}\times\hat{r}}{r^2}\ d\tau$$
 In principle, this is our solution for a known distribution of steady currents.
 Can be onerous to actually compute (use a computer lol).
+
 An alternative would be something like Ampere's Law. If we have sufficient symmetry in the current distribution, it is much simpler to compute.
 $$\begin{align}
 \nabla\times \vec{B}&=\mu_0\vec{J} & \oint\vec{B}\cdot d\vec{l} &= \mu_0I & \text{(Ampere's Law)}
@@ -31,7 +34,7 @@ If we can choose a path where $\vec B$ is parallel or perpendicular at every poi
 It technically holds true in most cases, but isn't always so useful for calculating things.
 
 ### Vector Potential
-Since $\vec{B}$ is divergence-less $\left(\vec\nabla\times\vec{B}=0\right)$, we can write it as the curl of a vector $\vec{A}$.
+Since $\vec{B}$ is divergence-less $\left(\vec\nabla\cdot\vec{B}=0\right)$, we can write it as the curl of a vector $\vec{A}$.
 $$\vec\nabla\times\vec{A}=\vec{B}$$
 For a scalar potential, we can always add a constant term without effecting the field.
 For a vector potential, we can add the gradient of an arbitrary scalar function $\phi$.
