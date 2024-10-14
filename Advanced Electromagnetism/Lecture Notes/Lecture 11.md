@@ -1,5 +1,5 @@
 **Name:** Stanley Goodwin
-**Date:** 10/01/2024
+**Date:** 10/1/2024
 
 ---
 ### Maxwell's Equations

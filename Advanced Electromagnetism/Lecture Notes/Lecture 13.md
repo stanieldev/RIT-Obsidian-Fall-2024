@@ -1,5 +1,5 @@
 **Name:** Stanley Goodwin
-**Date:** 10/08/2024
+**Date:** 10/8/2024
 
 ---
 ### Conserved Energy
