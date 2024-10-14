@@ -3,6 +3,8 @@
 **Collaborators:** None
 **Time Taken:** 8 Hours over 2 days
 
+---
+
 **Notes:** 
  - I didn't really know how to do Q2D, but I know it has to relate to the drift velocities and $\rho$ at the interface making sure that enough current is flowing in both wires.
  - I didn't graph any of these by hand, but they were Gaussian-Adjacent, so I don't think it mattered too much.

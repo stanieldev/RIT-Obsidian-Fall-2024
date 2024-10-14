@@ -3,8 +3,7 @@
 **Collaborators:** None
 **Time Taken:** ~2 Hours
 
-
-
+---
 
 **Q1.** *Make a quick sketch, in the x-y plane, of the following (two-dimensional) vector function.*
 Plot enough different vectors to give a feeling for what this field looks like in the x-y plane.
