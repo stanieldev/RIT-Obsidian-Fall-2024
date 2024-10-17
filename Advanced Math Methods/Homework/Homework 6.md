@@ -1,6 +1,7 @@
 **Name:** Stanley Goodwin
 **Date:** 10/17/2024
 **Collaborators:** None
+**Status:** Revision 2
 
 In this assignment, we consider the function $f(z)=\dfrac{\ln(z-(2-i))}{z(z-i)^2}$, where $\ln$ refers to the principal branch of the logarithm function. The goal is to explore the singularities of this function, its series expansions, and to compute contour integrals.
 
@@ -32,8 +33,9 @@ $$\begin{align}
 The inner singularity has a radius of 0, since it's centered at a singularity, but the outer one is able to go out to a radius of 1 before encountering a singularity.
 
 Since this series expansion does enclose a pole at the origin, the Laurent series is necessary to express this function about the point $z=0$.
-Since the pole at $z=i$ is of order $2$, then the smallest $a_n\ne0$ is $n=-2$, with the term $\dfrac{a_{-2}}{z^2}$.
-There is also a simple pole at $z=0$, which is included in the Laurent series above.
+Therefore, the smallest $a_n\ne0$ is $n=-1$, with the term $\dfrac{a_{-1}}{z}$.
+
+I'm not sure why the order-2 singularity at radius 1 wouldn't contribute to the Laurent series, but based on lecture material the above is the correct statement.
 
 ---
 ## Exercise 3

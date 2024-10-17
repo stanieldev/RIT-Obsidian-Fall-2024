@@ -33,3 +33,4 @@ It is also a solution to the wave equation, since the wave equation is linear.
 
 It doesn't necessarily have to be periodic, but it can be written as a linear combination of sines and cosines using the *Fourier transform*.
 
+Most the future work we do will be with *transverse waves*, and specifically *plane waves*.
