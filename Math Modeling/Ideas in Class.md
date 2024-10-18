@@ -5,3 +5,5 @@ What about an "entropy" of a dataset compared to the true distribution?
 Less points means less accurate but more degree polynomial leads to larger variability.
 The best distribution would be a function with minimum entropy (minimal information to describe the distribution).
 
+Power, Memory, and Speed.
+Optimizing and the maximal limit using entropy.
