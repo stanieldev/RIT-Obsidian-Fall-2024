@@ -13,11 +13,8 @@ Given the function $f(z)=\dfrac{\ln(z-(2-i))}{z(z-i)^2}$, we can see the followi
  - $z=0$ (Order-1 pole)
  - $z=i$ (Order-2 pole)
  - $z\in\left\{x-i\ |\ x\le2\right\}$ (Interval branch-cut)
-
 ### Graph of $f(z)$
 ![[HW6_Q1.png]]
-As we can see, there is a branch cut (where there's a discontinuity in color/phase), and has 
-However, at the point $z=i$, **there is a removable singularity**, and that doesn't appear on the graph as a problematic point, but it is undefined at that point.
 
 ---
 ## Exercise 2

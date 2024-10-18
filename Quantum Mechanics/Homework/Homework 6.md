@@ -63,18 +63,14 @@ $$\begin{align}
 ## Question 4
 Consider the double delta-function potential $V(x)=-\alpha\left(\delta(x+a)+\delta(x-a)\right)$, where $\alpha, a$ are positive constants.
 ### 4.1
-TODO: Sketch Potential Well
+TODO: Sketch Potential Well.
 ### 4.2
-Assume $\psi(x)=\begin{cases}Ae^{-kx},&x>a\\B\left(e^{kx}+e^{-kx}\right),&-a<x<a\\Ae^{kx},&x<-a\\\end{cases}$, where $k=\dfrac{\sqrt{-2mE}}{\hbar}$.
+Assume $\psi(x)=\begin{cases}Ae^{kx},&x<-a\\B\left(e^{kx}+e^{-kx}\right),&-a<x<a\\Ae^{-kx},&x>a\end{cases}$, where $k=\dfrac{\sqrt{-2mE}}{\hbar}$.
 $$\begin{align}
 \lim_{x\rightarrow a^+}\psi(x)&=Ae^{-ka}\\
 \lim_{x\rightarrow a^-}\psi(x)&=B\left(e^{ka}+e^{-ka}\right)\\
 Ae^{-ka}&=B\left(e^{ka}+e^{-ka}\right)\\
 \Aboxed{A&=B\left(e^{2ka}+1\right)}\\
-\lim_{x\rightarrow -a^-}\psi(x)&=Ae^{-ka}\\
-\lim_{x\rightarrow -a^+}\psi(x)&=B\left(e^{ka}+e^{-ka}\right)\\
-Ae^{-ka}&=B\left(e^{ka}+e^{-ka}\right)\\
-\Aboxed{A&=B\left(e^{2ka}+1\right)}
 \end{align}$$
 ### 4.3
 Let $\psi'(x)=\begin{cases}-kAe^{-kx},&x>a\\kB\left(e^{kx}-e^{-kx}\right),&-a<x<a\\kAe^{kx},&x<-a\\\end{cases}$, where $k=\dfrac{\sqrt{-2mE}}{\hbar}$.
@@ -113,25 +109,24 @@ E&\approx-4\cdot0.63923^2\cdot0.1\text{ MeV}\\
 Assume a particle incident from the left described by the wave function:
 $$\begin{align}
 \psi(x)&=\begin{cases}
-Ae^{ikx}+Be^{-ikx},&x<-a\\
+Ae^{ikx}+Be^{-ikx}&x<-a\\
 Ce^{ikx}+De^{-ikx},&-a<x<a\\
-Fe^{ikx},&x>a\\
-\end{cases}\\
-\psi'(x)&=\begin{cases}
-ikAe^{ikx}-ikBe^{-ikx},&x<-a\\
-ikCe^{ikx}-ikDe^{-ikx},&-a<x<a\\
-ikFe^{ikx},&x>a\\
+Fe^{ikx}&x>a\\
 \end{cases}
 \end{align}$$
+
+| $x<-a$         | $-a<x<a$       | $x>a$          |
+| -------------- | -------------- | -------------- |
+| $A\rightarrow$ | $C\rightarrow$ | $F\rightarrow$ |
+| $\leftarrow B$ | $\leftarrow D$ | $\leftarrow G$ |
 ### 5.1
 **Continuity at $x=-a$:**
 $$\begin{align}
-\lim_{x\rightarrow -a^+}\psi(x)&=Ce^{-ika}+De^{ika}\\
+\lim_{x\rightarrow -a^+}\psi(x)&=Ce^{-ika}\\
 \lim_{x\rightarrow -a^-}\psi(x)&=Ae^{-ika}+Be^{ika}\\
-Ae^{-ika}+Be^{ika}&=Ce^{-ika}+De^{ika}\\
-Ae^{-ika}-Ce^{-ika}&=+De^{ika}-Be^{ika}\\
-(A-C)e^{-ika}&=(D-B)e^{ika}\\
-\Aboxed{A&=(D-B)e^{2ika}+C}
+Ae^{-ika}+Be^{ika}&=Ce^{-ika}\\
+Ae^{-ika}&=Ce^{-ika}-Be^{ika}\\
+\Aboxed{A&=-Be^{2ika}+C}
 \end{align}$$
 **Continuity at $x=+a$:**
 $$\begin{align}
@@ -143,29 +138,85 @@ Fe^{ika}&=Ce^{ika}+De^{-ika}\\
 **Discontinuity at $x=-a$:**
 $$\begin{align}
 \lim_{x\rightarrow -a^+}\psi'(x)-\lim_{x\rightarrow -a^-}\psi'(x)&=-\dfrac{2m\alpha}{\hbar^2}\psi(-a)\\
-ikAe^{-ika}-ikBe^{ika}-ikCe^{-ika}+ikDe^{ika}&=-\dfrac{2m\alpha}{\hbar^2}\left(Ae^{-ika}+Be^{ika}\right)\\
-Ae^{-ika}-Be^{ika}-Ce^{-ika}+De^{ika}&=-\dfrac{2m\alpha}{ik\hbar^2}\left(Ae^{-ika}+Be^{ika}\right)\\
-(A-C)+(D-B)e^{2ika}&=-\dfrac{2m\alpha}{ik\hbar^2}A-\dfrac{2m\alpha}{ik\hbar^2}Be^{2ika}\\
-2(D-B)e^{2ika}&=-\dfrac{2m\alpha}{ik\hbar^2}A-\dfrac{2m\alpha}{ik\hbar^2}Be^{2ika}\\
-\Aboxed{De^{2ika}-B\left(1+i\dfrac{m\alpha}{k\hbar^2}\right)e^{2ika}&=-\dfrac{m\alpha}{ik\hbar^2}A\\}
+ikAe^{-ika}-ikBe^{ika}-ikCe^{-ika}&=-\dfrac{2m\alpha}{\hbar^2}Ce^{-ika}\\
+A-Be^{2ika}-C&=-\dfrac{2m\alpha}{ik\hbar^2}C\\
+2Be^{2ika}&=-\dfrac{2m\alpha}{ik\hbar^2}C\\
+Be^{2ika}&=-\dfrac{m\alpha}{ik\hbar^2}C\\
+\Aboxed{-\dfrac{ik\hbar^2}{m\alpha}Be^{2ika}&=C}
 \end{align}$$
 **Discontinuity at $x=+a$:**
 $$\begin{align}
 \lim_{x\rightarrow a^+}\psi'(x)-\lim_{x\rightarrow a^-}\psi'(x)&=-\dfrac{2m\alpha}{\hbar^2}\psi(a)\\
-ikFe^{ika}-ikCe^{ika}+ikDe^{-ika}&=-\dfrac{2m\alpha}{\hbar^2}\left(Fe^{ika}\right)\\
+ikFe^{ika}-ikCe^{ika}+ikDe^{-ika}&=-\dfrac{2m\alpha}{\hbar^2}Fe^{ika}\\
 Fe^{ika}-Ce^{ika}+De^{-ika}&=-\dfrac{2m\alpha}{ik\hbar^2}Fe^{ika}\\
 (F-C)+De^{-2ika}&=-\dfrac{2m\alpha}{ik\hbar^2}F\\
 De^{-2ika}+De^{-2ika}&=-\dfrac{2m\alpha}{ik\hbar^2}F\\
 De^{-2ika}&=-\dfrac{m\alpha}{ik\hbar^2}F\\
-\Aboxed{-\dfrac{ik\hbar^2}{m\alpha}De^{-2ika}&=F}\\
+\Aboxed{-\dfrac{ik\hbar^2}{m\alpha}De^{-2ika}&=F}
 \end{align}$$
 **Combination**
 $$\begin{align}
-\Aboxed{A&=(D-B)e^{2ika}+C}\\
+\Aboxed{A&=-Be^{2ika}+C}\\
 \Aboxed{F&=De^{-2ika}+C}\\
-\Aboxed{-\dfrac{m\alpha}{ik\hbar^2}A&=De^{2ika}-B\left(1+i\dfrac{m\alpha}{k\hbar^2}\right)e^{2ika}\\}\\
-\Aboxed{F&=-\dfrac{ik\hbar^2}{m\alpha}De^{-2ika}}\\
+\Aboxed{C&=-\dfrac{ik\hbar^2}{m\alpha}Be^{2ika}}\\
+\Aboxed{F&=-\dfrac{ik\hbar^2}{m\alpha}De^{-2ika}}
 \end{align}$$
+$$\begin{align}
+\Aboxed{A&=-B\left(1+\dfrac{ik\hbar^2}{m\alpha}\right)e^{2ika}}\\
+\Aboxed{F&=-\dfrac{\left(\dfrac{ik\hbar^2}{m\alpha}\right)^2}{1+\dfrac{ik\hbar^2}{m\alpha}}Be^{2ika}}\\
+\end{align}$$
+$$\begin{align}
+\dfrac{F}{A}&=\dfrac{\left(\dfrac{ik\hbar^2}{m\alpha}\right)^2}{1+\dfrac{ik\hbar^2}{m\alpha}}Be^{2ika}\dfrac{1}{B\left(1+\dfrac{ik\hbar^2}{m\alpha}\right)e^{2ika}}\\
+&=\dfrac{\left(\dfrac{ik\hbar^2}{m\alpha}\right)^2}{\left(1+\dfrac{ik\hbar^2}{m\alpha}\right)^2}\\
+&=\dfrac{\left(i\dfrac{1}{\beta}\right)^2}{\left(1+i\dfrac{1}{\beta}\right)^2}\\
+\dfrac{F}{A}&=\dfrac{-1}{\left(\beta+i\right)^2}\\
+\end{align}$$
+$$\begin{align}
+\dfrac{F}{A}&=\dfrac{\left(\dfrac{ik\hbar^2}{m\alpha}\right)^2}{1+\dfrac{ik\hbar^2}{m\alpha}}Be^{2ika}\dfrac{1}{B\left(1+\dfrac{ik\hbar^2}{m\alpha}\right)e^{2ika}}\\
+&=\dfrac{\left(\dfrac{ik\hbar^2}{m\alpha}\right)^2}{\left(1+\dfrac{ik\hbar^2}{m\alpha}\right)^2}\\
+&=\dfrac{\left(i\dfrac{1}{\beta}\right)^2}{\left(1+i\dfrac{1}{\beta}\right)^2}\\
+\dfrac{F}{A}&=\dfrac{-1}{\left(\beta+i\right)^2}\\
+\left|\dfrac{F}{A}\right|^2&=\dfrac{-1}{\left(\beta+i\right)^2}\dfrac{-1}{\left(\beta-i\right)^2}\\
+&=\dfrac{1}{\left(\beta^2+1\right)^2}\\
+\end{align}$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Consequences
 $$\begin{align}
