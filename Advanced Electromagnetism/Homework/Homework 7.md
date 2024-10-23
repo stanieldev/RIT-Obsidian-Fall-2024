@@ -1,7 +1,7 @@
 **Name:** Stanley Goodwin
-**Date:** XX/XX/2024
-**Collaborators:** None
-**Time Taken:** XXX Hours
+**Date:** 10/22/2024
+**Collaborators:** Chris, Hasan
+**Time Taken:** 6 Hours
 
 ---
 ## Question 1
@@ -47,9 +47,44 @@ This completely adds up, since the total power the circuit would be running with
 A capacitor with circular plates of radius $R$ separated by distance $d\ll R$ is being charged by a steady current $I$. The plates are sufficiently close that fringe effects can be ignored. Assume that at $t=0$, the plate is uncharged.
 ### 2.A
 In class we did an activity (this was Worksheet 11) to compute the magnitude of the magnetic field between the plates at all distances $s$ from the center of the plates (for both $s<R$ and $s>R$). Reconstruct that argument (show me your work) and then use it to compute the Poynting vector $\vec{S}$ (magnitude and direction) on the rim of the capacitor, between the plates, at $s=R$ (the "rim" is the ribbon of area at $s=R$ between the plates; see the diagram). Express your answer in terms of given quantities only.
-
+$$\begin{align}
+\oint\vec{B}\cdot d\vec{l}&=\mu_0I+\epsilon_0\mu_0\dfrac{d}{dt}\int\vec{E}\cdot d\vec{A}\\
+B\cdot 2\pi s&=\mu_00+\epsilon_0\mu_0\dfrac{d}{dt}\left(E\pi s^2\right)\\
+B&=\dfrac{\epsilon_0\mu_0\pi s^2}{2\pi s}\dfrac{dE}{dt}\\
+B&=\dfrac{\epsilon_0\mu_0\pi s^2}{2\pi s}\dfrac{I}{\epsilon_0\pi R^2}\\
+\Aboxed{\vec{B}&=\dfrac{\mu_0Is}{2\pi R^2}\hat\phi, \ \ \ s<R}
+\end{align}$$
+$$\begin{align}
+\oint\vec{B}\cdot d\vec{l}&=\mu_0I+\epsilon_0\mu_0\dfrac{d}{dt}\int\vec{E}\cdot d\vec{A}\\
+B\cdot 2\pi s&=\mu_00+\epsilon_0\mu_0\dfrac{d}{dt}\left(E\pi R^2\right)\\
+B&=\dfrac{\epsilon_0\mu_0\pi R^2}{2\pi s}\dfrac{dE}{dt}\\
+B&=\dfrac{\epsilon_0\mu_0\pi R^2}{2\pi s}\dfrac{I}{\epsilon_0\pi R^2}\\
+\Aboxed{\vec{B}&=\dfrac{\mu_0I}{2\pi s}\hat\phi, \ \ \ s>R}
+\end{align}$$
+$$\begin{align}
+\vec{B}&=\begin{cases}
+\dfrac{\mu_0Is}{2\pi R^2}\hat\phi, & s<R\\
+\dfrac{\mu_0I}{2\pi s}\hat\phi, & s>R\\
+\end{cases}
+\end{align}$$
+We can then calculate the Poynting Vector:
+$$\begin{align}
+\vec{S}&=\dfrac{\tfrac{Q(t)\pi R^2}{\epsilon_0}\hat{z}\times\dfrac{\mu_0Is}{2\pi R^2}\hat\phi}{\mu_0}\\
+&=\dfrac{Q(t)\pi R^2\mu_0Is\cdot \hat{z}\times\hat\phi}{2\pi R^2\mu_0\epsilon_0}\\
+&=\dfrac{Q(t)I(t)R}{2\epsilon_0}\hat{s}\\
+&=\dfrac{I^2Rt}{2\epsilon_0}\hat{s}\\
+\Aboxed{\vec{S}&=\dfrac{I^2Rt}{2\epsilon_0}\hat{s}}
+\end{align}$$
 ### 2.B
 Compute the stored energy $U$ in the capacitor as function of time in terms of given quantities. Then show that the rate at which the capacitor's stored energy is increasing $(dU/dt)$ is equal to the rate at which field energy is entering through the rim. Comment on the sign conventions you used, and the basic physics— what is going on here?
+$$\begin{align}
+U(t)&=\dfrac{1}{2}\dfrac{Q^2}{C}\\
+\Aboxed{U(t)&=\dfrac{1}{2}\dfrac{I^2t^2d}{\epsilon_0\pi R^2}}\\
+\dfrac{\partial U(t)}{\partial t}&=\dfrac{\partial}{\partial t}\left(\dfrac{1}{2}\dfrac{I^2t^2d}{\epsilon_0\pi R^2}\right)\\
+&=\dfrac{1}{2}\dfrac{I^2d}{\epsilon_0\pi R^2}\dfrac{\partial}{\partial t}\left(t^2\right)\\
+\Aboxed{U'(t)&=\dfrac{I^2d}{\epsilon_0\pi R^2}t}
+\end{align}$$
+The rate of change is positive since we're looking from the perspective of the capacitor, which is gaining energy. However, since the energy flows inward, it would be a negative value for the source of the energy, like the battery.
 
 ---
 ## Question 3
@@ -57,13 +92,55 @@ Consider a very long solenoid of length $L$, radius $R$, and turns per length $n
 ### 3.A
 Integrate the magnetic field energy density to derive a formula for the total field energy
 stored in the solenoid at times $t>t_0$.
+$$\begin{align}
+\int\mathcal{U}_\text{B}\ d\tau&=\int\dfrac{B^2}{2\mu_0}\ d\tau\\
+&=\int\dfrac{(\mu_0nI)^2}{2\mu_0}\ d\tau\\
+&=\dfrac{\mu_0n^2}{2}I^2(t)\int d\tau\\
+&=\dfrac{\mu_0n^2}{2}I^2(t)\cdot\pi R^2L\\
+&=\dfrac{\mu_0\pi R^2Ln^2}{2}I^2(t)\\
+\Aboxed{U(t)&=\dfrac{\mu_0\pi R^2Ln^2I^2}{2t_0^2}t^2}
+\end{align}$$
 ### 3.B
-Solve for the electric field everywhere in space at times $0<t<t_0$
+Solve for the electric field everywhere in space at times $0<t<t_0$.
+Region $s<R$:
+$$\begin{align}
+\oint\vec{E}\cdot d\vec{l}&=-\dfrac{d}{dt}\int\vec{B}\cdot d\vec{A}\\
+E\cdot2\pi s&=-\dfrac{d}{dt}\left(B\cdot\pi s^2\right)\\
+E&=-\dfrac{\pi s^2}{2\pi s}\dfrac{dB}{dt}\\
+E&=-\dfrac{\mu_0 ns}{2}\dfrac{dI}{dt}\\
+\Aboxed{\vec{E}&=-\dfrac{\mu_0 ns}{2}\dfrac{I_0}{t_0}\hat\phi}
+\end{align}$$
+Region $s>R$:
+$$\begin{align}
+\oint\vec{E}\cdot d\vec{l}&=-\dfrac{d}{dt}\int\vec{B}\cdot d\vec{A}\\
+E\cdot2\pi s&=-\dfrac{d}{dt}\left(B\cdot\pi R^2\right)\\
+E&=-\dfrac{\pi R^2}{2\pi s}\dfrac{dB}{dt}\\
+E&=-\dfrac{\mu_0 nR^2}{2s}\dfrac{dI}{dt}\\
+\Aboxed{\vec{E}&=-\dfrac{\mu_0 nR^2}{2s}\dfrac{I_0}{t_0}\hat\phi}
+\end{align}$$
+$$\begin{align}
+\vec{E}(t)&=\begin{cases}
+-\dfrac{\mu_0 ns}{2}\dfrac{I_0}{t_0}\hat\phi, & s<R\\
+-\dfrac{\mu_0 nR^2}{2s}\dfrac{I_0}{t_0}\hat\phi, & s>R\\
+\end{cases}
+\end{align}$$
 ### 3.C
 Solve for the Poynting vector $\vec{S}$ (direction and magnitude) at $s=R$ (just inside the walls
 of the solenoid) as a function of time $t$.
+$$\begin{align}
+\vec{S}&=\dfrac{-\dfrac{\mu_0 ns}{2}\dfrac{I_0}{t_0}\hat\phi\times\mu_0nI\hat{z}}{\mu_0}\\
+\vec{S}&=\dfrac{-\mu_0n^2I_0^2R}{2t_0^2}t\cdot\hat\phi\times\hat{z}\\
+\Aboxed{\vec{S}&=\dfrac{-\mu_0n^2I_0^2R}{2t_0^2}t\cdot\hat{s}}
+\end{align}$$
+The Poynting Vector points inward toward the center of the solenoid.
 ### 3.D
 Show that the integral from $t=0$ to $t=t_0$ of the total power entering at the surface of the solenoid is equal to the total energy stored in the solenoid you calculated in part a.
+$$\begin{align}
+\iint\vec{S}\cdot d\vec{A}\ dt&=\pi R^2\int_0^{t_0}|\vec{S}|\ dt\\
+&=-\pi R^2\int_0^{t_0}\dfrac{\mu_0n^2I_0^2R}{2t_0^2}t\ dt\\
+&=-\dfrac{\pi\mu_0n^2I_0^2R^3}{2t_0^2}\dfrac{t_0^2}{2}\\
+\Aboxed{U&=-\dfrac{\mu_0n^2I_0^2\pi R^3}{4}}
+\end{align}$$
 
 ---
 ## Question 4
@@ -162,6 +239,11 @@ It looks to me that they satisfy the relationship $\mathcal{U}_{EM}=\dfrac{|\vec
 Describe in words what this $\vec{E}$ and $\vec{B}$ field look like.
 Can you "interpret" them physically? What does the constant "k" tell you?
 
+Both $\vec{E}$ and $\vec{B}$ are components of a plane wave, where the direction of propagation is normal to the plane spanned by these 2 vectors.
+1-Dimensional waves that are orthogonal.
+
+The constant $k$ refers to the spatial frequency, an so relate to the wavelength of the electromagnetic wave.
+
 ---
 ## Question 5
 Two points on a string are observed as a traveling sinusoidal wave passes by. The points are at $x_1=0$ and $x_2=1$. The two points are known to be less than one wavelength apart. The transverse motions of the two points are observed to be:
@@ -201,3 +283,43 @@ I believe that $\vec\nabla\cdot\vec{E}=i\vec{k}\cdot\vec{E}$ by similar means as
 ---
 ## Question 6
 Use Griffiths formulas for the stress tensor in section 8.2.2 and write out the full 3x3 stress tensor for the traveling wave of problem 4. It’s surprisingly simple! Can you interpret the result physically? (Read the portion of Griffiths where he talks about “flow of momentum” as related to the stress tensor.)
+
+$$\begin{align}
+T_{xx}&=\dfrac{1}{2}\epsilon_0\left(E_x^2-E_y^2-E_z^2\right)+\dfrac{1}{2\mu_0}\left(B_x^2-B_y^2-B_z^2\right)\\
+T_{xy}&=\epsilon_0\left(E_xE_y\right)+\dfrac{1}{\mu_0}\left(B_xB_y\right)\\
+\end{align}$$
+From question 4, we can see that:
+$$\begin{align}
+\vec{E}(x,y,z,t)&=E_0\cos\left(k(x-ct)\right)\hat{y}\\
+\vec{B}(x,y,z,t)&=\dfrac{E_0}{c}\cos(k(x-ct))\hat{z}\\
+\end{align}$$
+So we have the following:
+$$\begin{align}
+E_x&=0& E_y&=E_0\cos\left(k(x-ct)\right) & E_z&=0\\
+B_x&=0& B_y&=0 &B_z&=\dfrac{E_0}{c}\cos(k(x-ct))\\
+\end{align}$$
+And so:
+$$\begin{align}
+T_{xx}&=\dfrac{1}{2}\epsilon_0\left(E_x^2-E_y^2-E_z^2\right)+\dfrac{1}{2\mu_0}\left(B_x^2-B_y^2-B_z^2\right)\\
+&=-\dfrac{1}{2}\epsilon_0E_0^2\cos^2\left(k(x-ct)\right)-\dfrac{1}
+{2\mu_0}\dfrac{E_0^2}{c^2}\cos^2(k(x-ct))\\
+T_{xx}&=-\epsilon_0E_0^2\cos^2\left(k(x-ct)\right)\\
+T_{yy}&=\dfrac{1}{2}\epsilon_0\left(E_y^2-E_x^2-E_z^2\right)+\dfrac{1}{2\mu_0}\left(B_y^2-B_x^2-B_z^2\right)\\
+&=\dfrac{1}{2}\epsilon_0E_0^2\cos^2\left(k(x-ct)\right)-\dfrac{1}{2\mu_0}\dfrac{E_0^2}{c^2}\cos^2(k(x-ct))\\
+T_{yy}&=0\\
+T_{zz}&=\dfrac{1}{2}\epsilon_0\left(E_z^2-E_x^2-E_y^2\right)+\dfrac{1}{2\mu_0}\left(B_z^2-B_x^2-B_y^2\right)\\
+&=-\dfrac{1}{2}\epsilon_0E_0^2\cos^2\left(k(x-ct)\right)+\dfrac{1}{2\mu_0}\dfrac{E_0^2}{c^2}\cos^2(k(x-ct))\\
+T_{zz}&=0\\
+\end{align}$$
+$$\begin{align}
+T_{xy}&=\epsilon_0\left(E_xE_y\right)+\dfrac{1}{\mu_0}\left(B_xB_y\right)\\
+T_{xy}&=T_{yx}=0\\
+T_{yz}&=\epsilon_0\left(E_yE_z\right)+\dfrac{1}{\mu_0}\left(B_yB_z\right)\\
+T_{yz}&=T_{zy}=0\\
+T_{zx}&=\epsilon_0\left(E_zE_x\right)+\dfrac{1}{\mu_0}\left(B_zB_x\right)\\
+T_{zx}&=T_{xz}=0\\
+\end{align}$$
+The matrix is a bunch of zeros, except for $T_{xx}=-\epsilon_0E_0^2\cos^2\left(k(x-ct)\right)$.
+
+
+

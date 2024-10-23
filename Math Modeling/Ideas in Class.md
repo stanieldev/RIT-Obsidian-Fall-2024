@@ -7,3 +7,5 @@ The best distribution would be a function with minimum entropy (minimal informat
 
 Power, Memory, and Speed.
 Optimizing and the maximal limit using entropy.
+
+Grid Harmonics for Calculating Cells between object in physics sims.
