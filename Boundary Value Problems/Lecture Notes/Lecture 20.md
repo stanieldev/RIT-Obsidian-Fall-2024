@@ -16,7 +16,7 @@ k\cdot \dfrac{X''(x)}{X(x)}+\dfrac{h(x)}{X(x)T(t)}&=\dfrac{T'(t)}{T(t)}\\
 Consider $u(x,t)=w(x,t)+v(x)$
 $$\begin{align}
 k\dfrac{\partial^2u}{\partial x^2}+h(x)&=\dfrac{\partial u}{\partial t}\\
-k\cdot \left(W(x,t)+V''(x)\right)+h(x)&=\dfrac{\partial W}{\partial t}\\
+k\cdot \left(W''(x,t)+V''(x)\right)+h(x)&=\dfrac{\partial W}{\partial t}\\
 \end{align}$$
 Looking at the boundary conditions:
 $$\begin{align}
