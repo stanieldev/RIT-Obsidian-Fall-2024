@@ -57,5 +57,3 @@ c^2\vec\nabla^2\psi&=\dfrac{\partial^2\psi}{\partial t^2}\\
 \end{align}$$
 
 
-
-
