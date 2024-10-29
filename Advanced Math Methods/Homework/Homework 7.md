@@ -78,8 +78,11 @@ $$\begin{align}
 &=2\pi i\left(\mathrm{Res}(z=i)+\mathrm{Res}(z=-i)\right)\\
 &=2\pi i\left(\dfrac{\sqrt{i}}{2i}-\dfrac{\sqrt{-i}}{2i}\right)\\
 &=\pi\left(\sqrt{i}-\sqrt{-i}\right)\\
-&=2\pi\sin\left(\tfrac{\pi}{4}\right)\\
-\Aboxed{\int_{\Gamma}\dfrac{\sqrt{z}}{1+z^2}\ dz&=\sqrt{2}\pi}
+&=\pi\left(\sqrt{e^{i\tfrac{\pi}{2}}}-\sqrt{e^{-i\tfrac{\pi}{2}}}\right)\\
+&=\pi\left({e^{i\tfrac{\pi}{4}}}-{e^{-i\tfrac{\pi}{4}}}\right)\\
+&=2\pi i\left(\dfrac{{e^{i\tfrac{\pi}{4}}}-{e^{-i\tfrac{\pi}{4}}}}{2i}\right)\\
+&=2\pi i\sin\left(\tfrac{\pi}{4}\right)\\
+\Aboxed{\int_{\Gamma}\dfrac{\sqrt{z}}{1+z^2}\ dz&=i\sqrt{2}\pi}
 \end{align}$$
 $$\begin{align}
 2\int_0^\infty\dfrac{\sqrt{x}}{1+x^2}\ dx&=\int_{\Gamma}\dfrac{\sqrt{z}}{1+z^2}\ dz\\
