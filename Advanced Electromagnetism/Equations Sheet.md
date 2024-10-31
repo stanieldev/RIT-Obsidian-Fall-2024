@@ -7,24 +7,24 @@ V_\mathrm{net}&=\dfrac{1}{4\pi\epsilon_0}\int\dfrac{\rho}{r}\ d\tau&\text{(Scala
 \end{align}$$
 ### Maxwell's Equations $\left(\vec{E}\ \&\ \vec{B}\right)$
 $$\begin{align}
-\nabla\cdot\vec{E}&=\dfrac{\rho}{\epsilon_0}&
+\vec\nabla\cdot\vec{E}&=\dfrac{\rho}{\epsilon_0}&
 \oint\vec{E}\cdot d\vec{A}&=\dfrac{q_\text{enc}}{\epsilon_0}&
 \text{(Gauss' Law)}\\
-\nabla\cdot\vec{B}&=0&
+\vec\nabla\cdot\vec{B}&=0&
 \oint\vec{B}\cdot d\vec{A}&=0&
 \text{(No Monopoles)}\\
-\nabla\cdot\vec{J}&=-\dfrac{\partial\rho}{\partial t}&
+\vec\nabla\cdot\vec{J}&=-\dfrac{\partial\rho}{\partial t}&
 \oint\vec{J}\cdot d\vec{A}&=-\dfrac{\partial q_\text{enc}}{\partial t}&
 \text{(Continuity)}\\
-\nabla\times\vec{E}&=-\dfrac{\partial\vec{B}}{\partial t}&
+\vec\nabla\times\vec{E}&=-\dfrac{\partial\vec{B}}{\partial t}&
 \oint\vec{E}\cdot d\vec{l}&=-\dfrac{d}{dt}\int\vec{B}\cdot d\vec{A}&
 \text{(Faraday's Law)}\\
-\nabla\times\vec{B}&=\mu_0\vec{J}+\epsilon_0\mu_0\dfrac{\partial\vec{E}}{\partial t}&
+\vec\nabla\times\vec{B}&=\mu_0\vec{J}+\epsilon_0\mu_0\dfrac{\partial\vec{E}}{\partial t}&
 \oint\vec{B}\cdot d\vec{l}&=\mu_0I+\epsilon_0\mu_0\dfrac{d}{dt}\int\vec{E}\cdot d\vec{A}&
 \text{(Ampere's Law)}
 \end{align}$$
 $$\begin{align}
-\vec{F}&=q_e\left(\vec{E}+\vec{v}\times\vec{B}\right)&
+\vec{F}&=q\left(\vec{E}+\vec{v}\times\vec{B}\right)&
 \text{(Lorentz Force)}\\
 \vec\nabla^2\vec{E}&=\dfrac{1}{c^2}\dfrac{\partial^2\vec{E}}{\partial t^2}&
 \text{(Electric Wave Equation)}\\
@@ -49,16 +49,72 @@ $$\begin{align}
 \left.\left(\vec{H}_\text{above}^\perp-\vec{H}_\text{below}^\perp\right)\right|_\text{surface}&=0\\
 \left.\left(\vec{H}_\text{above}^\parallel-\vec{H}_\text{below}^\parallel\right)\right|_\text{surface}&=\vec{K}_\text{free}\times\hat{n}\\
 \end{align}$$
-### Electrodynamics
+### Electromagnetic Induction
 $$\begin{align}
-\mathrm{EMF}&=\oint\vec{E}\cdot d\vec{l}=-\dfrac{d\Phi_B}{dt}\\
-M_{ij}&=\dfrac{\mu_0}{4\pi}\oint_{\gamma_i}\oint_{\gamma_j}\dfrac{d\vec{l}_i\cdot d\vec{l}_j}{r}
+\mathrm{EMF}&=\oint\vec{E}\cdot d\vec{l}=-\dfrac{d\Phi_B}{dt}
+&\text{(Electromotive "Force")}\\
+M_{ij}&=\dfrac{\mu_0}{4\pi}\oint_{\gamma_i}\oint_{\gamma_j}\dfrac{d\vec{l}_i\cdot d\vec{l}_j}{r}=M_{ji}
+&\text{(Mutual Induction)}
 \end{align}$$
 ### Electromagnetic Energy
 $$\begin{align}
-\mathcal{W}_E=\dfrac{1}{2}\epsilon_0E^2, \ \ \ \mathcal{W}_B=\dfrac{1}{2\mu_0}B^2\\
-\mathcal{W}_{EM}=\dfrac{1}{2}\left(\epsilon_0E^2+\dfrac{1}{\mu_0}B^2\right)\\
+\mathcal{U}_{EM}&=\dfrac{1}{2}\left(\epsilon_0\vec{E}^2+\dfrac{1}{\mu_0}\vec{B}^2\right)\\
+\vec{S}&=\dfrac{\vec{E}\times\vec{B}}{\mu_0}\\
+\vec{\mathbb{P}}_\text{EM}&=\mu_0\epsilon_0\vec{S}\\
 \end{align}$$
+### Electromagnetic Waves
+$$\begin{align}
+\vec{k}&=\sqrt{k_x^2+k_y^2+k_z^2}\ \hat{k}\\
+\vec{E}&=\tilde{E_0}\cos\left(\vec{k}\cdot\vec{x}-\omega t\right)\hat{E}_0\\
+\vec{B}&=\dfrac{\tilde{E_0}}{c}\cos\left(\vec{k}\cdot\vec{x}-\omega t\right)\left(\hat{k}\times\hat{E}_0\right)=\dfrac{\hat{k}\times\vec{E}}{c}\\
+\end{align}$$
+#### Incidence at Interfaces
+**Note:** Works only for $\vec{E}$ who's polarized in the plane of incidence.
+$$\begin{align}
+n_1\sin(\theta_I)&=n_2\sin(\theta_T)&\text{(Snell's Law)}\\
+\tilde{E}_{0\text{T}}&=\dfrac{2}{\alpha+\beta}\tilde{E}_{0\text{I}}&\text{(Transmitted Electric Field)}\\
+\tilde{E}_{0\text{R}}&=\dfrac{\alpha-\beta}{\alpha+\beta}\tilde{E}_{0\text{I}}&\text{(Reflected Electric Field)}\\
+\beta&=\dfrac{n_2}{n_1}=\dfrac{v_1}{v_2}\\
+\alpha&=\dfrac{\cos\theta_T}{\cos\theta_I}
+\end{align}$$
+$$\begin{align}
+T&=\dfrac{I_T}{I_I}
+=\dfrac{n_2\cos\theta_T}{n_1\cos\theta_I}\dfrac{E^2_{0R}}{E^2_{0I}}
+=\dfrac{4\alpha\beta}{(\alpha+\beta)^2}
+&&(\text{Transmission Coefficient})\\
+R&=\dfrac{I_R}{I_I}
+=\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \dfrac{E^2_{0\text{R}}}{E^2_{0\text{I}}}
+=\dfrac{(\alpha-\beta)^2}{(\alpha+\beta)^2}
+&&(\text{Reflection Coefficient})
+\end{align}$$
+$$\begin{align}
+I_j&=\langle\vec{S}_j\rangle\cos(\theta_j)&&(\text{Intensity-Poynting Relation})\\
+\theta_B&\approx\tan^{-1}\left(\beta\right)&&(\text{Brewster's Angle})\\
+\end{align}$$
+#### Waves in Conductors
+$$\begin{align}
+\rho(t)&=\rho(0)e^{-\tfrac{\sigma}{\epsilon}t}
+\end{align}$$
+
+
+
+
+
+
+
+
+Needs Oct 31st and beyond.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
