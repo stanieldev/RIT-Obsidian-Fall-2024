@@ -79,7 +79,7 @@ n_1\sin(\theta_I)&=n_2\sin(\theta_T)&\text{(Snell's Law)}\\
 \end{align}$$
 $$\begin{align}
 T&=\dfrac{I_T}{I_I}
-=\dfrac{n_2\cos\theta_T}{n_1\cos\theta_I}\dfrac{E^2_{0R}}{E^2_{0I}}
+=\dfrac{n_2\cos\theta_T}{n_1\cos\theta_I}\dfrac{E^2_{0T}}{E^2_{0I}}
 =\dfrac{4\alpha\beta}{(\alpha+\beta)^2}
 &&(\text{Transmission Coefficient})\\
 R&=\dfrac{I_R}{I_I}
