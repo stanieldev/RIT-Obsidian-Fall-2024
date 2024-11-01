@@ -25,6 +25,8 @@ Similar to the executive summary you wrote for Module 2, you should create and w
 
 
 
+
+
 ### Formulation
 Let the vector $\vec{S}(t)$ represent the configuration space of the predator and pray populations.
 We can then write the evolution of the configuration state as:
@@ -54,19 +56,9 @@ $$\begin{align}
 
 
 ### Introducing Competition
-To introduce a competition term to both, I'm going to introduce a carrying capacity:
 $$\begin{align}
-\dfrac{dX}{dt}&=A\dfrac{X(t)}{\alpha}\left(1-\dfrac{X(t)}{\alpha}\right)+kY(t)\\
-\dfrac{dY}{dt}&=B\dfrac{Y(t)}{\beta}\left(1-\dfrac{Y(t)}{\beta}\right)+bX(t)\\
-\end{align}$$
-Unfortunately, it is no longer possible to represent the state-vector as a 2D vector, and instead has to be written as a 4D vector:
-$$\begin{align}
-\dfrac{dX}{dt}&=\dfrac{A}{\alpha}X(t)-\dfrac{A}{\alpha^2}X^2(t)+kY(t)\\
-\dfrac{dY}{dt}&=\dfrac{B}{\beta}Y(t)-\dfrac{B}{\beta^2}Y^2(t)+bX(t)\\
-\end{align}$$
-$$\begin{align}
-\dfrac{d}{dt}\left[\begin{array}{c}X(t)\\Y(t)\end{array}\right]&=
-\left[\begin{array}{cccc}\dfrac{A}{\alpha}&k&-\dfrac{A}{\alpha^2}&0\\b&\dfrac{B}{\beta}&0&-\dfrac{B}{\beta^2}\end{array}\right]\left[\begin{array}{c}X(t)\\Y(t)\\X^2(t)\\Y^2(t)\end{array}\right]\\
+\dfrac{dX}{dt}&=(A-C)X(t)+kY(t)\\
+\dfrac{dY}{dt}&=bX(t)+BY(t)\\
 \end{align}$$
 
 
