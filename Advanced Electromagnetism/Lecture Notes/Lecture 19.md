@@ -12,7 +12,7 @@ The Fresnel Equations for oblique incidence (for polarization in the plane of in
 $$\begin{align}
 \vec{E}_{0T}&=\dfrac{2}{\alpha+\beta}\vec{E}_{0I}\\
 \vec{E}_{0R}&=\dfrac{\alpha-\beta}{\alpha+\beta}\vec{E}_{0I}\\
-\beta&=\dfrac{n_2}{n_1}, \ \alpha=\dfrac{\cos\theta_T}{\cos\theta_I}
+\beta\approx\dfrac{n_2}{n_1}, \ \alpha=\dfrac{\cos\theta_T}{\cos\theta_I}
 \end{align}$$
  - If $\theta_I=0$, Snell's Law gives $\theta_R=\theta_T=0$ and $\alpha=1$, recovering the normally-incident case.
  - $\vec{E}_{0T}$ is always in-phase with $\vec{E}_{0I}$.
@@ -31,5 +31,4 @@ T&\equiv\dfrac{I_T}{I_I}=\dfrac{n_2}{n_1}\dfrac{E^2_{0R}}{E^2_{0I}}\dfrac{\cos\t
 If $n_2>n_1$, there exists a critical angle for which the transmitted angle is $90$ degrees.
 This is called Total Internal Reflection. If the incident angle is greater than this critical angle, there will be 0 transmission.
 
-
-Update this with lecture notes. This is very confusing tbh.
+For the transmitted wave, we have a part propagating $\parallel$ to the boundary, but also a part does propagate into the 2nd region. Since the component of the wavevector transmitted is imaginary, the part that is transmitted is 2 exponential decays instead of 2 oscillations. This "evanescent wave" has a nonzero Electric Field, but transmits 0 power.
