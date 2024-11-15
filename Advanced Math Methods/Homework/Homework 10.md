@@ -31,7 +31,8 @@ $$\begin{align}
 \Aboxed{\tilde{\chi}(\omega)&=\dfrac{ne^2}{m}\dfrac{-1}{(\omega-\omega_+)(\omega-\omega_-)}}
 \end{align}$$
 The poles are at the 2 points $\omega_\pm$, which looks like the following graph:
-INSERT_GRAPH_HERE
+![[HW10_Q1.png]]
+https://www.desmos.com/calculator/4mieh458km
 
 ---
 ## Exercise 2
@@ -41,11 +42,50 @@ $$\begin{align}
 \end{align}$$
 following the same contour integration approach used for the RL circuit. Explain clearly what integration contour you choose depending on the sign of $t$ and why, using Jordon's lemma.
 
+I'm using a half-circle that goes into the negative imaginary axis:
+$$\begin{align}
+\dfrac{ne^2}{m}\oint e^{-i\omega t}\dfrac{1}{\Omega_0^2-\omega^2-i\gamma\omega}\dfrac{d\omega}{2\pi}&=\dfrac{ne^2}{m}\int_{-\infty}^\infty e^{-i\omega t}\dfrac{1}{\Omega_0^2-\omega^2-i\gamma\omega}\dfrac{d\omega}{2\pi}+\lim_{R\rightarrow\infty}\dfrac{ne^2}{m}\int_\pi^{2\pi} e^{-i\omega t}\dfrac{1}{\Omega_0^2-\omega^2-i\gamma\omega}\dfrac{d\omega}{2\pi}\\
+\dfrac{ne^2}{m}\oint e^{-i\omega t}\dfrac{1}{\Omega_0^2-\omega^2-i\gamma\omega}\dfrac{d\omega}{2\pi}&=\dfrac{ne^2}{m}\int_{-\infty}^\infty e^{-i\omega t}\dfrac{1}{\Omega_0^2-\omega^2-i\gamma\omega}\dfrac{d\omega}{2\pi}+0\\
+\Aboxed{\dfrac{ne^2}{m}\oint e^{-i\omega t}\dfrac{1}{\Omega_0^2-\omega^2-i\gamma\omega}\dfrac{d\omega}{2\pi}&=\dfrac{ne^2}{m}\int_{-\infty}^\infty e^{-i\omega t}\dfrac{1}{\Omega_0^2-\omega^2-i\gamma\omega}\dfrac{d\omega}{2\pi}}
+\end{align}$$
+We can then just use the residue theorem:
+$$\begin{align}
+\dfrac{ne^2}{m}\oint e^{-i\omega t}\dfrac{1}{\Omega_0^2-\omega^2-i\gamma\omega}\dfrac{d\omega}{2\pi}&=2\pi i\dfrac{ne^2}{m}\left(\text{Res}(\omega=\omega_+)+\text{Res}(\omega=\omega_-)\right)
+\end{align}$$
+So we can calculate the residues:
+$$\begin{align}
+\text{Res}(\omega=\omega_+)&=\lim_{\omega\rightarrow\omega_+}(\omega-\omega_+)\left(\dfrac{1}{\Omega_0^2-\omega^2-i\gamma\omega}\dfrac{e^{-i\omega t}}{2\pi}\right)\\
+&=\lim_{\omega\rightarrow\omega_+}(\omega-\omega_+)\left(\dfrac{-1}{(\omega-\omega_+)(\omega-\omega_-)}\dfrac{e^{-i\omega t}}{2\pi}\right)\\
+&=\lim_{\omega\rightarrow\omega_+}\left(\dfrac{-1}{\omega-\omega_-}\dfrac{e^{-i\omega t}}{2\pi}\right)\\
+\Aboxed{\text{Res}(\omega=\omega_+)&=-\dfrac{1}{\omega_+-\omega_-}\dfrac{e^{-i\omega_+t}}{2\pi}}\\
+\text{Res}(\omega=\omega_-)&=\lim_{\omega\rightarrow\omega_-}(\omega-\omega_-)\left(\dfrac{1}{\Omega_0^2-\omega^2-i\gamma\omega}\dfrac{e^{-i\omega t}}{2\pi}\right)\\
+&=\lim_{\omega\rightarrow\omega_-}(\omega-\omega_-)\left(\dfrac{-1}{(\omega-\omega_+)(\omega-\omega_-)}\dfrac{e^{-i\omega t}}{2\pi}\right)\\
+&=\lim_{\omega\rightarrow\omega_-}\left(\dfrac{-1}{\omega-\omega_+}\dfrac{e^{-i\omega t}}{2\pi}\right)\\
+\Aboxed{\text{Res}(\omega=\omega_+)&=\dfrac{1}{\omega_+-\omega_-}\dfrac{e^{-i\omega_-t}}{2\pi}}\\
+\end{align}$$
+Substituting, we get:
+$$\begin{align}
+\dfrac{ne^2}{m}\oint e^{-i\omega t}\dfrac{1}{\Omega_0^2-\omega^2-i\gamma\omega}\dfrac{d\omega}{2\pi}&=2\pi i\dfrac{ne^2}{m}\left(\text{Res}(\omega=\omega_+)+\text{Res}(\omega=\omega_-)\right)\theta(t)\\
+&=2\pi i\dfrac{ne^2}{m}\left(-\dfrac{1}{\omega_+-\omega_-}\dfrac{e^{-i\omega_+t}}{2\pi}+\dfrac{1}{\omega_+-\omega_-}\dfrac{e^{-i\omega_-t}}{2\pi}\right)\theta(t)\\
+&=\dfrac{i}{\omega_+-\omega_-}\dfrac{ne^2}{m}\left(e^{-i\omega_-t}-e^{-i\omega_+t}\right)\theta(t)\\
+&=\theta(t)i\dfrac{ne^2}{m}\dfrac{e^{-i\omega_-t}-e^{-i\omega_+t}}{\omega_+-\omega_-}\\
+\end{align}$$
+By inspection, we can see that $\omega_\pm=i\lambda_\pm$, and so:
+$$\begin{align}
+&=\theta(t)i\dfrac{ne^2}{m}\dfrac{e^{-i\omega_+t}-e^{-i\omega_-t}}{\omega_+-\omega_-}\\
+&=\theta(t)i\dfrac{ne^2}{m}\dfrac{e^{\lambda_+t}-e^{\lambda_-t}}{i\lambda_+-i\lambda_-}\\
+\Aboxed{\chi(t)&=\dfrac{ne^2}{m}\theta(t)\dfrac{e^{\lambda_+t}-e^{\lambda_-t}}{\lambda_+-\lambda_-}}\\
+\Aboxed{\lambda_\pm&=\dfrac{1}{2}\left(-\gamma\pm\sqrt{\gamma^2-4\Omega_0^2}\right)}
+\end{align}$$
 ---
 ## Exercise 3
 Using the expression you found for $\chi(t)$, explain whether the response of the dielectric satisfies causality, specifically:
  - What is the physical significance of the $\theta(t)$ factor?
  - How is causality reflected in the analytic properties of $\tilde{\chi}(\omega)$?
+
+The response is causal because of the $\theta(t)$ component, making it zero for all times up to the integration are allowed to influence the present, but the future is not.
+
+The physical significance of $\theta(t)$ is that it enforces causality on the definition of the function, relating to the above comment.
 
 ---
 ## Exercise 4
@@ -54,3 +94,11 @@ $$E_T(t)=\begin{cases}\tfrac{1}{T},&-\tfrac{T}{2}<t<\tfrac{T}{2}\\0,& \text{othe
 and the corresponding polarization $P_T(t)$, using the general convolution formula:
 $$P(t)=\int_{-\infty}^\infty\chi(t-\tau)E(\tau)\ d\tau$$
 Determine the value of $P_T(t)$ for all $t\ne0$ in the limit for $T\rightarrow0$.
+$$\begin{align}
+P(t)
+&=\lim_{T\rightarrow0}\int_{-\infty}^\infty\chi(t-\tau)E_T(\tau)\ d\tau\\
+&=\int_{-\infty}^\infty\chi(t-\tau)\delta(\tau)\ d\tau\\
+&=\chi(t)\\
+\Aboxed{P(t)&=\dfrac{ne^2}{m}\theta(t)\dfrac{e^{\lambda_+t}-e^{\lambda_-t}}{\lambda_+-\lambda_-}}
+\end{align}$$
+
