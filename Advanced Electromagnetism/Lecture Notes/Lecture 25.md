@@ -3,3 +3,4 @@
 
 ---
 
+Snoozed Through Class. Update Later.
