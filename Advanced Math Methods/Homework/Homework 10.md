@@ -1,5 +1,5 @@
 **Name:** Stanley Goodwin
-**Date:** XX/XX/2024
+**Date:** 11/14/2024
 **Collaborators:** None
 
 In this assignment, we will analyze a model for the response of a dielectric to an external electric field. Consider the following differential equation for the polarization density $P(t)$:
@@ -87,6 +87,8 @@ The response is causal because of the $\theta(t)$ component, making it zero for 
 
 The physical significance of $\theta(t)$ is that it enforces causality on the definition of the function, relating to the above comment.
 
+I assume by the analytic properties is that it comes from the function being holomorphic in the upper half complex plane, and so then leads to causality directly.
+
 ---
 ## Exercise 4
 Consider an electric field pulse of the form:
@@ -101,4 +103,10 @@ P(t)
 &=\chi(t)\\
 \Aboxed{P(t)&=\dfrac{ne^2}{m}\theta(t)\dfrac{e^{\lambda_+t}-e^{\lambda_-t}}{\lambda_+-\lambda_-}}
 \end{align}$$
+
+
+
+
+
+
 
