@@ -54,20 +54,50 @@ Finally, while the use of graphics processing units (GPUs) for simulation holds 
 In summary, while significant progress has been made in simulating BNSMs, there remain crucial areas where optimization techniques can provide substantial improvements. This study aims to address these gaps, focusing on EoS optimization, root-finding algorithm enhancements, parallelization refinements, and table swapping, in order to push the boundaries of what is computationally feasible for BNSM modeling.
 
 ## Methodology
-Computational Framework:
- - Detail the use of the Einstein Toolkit and other software tools.
- - Describe the hardware environment (CCRG server, Frontera, Frontier).
+### Initial Setup and Computational Environment
+This research commenced in the summer of 2024, utilizing the computational resources of the RIT SPORC Cluster to simulate binary neutron star mergers (BNSMs). The SPORC Cluster, equipped with high-performance computing capabilities, provided a robust environment for running large-scale simulations. The Einstein Toolkit, which serves as the backbone for our simulations, was configured to operate with the Cactus Framework.
 
-Optimization Strategies:
-Explain the techniques you'll implement:
- - EoS Table Compression: Explain the compression method and its computational benefits.
- - Root-Finding Algorithms: Discuss the improvements over existing algorithms.
- - Adaptive Mesh Refinement (AMR): Describe dynamic resolution approaches.
+Compiling the necessary C code and integrating various libraries were integral steps in this setup. GCC was employed to compile the framework and its associated modules, ensuring compatibility with the SPORC Cluster's architecture. A custom implementation of Lorene and FFTW3 was integrated into the Einstein Toolkit to initialize neutron star data accurately.
 
-Baseline Profiling:
- - Mention how you profiled initial simulation performance.
-Experimental Design:
- - Provide an overview of tests you'll conduct to evaluate performance gains.
+### Simulation Setup and Challenges
+Once the computational framework was established, the next step involved preparing the Cactus Run File and associated parameter files for simulation. This process required extensive troubleshooting to ensure the compatibility of input files with the specific type of BNSM simulation being conducted. During initial simulation runs, inconsistencies were identified in the input files, which necessitated modifications to align them with the physical parameters and resolution requirements of the study. Addressing these issues was critical for achieving stable and physically meaningful outputs.
+
+### Profiling and Performance Analysis
+To identify computational bottlenecks and optimize simulation performance, HPCToolkit was employed as a profiling tool. This software suite is designed to analyze high-performance applications, providing insights into execution efficiency and resource utilization. However, initial attempts to profile the simulation using HPCToolkit were unsuccessful, due to compatibility challenges with the current configuration of the SPORC Cluster and the Einstein Toolkit.
+
+### Ongoing and Future Optimization Efforts
+Efforts are ongoing to resolve profiling challenges and fully leverage HPCToolkit for identifying areas of inefficiency, particularly in the equation of state (EoS) calculations, root-finding algorithms, and other computationally intensive processes. Once profiling is operational, targeted optimizations—such as table swapping and adaptive mesh refinement—will be implemented and evaluated for their efficacy in reducing runtime and enhancing simulation accuracy.
+
+
+## Computational Framework
+This study leverages the **Einstein Toolkit**, a widely used open-source software suite for simulating relativistic astrophysical phenomena. At its core is the Cactus Framework, which provides modular, extensible tools for implementing general relativistic and hydrodynamic simulations. The simulations utilize a custom implementation of Lorene for generating neutron star initial data, tailored to the specific needs of binary neutron star mergers (BNSMs). The Einstein Toolkit's extensive documentation and community support facilitate seamless adaptation for our research goals.
+
+The hardware environment for this study consists of computational resources provided by the **Center for Computational Relativity and Gravitation (CCRG)** at the Rochester Institute of Technology (RIT). Initial testing and simulation runs were conducted on the CCRG's in-house server, which mirrors the architecture of the University of Texas's **Frontera** system, a petabyte-scale computing facility powered by Intel Cascade Lake processors. Frontera boasts 4.8 teraflops of double-precision computing power, suitable for parallel-intensive computations. Additionally, the CCRG is migrating to **Frontier**, located at Oak Ridge National Laboratory, the world's first exabyte-scale system. Frontier’s AMD Infinity architecture allows for unprecedented computational speeds, supporting exaflop-scale workloads while maintaining compatibility with x86-64 architecture. This transition ensures access to state-of-the-art computational infrastructure, enabling more demanding simulations in the future.
+
+## Optimization Strategies
+
+### EoS Table Compression
+The equation of state (EoS) determines critical thermodynamic relationships—pressure ($P$), density ($\rho$), and temperature ($T$)—and is essential for BNSM simulations. Standard simulations rely on high-resolution EoS tables, which involve extensive interpolation and root-finding operations at runtime, resulting in significant computational overhead. To address this bottleneck, we implement a **compression algorithm** to reduce table size while preserving its fidelity. This involves approximating high-dimensional data with a sparse, efficiently searchable representation. By minimizing runtime interpolation and storage requirements, EoS table compression streamlines the retrieval of thermodynamic properties, accelerating calculations without sacrificing accuracy.
+
+### Root-Finding Algorithm Optimization
+Root-finding operations are integral to solving nonlinear equations derived from the EoS and hydrodynamic conditions. Traditional algorithms such as Newton-Raphson are computationally expensive and sensitive to initial guesses, leading to potential inefficiencies. This research explores optimized variants, including **hybrid iterative methods**, that combine the robustness of bisection with the rapid convergence of higher-order schemes. By reducing the number of iterations required and improving stability under extreme physical conditions, these enhancements aim to significantly reduce runtime while maintaining numerical precision.
+
+### Adaptive Mesh Refinement (AMR)
+AMR dynamically adjusts the spatial and temporal resolution of the simulation grid, providing fine-grained resolution in regions of interest, such as the merging neutron star cores, while coarsening in less dynamic areas. This strategy minimizes computational costs without compromising accuracy. For this study, **Berger-Oliger refinement** is employed, which integrates error estimation and hierarchical grid structures to target areas requiring higher fidelity. This adaptive approach ensures that critical physical processes, such as shock wave dynamics and fluid turbulence, are resolved at the highest possible resolution while reducing overall computational demands.
+
+## Baseline Profiling
+Baseline performance profiling was conducted using the **HPCToolkit**, a software suite designed for high-performance application analysis. Initial profiling efforts focused on identifying computational hotspots within the simulation, including bottlenecks in EoS lookups, root-finding operations, and grid management. While full profiling integration remains a work in progress due to compatibility challenges, these efforts provide preliminary insights into resource allocation and computational inefficiencies, forming a foundation for subsequent optimization efforts.
+
+## Experimental Design
+To evaluate the efficacy of the proposed optimization strategies, a series of controlled simulation tests will be conducted:
+
+1. **Baseline Simulations**: Initial runs using unoptimized configurations will establish a benchmark for runtime, memory usage, and resolution accuracy.
+2. **EoS Optimization Tests**: The performance of compressed EoS tables will be compared to the standard tables, assessing runtime improvements and interpolation accuracy under varying thermodynamic conditions.
+3. **Root-Finding Algorithm Comparisons**: Simulations incorporating optimized root-finding algorithms will be evaluated against traditional methods for convergence speed and stability across different physical regimes.
+4. **AMR Performance Evaluation**: The efficiency of adaptive refinement will be tested by comparing fixed-grid simulations with AMR-enabled runs, measuring computational savings and fidelity in resolving small-scale features.
+
+Each test will be performed under identical initial conditions to ensure comparability, with results analyzed to quantify improvements in simulation speed, memory efficiency, and physical accuracy. These evaluations will guide further refinements, ensuring that proposed strategies meet the dual goals of computational efficiency and scientific rigor.
+
 
 
 
