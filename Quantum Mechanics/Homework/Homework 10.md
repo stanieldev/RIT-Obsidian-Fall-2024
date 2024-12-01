@@ -1,7 +1,7 @@
 **Name:** Stanley Goodwin
 **Date:** 12/02/2024
 **Collaborators:** Ethan
-**Time Taken:** XXX Hours
+**Time Taken:** 5 Hours
 
 ---
 ## Question 1
