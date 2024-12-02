@@ -134,7 +134,7 @@ A hydrogen atom starts out with the initial wavefunction:
 $$\begin{align}
 \psi(\vec{r},0)=\dfrac{\psi_{2,1,1}+\psi_{2,1,-1}}{\sqrt{2}}
 \end{align}$$
-### 4.1 (Incomplete)
+### 4.1
 Construct $\psi(\vec{r},t)$. Simplify as much as possible.
 $$\begin{align}
 \psi(\vec{r},t)&=\int e^{-i\vec{k}\cdot\vec{r}}\phi(\vec{k},0)e^{-iE_nt/\hbar}\ d^3\vec{k}\\
@@ -152,33 +152,31 @@ $$\begin{align}
 &=\dfrac{2}{\sqrt{2}}\dfrac{1}{\sqrt{64\pi}a_0^{5/2}}re^{-r/2a_0}\sin\theta\cos\phi\\
 \Aboxed{\psi(\vec{r},0)&=\dfrac{1}{\sqrt{32\pi}a_0^{5/2}}re^{-r/2a_0}\sin\theta\cos\phi}
 \end{align}$$
-#### Finding $\phi(\vec{p},0)$
-Using the definition of the Fourier transform for space:
+We can then write the total wavefunction as:
 $$\begin{align}
-\phi_{2,1,\pm1}(\vec{p},0)
-&=\dfrac{1}{\sqrt{2\pi\hbar}}\int e^{-i\vec{p}\cdot\vec{r}/\hbar}\ \psi(\vec{r},0)\ d^3\vec{r}
+\Aboxed{\psi(\vec{r},0)&=\dfrac{1}{\sqrt{32\pi}a_0^{5/2}}re^{-r/2a_0}\sin\theta\cos\phi e^{-iE_2t/\hbar}, \ \ \ E_2=-\dfrac{\hbar^2}{8ma_0^2}}
 \end{align}$$
 ### 4.2
 Find a formula for the expected value of potential energy $\langle V\rangle$.
 $$\begin{align}
 \langle V\rangle
 &=\int\psi^\dagger(\vec{r},0)\hat{V}\psi(\vec{r},0)\ d^3\vec{r}\\
-&=\dfrac{1}{32\pi a_0^{5}}\int\left(\dfrac{1}{4\pi\epsilon_0}\dfrac{e^2}{r}\right)r^2e^{-r/a_0}\sin^2\theta\cos^2\phi\ \cdot r^2\sin\theta\ dr\ d\theta\ d\phi\\
-&=\dfrac{e^2}{4\pi\epsilon_0}\dfrac{1}{32\pi a_0^{5}}\int_0^{2\pi}\int_0^\pi \int_0^\infty r^3e^{-r/a_0}\sin^3\theta\cos^2\phi\ dr\ d\theta\ d\phi\\
-&=\dfrac{e^2}{4\pi\epsilon_0}\dfrac{1}{32\pi a_0^{5}}\int_0^{2\pi}\cos^2\phi\ d\phi\int_0^\pi\sin^3\theta\ d\theta\int_0^\infty r^3e^{-r/a_0}\ dr\\
-&=\dfrac{e^2}{4\pi\epsilon_0}\dfrac{1}{32\pi a_0}\pi\dfrac{4}{3}\int_0^\infty \dfrac{r^3}{a_0^3}e^{-r/a_0}\ \dfrac{dr}{a_0}\\
-&=\dfrac{e^2}{96\pi\epsilon_0a_0}\int_0^\infty w^3e^{-w}\ dw\\
-&=\dfrac{e^2}{16\pi\epsilon_0a_0}\\
-&=\dfrac{e^2}{16\pi\epsilon_0}\dfrac{me^2}{4\pi\epsilon_0\hbar^2}\\
-\Aboxed{\langle V\rangle&=\dfrac{me^4}{64\pi^2\epsilon_0^2\hbar^2}}
+&=\dfrac{1}{32\pi a_0^{5}}\int\left(-\dfrac{1}{4\pi\epsilon_0}\dfrac{e^2}{r}\right)r^2e^{-r/a_0}\sin^2\theta\cos^2\phi\ \cdot r^2\sin\theta\ dr\ d\theta\ d\phi\\
+&=-\dfrac{e^2}{4\pi\epsilon_0}\dfrac{1}{32\pi a_0^{5}}\int_0^{2\pi}\int_0^\pi \int_0^\infty r^3e^{-r/a_0}\sin^3\theta\cos^2\phi\ dr\ d\theta\ d\phi\\
+&=-\dfrac{e^2}{4\pi\epsilon_0}\dfrac{1}{32\pi a_0^{5}}\int_0^{2\pi}\cos^2\phi\ d\phi\int_0^\pi\sin^3\theta\ d\theta\int_0^\infty r^3e^{-r/a_0}\ dr\\
+&=-\dfrac{e^2}{4\pi\epsilon_0}\dfrac{1}{32\pi a_0}\pi\dfrac{4}{3}\int_0^\infty \dfrac{r^3}{a_0^3}e^{-r/a_0}\ \dfrac{dr}{a_0}\\
+&=-\dfrac{e^2}{96\pi\epsilon_0a_0}\int_0^\infty w^3e^{-w}\ dw\\
+&=-\dfrac{e^2}{16\pi\epsilon_0a_0}\\
+&=-\dfrac{e^2}{16\pi\epsilon_0}\dfrac{me^2}{4\pi\epsilon_0\hbar^2}\\
+\Aboxed{\langle V\rangle&=-\dfrac{me^4}{64\pi^2\epsilon_0^2\hbar^2}}
 \end{align}$$
 ### 4.3
 $$\begin{align}
 \langle V\rangle
-&=\dfrac{me^4}{64\pi^2\epsilon_0^2\hbar^2}\\
-&=\dfrac{(9.11\cdot10^{-31}\text{kg})(1.60\cdot10^{-19}\text{C})^4}{64\pi^2(8.85\cdot10^{-12}\text{ F/m})^2(1.05\cdot10^{-34}\text{J}\cdot\text{s})^2}\\
-&=1.095\cdot10^{-18}\text{ J}\\
-\Aboxed{\langle V\rangle&=6.832\text{ eV}}
+&=-\dfrac{me^4}{64\pi^2\epsilon_0^2\hbar^2}\\
+&=-\dfrac{(9.11\cdot10^{-31}\text{kg})(1.60\cdot10^{-19}\text{C})^4}{64\pi^2(8.85\cdot10^{-12}\text{ F/m})^2(1.05\cdot10^{-34}\text{J}\cdot\text{s})^2}\\
+&=-1.095\cdot10^{-18}\text{ J}\\
+\Aboxed{\langle V\rangle&=-6.832\text{ eV}}
 \end{align}$$
 ### 4.4
 The potential is independent of time since the expected distance of the electron stays at a uniform distance from the nucleus, and so the central potential is static in time. If the electron were to change the average distance from the nucleus, there would be a response of the potential with time, but this situation isn't one of those cases.

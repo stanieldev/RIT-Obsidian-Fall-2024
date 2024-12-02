@@ -1,7 +1,7 @@
 **Name:** Stanley Goodwin
 **Date:** 12/02/2024
 **Collaborators:** None
-**Time Taken:** XXX Hours
+**Time Taken:** 4 Hours
 
 As always, your work will be graded for clarity of explanation as much as for the “correctness” of your final answer. And as always, please include the names of those you collaborated with, as well as the total number of hours spent on this assignment.
 
