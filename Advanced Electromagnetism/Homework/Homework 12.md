@@ -1,7 +1,7 @@
 **Name:** Stanley Goodwin
 **Date:** 12/14/2024
-**Collaborators:** None
-**Time Taken:** XXX Hours
+**Collaborators:** Chris
+**Time Taken:** 8 Hours
 
 As always, your work will be graded for clarity of explanation as much as for the “correctness” of your final answer. And as always, please include the names of those you collaborated with, as well as the total number of hours spent on this assignment. I’ve decided to treat this as a bonus assignment, both because I’m adding to it in this final week and because a couple of the concepts (specifically, intervals and world lines) are things you’ve seen before but that we skipped reviewing in class (although you can find a good review in Griffiths). That said, don’t blow this off, even if you don’t need the extra credit—one problem on your final exam will be lifted directly from this assignment.
 
@@ -70,7 +70,7 @@ Therefore, it never collides with Probe1 with special relativity's velocity addi
 In the classical velocity addition, Probe1 would have the proton beam collide with it.
 
 ---
-## Question 2
+## Question 2 (Unfinished)
 When I was in undergrad, there was a brief fuss in the media about “faster than light neutrinos”. Let’s investigate those claims. Define the LHC lab in Switzerland to be located at $x_1=0$ in the Earth’s rest frame, and the Italian Gran Sasso neutrino detection facility to be located at $x_2 = 730\text{km}$. (Ignore any motion of the Earth in this problem.).
 ### 2.A
 Suppose a beam of photons travels from LHC (starting at $x_1=t_1=0$) heading to Gran Sasso in a straight line (through vacuum).
@@ -177,14 +177,14 @@ t_2'&=\dfrac{x_2}{c}\sqrt{\dfrac{1-\beta}{1+\beta}}\\
 
 ---
 ## Question 3
+**Griffiths Equation 12.109**
 $$\begin{align}
 E'_x&=E_x & E'_y&=\gamma(E_y-vB_z) & E'_z&=\gamma(E_z+vB_y)\\
 B'_x&=B_x & B'_y&=\gamma(B_y+vE_z/c^2) & B'_z&=\gamma(B_z-vE_y/c^2)\\
 \end{align}$$
 ### 3.A
-Use Griffiths Equation 12.109 (12.108 in 3rd edition) to show that both $\vec{E}\cdot\vec{B}$ and $E^2-c^2B^2$ are Lorentz invariants. We found earlier this semester that $\vec{E}$ and $\vec{B}$ are perpendicular for traveling EM waves. Given that this is true in some frame, can there by any other reference frame in which you would find $\vec{E}$ and $\vec{B}$ not perpendicular for a traveling EM wave?
-
-**Part 1:** Dot Product
+Use Griffiths Equation 12.109 to show that both $\vec{E}\cdot\vec{B}$ and $E^2-c^2B^2$ are Lorentz invariants. 
+#### 3.A.I: Dot Product
 $$\begin{align}
 E_x'B_x'&=E_xB_x\\
 E_y'B_y'&=\gamma(E_y-vB_z)\gamma(B_y+vE_z/c^2)\\
@@ -202,7 +202,7 @@ $$\begin{align}
 &=E_xB_x+E_yB_y+E_zB_z\\
 \Aboxed{\vec{E}'\cdot\vec{B}'&=\vec{E}\cdot\vec{B}}
 \end{align}$$
-**Part 2:** Magnitudes
+#### 3.A.II: Magnitudes
 $$\begin{align}
 (E')^2&=(E_x')^2+(E_y')^2+(E_z')^2\\
 &=(E_x)^2+(\gamma(E_y-vB_z))^2+(\gamma(E_z+vB_y))^2\\
@@ -225,6 +225,11 @@ $$\begin{align}
 &=E_x^2+E_y^2+E_z^2-c^2(B_x^2+B_y^2+B_z^2)\\
 \Aboxed{(E')^2-c^2(B')^2&=E^2-c^2B^2}
 \end{align}$$
+#### 3.A.III
+We found earlier this semester that $\vec{E}$ and $\vec{B}$ are perpendicular for traveling EM waves. Given that this is true in some frame, *can there by any other reference frame in which you would find $\vec{E}$ and $\vec{B}$ not perpendicular for a traveling EM wave?*
+
+According to the dot product, the answer is no. If they are perpendicular in one inertial frame, they must be perpendicular in all inertial frames.
+
 ### 3.B
 Use your results from part (a) to answer the following questions:
 #### 3.B.I
@@ -248,13 +253,158 @@ E^2-c^2B^2&=(E')^2-c^2(B')^2\\
 0^2-c^2B^2=&(E')^2-c^2(0)^2\\
 -c^2B^2&=(E')^2\\
 \end{align}$$
-Is it indeed possible to transform a pure $E$-field into a pure $B$-field. However, it would not be possible for any other electric fields in other frames.
+Is it not possible to transform a pure $E$-field into a pure $B$-field, since both fields are real-valued and the relationship requires one of the squares to be negative.
 
 ---
 ## Question 4
 It’s common in nuclear and particle physics to talk about the “rapidity” of a particle, defined as $y=\cosh^{-1}\gamma$ (where $\gamma$ is the usual relativistic gamma factor, and that’s an inverse hyperbolic cosine).
 ### 4.A
 Prove that the usual relativistic $\beta$ (that’s $\beta=v/c$) is given by $\beta=\tanh y$, then show that $\beta\gamma=\sinh y$.
+
+This can be thought of a hyperbolic "triangle" similar to typical triangles:
 $$\begin{align}
-...
+\cosh y&=\dfrac{1}{\sqrt{1^2-\beta^2}}
 \end{align}$$
+Where it takes a similar form of adjacent over hypotenuse, and so:
+$$\begin{align}
+\sinh y&=\dfrac{\beta}{\sqrt{1-\beta^2}}\\
+\tanh y&=\dfrac{\beta}{1}\\
+\end{align}$$
+To find what we're looking for, we can simplify as:
+$$\begin{align}
+\Aboxed{\beta&=\tanh y}\\
+\beta\gamma&=\tanh y\cosh y\\
+&=\dfrac{\sinh y}{\cosh y}\cosh y\\
+\Aboxed{\beta\gamma&=\sinh y}
+\end{align}$$
+### 4.B
+Rewrite the Lorentz transformations in matrix form (i.e. Griffiths Equation 12.24) entirely in terms of the rapidity angle. The result should remind you of a different kind of transformation— please comment (for a hint, look back at Griffiths section 1.1.5).
+$$\begin{align}
+\left[\begin{array}{c}ct'\\x'\\y'\\z'\end{array}\right]&=
+\left[\begin{array}{c}\gamma&-\gamma\beta&0&0\\-\gamma\beta&\gamma&0&0\\0&0&1&0\\0&0&0&1\end{array}\right]\left[\begin{array}{c}ct\\x\\y\\z\end{array}\right]\\
+&=\left[\begin{array}{c}\cosh y&-\sinh y&0&0\\-\sinh y&\cosh y&0&0\\0&0&1&0\\0&0&0&1\end{array}\right]\left[\begin{array}{c}ct\\x\\y\\z\end{array}\right]\\
+\end{align}$$
+### 4.C
+Suppose that observer B has rapidity $y_1$ as measured by observer A, and C has rapidity $y_2$ as measured by B. Both velocities are on the $x$-axis. Show that the rapidity of C as measured by A is just $y_1+y_2$, i.e. rapidities “add,” unlike velocities which do not simply add in relativity.
+$$\begin{align}
+\left[\begin{array}{c}ct'\\x'\\y'\\z'\end{array}\right]
+&=\left[\begin{array}{c}\cosh y_1&-\sinh y_1&0&0\\-\sinh y_1&\cosh y_1&0&0\\0&0&1&0\\0&0&0&1\end{array}\right]\left[\begin{array}{c}\cosh y_2&-\sinh y_2&0&0\\-\sinh y_2&\cosh y_2&0&0\\0&0&1&0\\0&0&0&1\end{array}\right]\left[\begin{array}{c}ct\\x\\y\\z\end{array}\right]\\
+&=\left[\begin{array}{c}\cosh y_1\cosh y_2+\sinh y_1\sinh y_2&-\cosh y_1\sinh y_2-\sinh y_1\cosh y_2&0&0\\-\sinh y_1\cosh y_2-\cosh y_1\sinh y_2&\sinh y_1\sinh y_2+\cosh y_1\cosh y_2&0&0\\0&0&1&0\\0&0&0&1\end{array}\right]\left[\begin{array}{c}ct\\x\\y\\z\end{array}\right]\\
+&=\left[\begin{array}{c}\cosh(y_1+y_2)&-\sinh(y_1+y_2)&0&0\\-\sinh(y_1+y_2)&\cosh(y_1+y_2)&0&0\\0&0&1&0\\0&0&0&1\end{array}\right]\left[\begin{array}{c}ct\\x\\y\\z\end{array}\right]\\
+\end{align}$$
+Under hyperbolic trigonometry rules, we can see that rapidities add like velocities do in classical mechanics.
+
+---
+## Question 5
+You are sitting in frame $S$, watching a long uniform line of charge (the $z$-axis) move by in the $+z$ direction with constant speed $v$. In this frame $S$, the charge density is $\lambda$ $(\text{C/m})$.
+### 5.A
+Use Gauss’s and Ampère’s Laws to find the electric and magnetic fields in this frame. Note that the current is simply $I=\lambda v$. While you'll likely prefer cylindrical coordinates for deriving the fields, you should write your final answer in Cartesian this time.
+
+**Electric Field**
+$$\begin{align}
+\oint\vec{E}\cdot d\vec{A}&=\dfrac{q_\text{enc}}{\epsilon_0}\\
+E\cdot2\pi sl&=\dfrac{\lambda l}{\epsilon_0}\\
+E&=\dfrac{\lambda}{2\pi\epsilon_0 s}\\
+\vec{E}&=\dfrac{\lambda}{2\pi\epsilon_0 s}\hat{s}\\
+&=\dfrac{\lambda}{2\pi\epsilon_0 \sqrt{x^2+y^2}}\left(\hat{x}\cos\phi+\hat{y}\sin\phi\right)\\
+&=\dfrac{\lambda}{2\pi\epsilon_0\sqrt{x^2+y^2}}\left(\hat{x}\dfrac{x}{\sqrt{x^2+y^2}}+\hat{y}\dfrac{y}{\sqrt{x^2+y^2}}\right)\\
+\Aboxed{\vec{E}(x,y,z)&=\dfrac{\lambda}{2\pi\epsilon_0 (x^2+y^2)}\left(x\hat{x}+y\hat{y}\right)}
+\end{align}$$
+**Magnetic Field**
+$$\begin{align}
+\oint\vec{B}\cdot d\vec{l}&=\mu_0I_\text{enc}\\
+B\cdot 2\pi s&=\mu_0\lambda v\\
+B&=\dfrac{\mu_0\lambda v}{2\pi s}\\
+\vec{B}&=\dfrac{\mu_0\lambda v}{2\pi s}\hat{\phi}\\
+&=\dfrac{\mu_0\lambda v}{2\pi\sqrt{x^2+y^2}}\left(-\hat{x}\sin\phi+\hat{y}\cos\phi\right)\\
+&=\dfrac{\mu_0\lambda v}{2\pi\sqrt{x^2+y^2}}\left(-\hat{x}\dfrac{y}{\sqrt{x^2+y^2}}+\hat{y}\dfrac{x}{\sqrt{x^2+y^2}}\right)\\
+\Aboxed{\vec{B}(x,y,z)&=\dfrac{\mu_0\lambda v}{2\pi(x^2+y^2)}\left(x\hat{y}-y\hat{x}\right)}
+\end{align}$$
+### 5.B
+Now, let’s rederive this in a slightly convoluted but informative way. Move to a frame $S'$ moving along with the charges. In this frame, there is no current, and thus no magnetic field. Compute the pure electric field $\vec{E}'$ in this frame, expressed entirely in terms of primed coordinates. (Note that the charge density isn’t $\lambda$ in this frame—what is it instead?)
+$$\begin{align}
+\oint\vec{E}'\cdot d\vec{A}&=\dfrac{q_\text{enc}}{\epsilon_0}\\
+E'\cdot2\pi sl'&=\dfrac{\lambda' l'}{\epsilon_0}\\
+E'&=\dfrac{\lambda/\gamma(v)}{2\pi\epsilon_0 s}\\
+&=\dfrac{\lambda\sqrt{1-v^2/c^2}}{2\pi\epsilon_0 s}\\
+\vec{E}'&=\dfrac{\lambda\sqrt{1-v^2/c^2}}{2\pi\epsilon_0 s}\hat{s}\\
+&=\dfrac{\lambda\sqrt{1-v^2/c^2}}{2\pi\epsilon_0\sqrt{x^2+y^2}}\left(\hat{x}\cos\phi+\hat{y}\sin\phi\right)\\
+&=\dfrac{\lambda\sqrt{1-v^2/c^2}}{2\pi\epsilon_0\sqrt{x^2+y^2}}\left(\hat{x}\dfrac{x}{\sqrt{x^2+y^2}}+\hat{y}\dfrac{x}{\sqrt{x^2+y^2}}\right)\\
+&=\dfrac{\lambda\sqrt{1-v^2/c^2}}{2\pi\epsilon_0(x^2+y^2)}\left(x\hat{x}+y\hat{y}\right)\\
+\Aboxed{\vec{E}'&=\vec{E}/\gamma(v)}
+\end{align}$$
+### 5.C
+Find both $\vec{E}$ and $\vec{B}$ in the $S$ frame, even though you started with just pure electric $\vec{E}'$ in frame $S'$. Don’t forget to rewrite any and all primed variables back in terms of the unprimed coordinate system (that requires Lorentz transformations too, and don’t forget, in the $z$ direction, not the usual $x$ direction). If you pull it off correctly, you should recover the same $\vec{E}$ and $\vec{B}$ you got in part a. (Let’s take a moment to appreciate what just happened here. Starting from a pure electric field in one frame, you were able to find the magnetic field in another reference frame via Lorentz boosts. In this way, a person could find that magnetic field without knowing a thing about Ampère’s Law! This is an essential unification of electromagnetism!)
+
+**Equation 12.109 in Griffiths**
+$$\begin{align}
+E'_x&=E_x & E'_y&=\gamma(E_y-vB_y) & E'_z&=\gamma(E_z+vB_z)\\
+B'_x&=B_x & B'_y&=\gamma(B_y+v/c^2E_z) & B'_z&=\gamma(B_z-v/c^2E_y)\\
+\end{align}$$
+Big guess but I'm using the cycling behavior to conjecture:
+$$\begin{align}
+E'_z&=E_z & E'_x&=\gamma(E_x-vB_x) & E'_y&=\gamma(E_y+vB_y)\\
+B'_z&=B_z & B'_x&=\gamma(B_x+v/c^2E_y) & B'_y&=\gamma(B_y-v/c^2E_x)\\
+\end{align}$$
+We actually want to look at the opposite transform, however, since this is the forward transform, and so we'll need:
+$$\begin{align}
+E_z&=E_z' & E_x&=\gamma(E_x'+vB_x') & E_y&=\gamma(E_y'-vB_y')\\
+B_z&=B_z' & B_x&=\gamma(B_x'-v/c^2E_y') & B_y&=\gamma(B_y'+v/c^2E_x')\\
+\end{align}$$
+Since there's only electric field components, we can simplify the above as:
+$$\begin{align}
+E_z&=E_z' & E_x&=\gamma E_x & E_y&=\gamma E_y'\\
+B_z&=0 & B_x&=-\dfrac{\gamma v}{c^2}E_y' & B_y&=\dfrac{\gamma v}{c^2}E_x'\\
+\end{align}$$
+Substituting our answer from previous, we get:
+$$\begin{align}
+E_z&=E_z' & E_x&=\gamma\dfrac{\lambda/\gamma}{2\pi\epsilon_0}\dfrac{x}{x^2+y^2} & E_y&=\gamma \dfrac{\lambda/\gamma}{2\pi\epsilon_0}\dfrac{y}{x^2+y^2}\\
+B_z&=0 & B_x&=-\dfrac{\gamma v}{c^2}\dfrac{\lambda/\gamma}{2\pi\epsilon_0}\dfrac{y}{x^2+y^2} & B_y&=\dfrac{\gamma v}{c^2}\dfrac{\lambda/\gamma}{2\pi\epsilon_0}\dfrac{x}{x^2+y^2}\\\\
+
+E_z&=E_z' & E_x&=\dfrac{\lambda}{2\pi\epsilon_0}\dfrac{x}{x^2+y^2} & E_y&=\dfrac{\lambda}{2\pi\epsilon_0}\dfrac{y}{x^2+y^2}\\
+B_z&=0 & B_x&=-\dfrac{\mu_0\epsilon_0}{\epsilon_0}\dfrac{\lambda v}{2\pi}\dfrac{y}{x^2+y^2} & B_y&=\dfrac{\mu_0\epsilon_0}{\epsilon_0}\dfrac{\lambda v}{2\pi}\dfrac{x}{x^2+y^2}\\\\
+
+E_z&=E_z' & E_x&=\dfrac{\lambda}{2\pi\epsilon_0}\dfrac{x}{x^2+y^2} & E_y&=\dfrac{\lambda}{2\pi\epsilon_0}\dfrac{y}{x^2+y^2}\\
+B_z&=0 & B_x&=-\dfrac{\mu_0\lambda v}{2\pi}\dfrac{y}{x^2+y^2} & B_y&=\dfrac{\mu_0\lambda v}{2\pi}\dfrac{x}{x^2+y^2}
+\end{align}$$
+Rewriting in vector notation, we see that:
+$$\begin{align}
+\vec{E}&=\dfrac{\lambda}{2\pi\epsilon_0}\dfrac{1}{x^2+y^2}\left(x\hat{x}+y\hat{y}\right)\\
+\vec{B}&=\dfrac{\mu_0\lambda v}{2\pi}\dfrac{1}{x^2+y^2}\left(x\hat{y}-y\hat{x}\right)
+\end{align}$$
+This is, indeed, the same as expected from the moving frame of reference.
+
+---
+## Question 6
+### 6.A
+A conserved quantity is the same *over time*.
+An invariant quantity is the same *under a coordinate transform*.
+### 6.B
+Can you have a conserved thing that is not invariant?
+*Velocity of the Center of Mass, Energy, Momentum.*
+
+How about the other way around?
+*Spacetime Intervals, Proper Time.*
+
+Can you have something that is both? Neither? Briefly, explain/comment.
+*Electric Charge, Rest Mass (4-Momentum)*
+There probably are others, but none I can think of at the moment.
+### 6.C
+Suppose you have measured many processes involving particles with some initial momentum and energy, and some final momentum and energy. You find that the final and initial energies and momenta are related in that they are CONSERVED. Show that energy and momentum (use the relativistic versions) are conserved in ALL inertial frames if they are conserved in ONE inertial frame.
+
+Any state represented by frame $S$ will have an invariant inertial rest mass by:
+$$P\cdot P=p_\nu p^\nu=g_{\mu\nu}p^\mu p^\nu=-(mc^2)^2$$
+Since 4-momentum is invariant under Lorentz transforms, and the norm is frame-independent, then Energy-Momentum is conserved in all inertial frames.
+
+To make it more solid, with individual conservations, we can write relativistic corrections for energy and momentum as:
+$$\begin{align}
+E&=\gamma mc^2\\
+\vec{p}&=\gamma m\vec{v}
+\end{align}$$
+Both of these are Lorentz invariant, since they account for the velocities in terms of the gamma factor between all differing frames. 
+
+### 6.D
+Can relativistic momentum be conserved in all reference frames without conservation of relativistic energy?
+$$\vec{p}=m\dfrac{d\vec{x}}{dt}=m\dfrac{d\vec{x}}{d\tau}\dfrac{d\tau}{dt}=\gamma m\vec{v}$$
+So long as there are no forces involved, the conservation of momentum is conserved.
+This is because any change in momenta must be the same in all inertial reference frames, and so long as the acceleration is zero then momentum is conserved.
