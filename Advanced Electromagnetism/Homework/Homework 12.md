@@ -399,7 +399,7 @@ Since 4-momentum is invariant under Lorentz transforms, and the norm is frame-in
 To make it more solid, with individual conservations, we can write relativistic corrections for energy and momentum as:
 $$\begin{align}
 E&=\gamma mc^2\\
-\vec{p}&=\gamma m\vec{v}
+\vec{p}&=\gamma m\vec{v}\\
 \end{align}$$
 Both of these are Lorentz invariant, since they account for the velocities in terms of the gamma factor between all differing frames. 
 

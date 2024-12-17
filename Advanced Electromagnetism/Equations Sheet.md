@@ -8,19 +8,19 @@ V_\mathrm{net}&=\dfrac{1}{4\pi\epsilon_0}\int\dfrac{\rho}{r}\ d\tau&\text{(Scala
 ### Maxwell's Equations $\left(\vec{E}\ \&\ \vec{B}\right)$
 $$\begin{align}
 \vec\nabla\cdot\vec{E}&=\dfrac{\rho}{\epsilon_0}&
-\oint\vec{E}\cdot d\vec{A}&=\dfrac{q_\text{enc}}{\epsilon_0}&
+\oint\vec{E}\cdot d\vec{a}&=\dfrac{q_\text{enc}}{\epsilon_0}&
 \text{(Gauss' Law)}\\
 \vec\nabla\cdot\vec{B}&=0&
-\oint\vec{B}\cdot d\vec{A}&=0&
+\oint\vec{B}\cdot d\vec{a}&=0&
 \text{(No Monopoles)}\\
 \vec\nabla\cdot\vec{J}&=-\dfrac{\partial\rho}{\partial t}&
-\oint\vec{J}\cdot d\vec{A}&=-\dfrac{\partial q_\text{enc}}{\partial t}&
+\oint\vec{J}\cdot d\vec{a}&=-\dfrac{\partial q_\text{enc}}{\partial t}&
 \text{(Continuity)}\\
 \vec\nabla\times\vec{E}&=-\dfrac{\partial\vec{B}}{\partial t}&
-\oint\vec{E}\cdot d\vec{l}&=-\dfrac{d}{dt}\int\vec{B}\cdot d\vec{A}&
+\oint\vec{E}\cdot d\vec{l}&=-\dfrac{d}{dt}\int\vec{B}\cdot d\vec{a}&
 \text{(Faraday's Law)}\\
 \vec\nabla\times\vec{B}&=\mu_0\vec{J}+\epsilon_0\mu_0\dfrac{\partial\vec{E}}{\partial t}&
-\oint\vec{B}\cdot d\vec{l}&=\mu_0I+\epsilon_0\mu_0\dfrac{d}{dt}\int\vec{E}\cdot d\vec{A}&
+\oint\vec{B}\cdot d\vec{l}&=\mu_0I_\text{enc}+\epsilon_0\mu_0\dfrac{d}{dt}\int\vec{E}\cdot d\vec{a}&
 \text{(Ampere's Law)}
 \end{align}$$
 $$\begin{align}
@@ -68,39 +68,75 @@ $$\begin{align}
 \vec{E}&=\tilde{E_0}\cos\left(\vec{k}\cdot\vec{x}-\omega t\right)\hat{E}_0\\
 \vec{B}&=\dfrac{\tilde{E_0}}{c}\cos\left(\vec{k}\cdot\vec{x}-\omega t\right)\left(\hat{k}\times\hat{E}_0\right)=\dfrac{\hat{k}\times\vec{E}}{c}\\
 \end{align}$$
-#### Incidence at Interfaces
-**Note:** Works only for $\vec{E}$ who's polarized in the plane of incidence.
+### Interfaces
 $$\begin{align}
-n_1\sin(\theta_I)&=n_2\sin(\theta_T)&\text{(Snell's Law)}\\
-\tilde{E}_{0\text{T}}&=\dfrac{2}{\alpha+\beta}\tilde{E}_{0\text{I}}&\text{(Transmitted Electric Field)}\\
-\tilde{E}_{0\text{R}}&=\dfrac{\alpha-\beta}{\alpha+\beta}\tilde{E}_{0\text{I}}&\text{(Reflected Electric Field)}\\
-\beta&=\dfrac{n_2}{n_1}=\dfrac{v_1}{v_2}\\
-\alpha&=\dfrac{\cos\theta_T}{\cos\theta_I}
+n_1\sin(\theta_I)&=n_2\sin(\theta_T) & \theta_B&=\tan^{-1}\left(\beta\right)\\
+\beta&=\dfrac{n_2}{n_1} & \alpha&=\dfrac{\cos\theta_T}{\cos\theta_I}
 \end{align}$$
 $$\begin{align}
-T&=\dfrac{I_T}{I_I}
-=\dfrac{n_2\cos\theta_T}{n_1\cos\theta_I}\dfrac{E^2_{0T}}{E^2_{0I}}
-=\dfrac{4\alpha\beta}{(\alpha+\beta)^2}
-&&(\text{Transmission Coefficient})\\
-R&=\dfrac{I_R}{I_I}
-=\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \dfrac{E^2_{0\text{R}}}{E^2_{0\text{I}}}
-=\dfrac{(\alpha-\beta)^2}{(\alpha+\beta)^2}
-&&(\text{Reflection Coefficient})
+&\text{Parallel (P)} && \text{Perpendicular (S)}\\
+\tilde{E}_{0\text{T}}&=\dfrac{2}{\alpha+\beta}\tilde{E}_{0\text{I}} &
+\tilde{E}_{0\text{T}}&=\dfrac{2}{1+\alpha\beta}\tilde{E}_{0\text{I}}\\
+\tilde{E}_{0\text{R}}&=\dfrac{\alpha-\beta}{\alpha+\beta}\tilde{E}_{0\text{I}} & 
+\tilde{E}_{0\text{R}}&=\dfrac{1-\alpha\beta}
+{1+\alpha\beta}\tilde{E}_{0\text{I}}\\
+T&=\dfrac{4\alpha\beta}{(\alpha+\beta)^2} & 
+T&=\dfrac{4\alpha\beta}{(1+\alpha\beta)^2}\\
+R&=\dfrac{(\alpha-\beta)^2}{(\alpha+\beta)^2} & 
+R&=\dfrac{(1-\alpha\beta)^2}{(1+\alpha\beta)^2}\\
+\end{align}$$
+### Conductors
+$$\begin{align}
+k_\text{Re}&=\omega\sqrt{\dfrac{\mu\epsilon}{2}}\sqrt{1+\sqrt{1+\left(\tfrac{\sigma}{\epsilon\omega}\right)^2}}\\
+k_\text{Im}&=\omega\sqrt{\dfrac{\mu\epsilon}{2}}\sqrt{-1+\sqrt{1+\left(\tfrac{\sigma}{\epsilon\omega}\right)^2}}\\
+\end{align}$$
+### Electromagnetic Gauge
+$$\begin{align}
+\phi'&=\phi-\partial_t\lambda&\vec{E}&=-\vec\nabla\phi-\partial_t\vec{A}\\
+\vec{A}'&=\vec{A}+\vec\nabla\lambda&\vec{B}&=\vec\nabla\times\vec{A}\\
 \end{align}$$
 $$\begin{align}
-I_j&=\langle\vec{S}_j\rangle\cos(\theta_j)&&(\text{Intensity-Poynting Relation})\\
-\theta_B&\approx\tan^{-1}\left(\beta\right)&&(\text{Brewster's Angle})\\
+\vec\nabla^2V+\dfrac{\partial}{\partial t}\left(\vec\nabla\cdot\vec{A}\right)&=-\dfrac{\rho}{\epsilon_0}\\
+\vec\nabla^2\vec{A}-\dfrac{1}{c^2}\dfrac{\partial^2}{\partial t^2}\vec{A}-\vec\nabla\left(\vec\nabla\cdot\vec{A}+\dfrac{1}{c^2}\dfrac{\partial}{\partial t}V\right)&=-\mu_0\vec{J}
 \end{align}$$
-#### Waves in Conductors
+#### Coulomb Gauge
 $$\begin{align}
-\rho(t)&=\rho(0)e^{-\tfrac{\sigma}{\epsilon}t}
+\vec\nabla\cdot\vec{A}&=0\\
+\vec\nabla^2V&=-\dfrac{\rho}{\epsilon_0}\\
+\vec\nabla^2\vec{A}-\dfrac{1}{c^2}\dfrac{\partial^2}{\partial t^2}\vec{A}-\dfrac{1}{c^2}\dfrac{\partial}{\partial t}\left(\vec\nabla V\right)&=-\mu_0\vec{J}
 \end{align}$$
-
-
-
-
-
-
-
-
-Needs Oct 31st and beyond.
+#### Lorenz Gauge
+$$\begin{align}
+\vec\nabla\cdot\vec{A}&=-\mu_0\epsilon_0\dfrac{\partial\phi}{\partial t}\\
+\dfrac{1}{c^2}\partial_t^2\phi-\vec\nabla^2\phi&=\dfrac{\rho}{\epsilon_0}\\
+\dfrac{1}{c^2}\partial_t^2\vec{A}-\vec\nabla^2\vec{A}&=\mu_0\vec{J}\\
+\end{align}$$
+#### Jefimenko's Equations
+$$\begin{align}
+V(\vec{r},t)&=\dfrac{1}{4\pi\epsilon_0}\int\dfrac{\rho(\vec{r}', t_R)}{|\vec{r}-\vec{r}'|}\ d\tau'\\
+\vec{A}(\vec{r},t)&=\dfrac{\mu_0}{4\pi}\int\dfrac{\vec{J}(\vec{r}', t_R)}{|\vec{r}-\vec{r}'|}\ d\tau'\\
+t_R&=t-\dfrac{|\vec{r}-\vec{r}'|}{c}
+\end{align}$$
+$$\begin{align}
+\vec{E}(\vec{r},t)&=\dfrac{1}{4\pi\epsilon_0}\int\left[\dfrac{\rho(\vec{r}', t_R)}{|\mathscr{r}|^2}\hat{r}+\dfrac{\dot\rho(\vec{r}', t_R)}{c|\mathscr{r}|}\hat{r}-\dfrac{\vec{J}(\vec{r},t_R)}{c^2|\mathscr{r}|}\right]d\tau'\\
+\vec{B}(\vec{r},t)&=\dfrac{\mu_0}{4\pi}\int\left[\dfrac{\vec{J}(\vec{r},t_R)}{|\mathscr{r}|^2}+\dfrac{\dot{\vec{J}}(\vec{r},t_R)}{c|\mathscr{r}|}\right]\times\hat{\mathscr{r}}\ d\tau'
+\end{align}$$
+### Relativistic Point Charge
+$$\begin{align}
+V(\vec{r},t)&=\dfrac{1}{4\pi\epsilon_0}\dfrac{qc}{\mathscr{r}c-\vec{\mathscr{r}}\cdot\vec{v}}\\
+\vec{A}(\vec{r},t)&=\dfrac{\vec{v}}{c^2}V(\vec{r},t)\\
+\end{align}$$
+### Dipole Radiation
+$$\begin{align}
+\langle P_\text{total}\rangle&=\dfrac{\mu_0p_0^2\omega^4}{12\pi c}\\
+&=\dfrac{\mu_0q^2a^2}{6\pi c}\\
+\end{align}$$
+### Lorentz Transform
+$$\begin{align}
+\left[\begin{array}{c}ct'\\x'\\y'\\z'\end{array}\right]&=
+\left[\begin{array}{c}\gamma&-\gamma\beta&0&0\\-\gamma\beta&\gamma&0&0\\0&0&1&0\\0&0&0&1\end{array}\right]\left[\begin{array}{c}ct\\x\\y\\z\end{array}\right]\\
+\end{align}$$
+$$\begin{align}
+E'_x&=E_x & E'_y&=\gamma(E_y-vB_z) & E'_z&=\gamma(E_z+vB_y)\\
+B'_x&=B_x & B'_y&=\gamma(B_y+vE_z/c^2) & B'_z&=\gamma(B_z-vE_y/c^2)\\
+\end{align}$$
