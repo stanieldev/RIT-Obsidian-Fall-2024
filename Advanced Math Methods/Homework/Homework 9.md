@@ -17,16 +17,19 @@ Now, verify the consistency with the Fourier inversion theorem by calculating th
 $$\begin{align}
 \tilde{G}(\omega)&=\int_{-\infty}^\infty e^{i\omega t}G(t)\ dt\\
 &=\int_{-\infty}^\infty e^{i\omega t}\theta(t)\dfrac{e^{\lambda_+t}-e^{\lambda_-t}}{\lambda_+-\lambda_-}\ dt\\
-&=\dfrac{1}{\lambda_+-\lambda_-}\int_{-\infty}^\infty e^{i\omega t}\theta(t)\left(e^{\lambda_+t}-e^{\lambda_-t}\right)\ dt\\
-&=\dfrac{1}{\lambda_+-\lambda_-}\left[\int_{-\infty}^\infty e^{i\omega t}\theta(t)e^{\lambda_+t}\ dt-\int_{-\infty}^\infty e^{i\omega t}\theta(t)e^{\lambda_-t}\ dt\right]\\
-&=\dfrac{1}{\lambda_+-\lambda_-}\left[\int_{-\infty}^0 e^{(\lambda_++i\omega )t}\ dt-\int_{-\infty}^0 e^{(\lambda_-+i\omega)t}\ dt\right]\\
-&=\dfrac{1}{\lambda_+-\lambda_-}\left[\dfrac{e^{(\lambda_++i\omega)t}}{\lambda_++i\omega}-\dfrac{e^{(\lambda_-+i\omega)t}}{\lambda_-+i\omega}\right]_{-\infty}^0\\
-&=\dfrac{1}{\lambda_+-\lambda_-}\left[\dfrac{e^{0}}{\lambda_++i\omega}-\dfrac{e^{0}}{\lambda_-+i\omega}\right]\\
-&=\dfrac{1}{\lambda_+-\lambda_-}\left[\dfrac{1}{\lambda_++i\omega}-\dfrac{1}{\lambda_-+i\omega}\right]\\
-&=\dfrac{1}{\lambda_+-\lambda_-}\left[\dfrac{\lambda_--\lambda_+}{(\lambda_++i\omega)(\lambda_-+i\omega)}\right]\\
-&=\dfrac{-1}{(\lambda_++i\omega)(\lambda_-+i\omega)}\\
-&=\dfrac{1}{(\omega-i\lambda_+)(\omega-i\lambda_-)}\\
-\Aboxed{\tilde{G}(\omega)&=\dfrac{1}{\Omega_0^2-\omega^2-i\gamma\omega}}
+&=\dfrac{1}{\lambda_+-\lambda_-}\int_{-\infty}^\infty e^{i\omega t}\theta(t)\left[e^{\lambda_+t}-e^{\lambda_-t}\right]\ dt\\
+&=\dfrac{1}{\lambda_+-\lambda_-}\int_{-\infty}^0 e^{i\omega t}\left[e^{\lambda_+t}-e^{\lambda_-t}\right]\ dt\\
+&=\dfrac{1}{\lambda_+-\lambda_-}\left(\int_{-\infty}^0 e^{i\omega t}e^{\lambda_+t}\ dt-\int_{-\infty}^0 e^{i\omega t}e^{\lambda_-t}\ dt\right)\\
+&=\dfrac{1}{\lambda_+-\lambda_-}\left(\int_{-\infty}^0 e^{(\lambda_++i\omega)t}\ dt-\int_{-\infty}^0 e^{(\lambda_-+i\omega)t}\ dt\right)\\
+&=\dfrac{1}{\lambda_+-\lambda_-}\left(\dfrac{e^{(\lambda_++i\omega)t}}{\lambda_++i\omega}-\dfrac{e^{(\lambda_-+i\omega)t}}{\lambda_-+i\omega}\right|_{-\infty}^0\\
+&=\dfrac{1}{\lambda_+-\lambda_-}\left(\dfrac{e^{0}}{\lambda_++i\omega}-\dfrac{e^{0}}{\lambda_-+i\omega}\right)\\
+&=\dfrac{1}{\lambda_+-\lambda_-}\left(\dfrac{1}{\lambda_++i\omega}-\dfrac{1}{\lambda_-+i\omega}\right)\\
+&=\dfrac{1}{\lambda_+-\lambda_-}\left(\dfrac{(\lambda_-+i\omega)-(\lambda_++i\omega)}{(\lambda_++i\omega)(\lambda_-+i\omega)}\right)\\
+&=-\dfrac{1}{\lambda_+-\lambda_-}\left(\dfrac{\lambda_+-\lambda_-}{(\lambda_++i\omega)(\lambda_-+i\omega)}\right)\\
+&=-\dfrac{1}{(\lambda_++i\omega)(\lambda_-+i\omega)}\\
+&=-\dfrac{(-i)^2}{(\omega-i\lambda_+)(\omega-i\lambda_-)}\\
+&=\dfrac{1}{(\omega-\omega_+)(\omega-\omega_-)}\\
+\Aboxed{\tilde{G}(\omega)&=\dfrac{-1}{\Omega_0^2-\omega^2-i\gamma\omega}}
 \end{align}$$
 ---
 ## Exercise 2
